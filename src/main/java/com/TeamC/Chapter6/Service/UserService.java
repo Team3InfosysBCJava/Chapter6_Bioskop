@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.Optional;
 
 
-public class UserService {
+public interface UserService {
 
-    List<User> getAll() {
+    List<User> getAll();
 
-    }
+
 
     User createUser(User user);
     Optional<User> getUserById(Long users_Id);
@@ -24,5 +24,4 @@ public class UserService {
     List<User> getUserByIsPlaying(String name);
 
     Page<User> search(String keyword, Integer pageNumber);
-}
 }

@@ -16,7 +16,7 @@ import com.TeamC.Chapter6.Exception.ResourceNotFoundException;
 
 @Service
 @AllArgsConstructor
-public class UserServiceImplements extends UserService {
+public class UserServiceImplements implements UserService {
 
     private final UserRepository userRepository;
 
