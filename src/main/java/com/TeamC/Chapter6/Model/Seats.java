@@ -1,5 +1,6 @@
 package com.TeamC.Chapter6.Model;
 
+import com.TeamC.Chapter6.DTO.SeatsResponseDTO;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -30,6 +31,15 @@ public class Seats {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+    public SeatsResponseDTO convertToResponse(){
+        return SeatsResponseDTO.builder()
+                .seat_id(this.seatId)
+                .name_studio(this.studioName)
+                .number_seat(this.seatNumber)
+                .available(this.isAvailable)
+                .build();
+    }
 
     @Override
     public String toString() {

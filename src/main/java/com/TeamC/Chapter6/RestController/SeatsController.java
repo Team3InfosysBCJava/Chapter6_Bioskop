@@ -1,5 +1,7 @@
 package com.TeamC.Chapter6.RestController;
 
+import com.TeamC.Chapter6.DTO.SeatsRequestDTO;
+import com.TeamC.Chapter6.DTO.SeatsResponseDTO;
 import com.TeamC.Chapter6.Model.Seats;
 import com.TeamC.Chapter6.Response.ResponseHandler;
 import com.TeamC.Chapter6.Service.SeatsService;
@@ -12,9 +14,10 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("team3")
+@RequestMapping("/team3")
 @AllArgsConstructor
 public class SeatsController {
 
@@ -27,24 +30,20 @@ public class SeatsController {
      * Get All
      * v1 = bentuk paling sederhana
      * v2 = versi akhir
+     *     @GetMapping("/v1/Seats")
+     *     public List<Seats> getAll() {
+     *         return seatsService.findAll();
+     *     }
      */
-    @GetMapping("/v1/Seats")
-    public List<Seats> getAll() {
-        return seatsService.findAll();
-    }
     @GetMapping("/v2/Seats")
     public ResponseEntity<Object> getAll2() {
         try {
             List<Seats> seats = seatsService.findAll();
-            List<Map<String, Object>> results = new ArrayList<>();
+            List<SeatsResponseDTO> results = new ArrayList<>();
             logger.info(Line + " Logger Start Get All " + Line);
             for (Seats data : seats) {
-                Map<String, Object> seat = new HashMap<>();
-                seat.put("seat_id", data.getSeatId());
-                seat.put("seat_number", data.getSeatNumber());
-                seat.put("studio_name", data.getStudioName());
-                seat.put("seat_available", data.getIsAvailable());
-                results.add(seat);
+                SeatsResponseDTO seatDTO = data.convertToResponse();
+                results.add(seatDTO);
                 logger.info("seatId : " + data.getSeatId() + " seatNumber : " + data.getSeatNumber() + " studioName : " + data.getStudioName() + " isAvailable : " + data.getIsAvailable());
             }
             logger.info(Line + " Logger End Get All " + Line);
@@ -58,20 +57,21 @@ public class SeatsController {
     }
 
     /**
-     * Get By id
+     * Get By id , @PathVariable Long id
      * v1 = bentuk paling sederhana
      * v2 = versi akhir
+     *     @GetMapping("/v1/Seats/{id}")
+     *     public Seats getSeatById(@PathVariable Long id) {
+     *         Optional<Seats> seats = seatsService.findById(id);
+     *         return seats.get();
+     *     }
      */
-    @GetMapping("/v1/Seats/{id}")
-    public Seats getSeatById(@PathVariable Long id) {
-        Optional<Seats> seats = seatsService.findById(id);
-        return seats.get();
-    }
     @GetMapping("/v2/Seats/{id}")
     public ResponseEntity<Object> getSeatById2(@PathVariable Long id) {
         try {
             Optional<Seats> seats = seatsService.findById(id);
-            Seats result = seats.get();
+            Seats seatsGet = seats.get();
+            SeatsResponseDTO result = seatsGet.convertToResponse();
             logger.info(Line + "Logger Start Get By Id " + Line);
             logger.info(result);
             logger.info(Line + "Logger End Get By Id " + Line);
@@ -85,21 +85,23 @@ public class SeatsController {
     }
 
     /**
-     * Create
+     * Create , @RequestBody Seats seats
      * v1 = bentuk paling sederhana
      * v2 = versi akhir
+     *    @PostMapping("/v1/Seats")
+     *     public Seats createSeat(@RequestBody Seats seats) {
+     *         return seatsService.createSeat(seats);
+     *     }
      */
-    @PostMapping("/v1/Seats")
-    public Seats createSeat(@RequestBody Seats seats) {
-        return seatsService.createSeat(seats);
-    }
     @PostMapping("/v2/Seats")
-    public ResponseEntity<Object> createSeat2(@RequestBody Seats seats) {
+    public ResponseEntity<Object> createSeat2(@RequestBody SeatsRequestDTO seatsRequestDTO) {
         try {
-            Seats results = seatsService.createSeat(seats);
-            logger.info(Line + "Logger Start Get By Id " + Line);
+            Seats seat = seatsRequestDTO.convertToModel();
+            seatsService.createSeat(seat);
+            SeatsResponseDTO results = seat.convertToResponse();
+            logger.info(Line + "Logger Start Create " + Line);
             logger.info(results);
-            logger.info(Line + "Logger End Get By Id " + Line);
+            logger.info(Line + "Logger End Create " + Line);
             return ResponseHandler.generateResponse("Success Create Seat", HttpStatus.CREATED, results);
         } catch (Exception e) {
             logger.error(Line + " Logger Start Error " + Line);
@@ -113,28 +115,30 @@ public class SeatsController {
      * Update by ID
      * v1 = bentuk paling sederhana
      * v2 = versi akhir
+     *     @PutMapping("/v1/Seats/{id}")
+     *     public Seats updateSeat(@PathVariable Long id, @Valid @RequestBody Seats seatsRequest) {
+     *         Optional<Seats> seatId = seatsService.findById(id);
+     *         Seats seats = seatId.get();
+     *         seats.setSeatNumber(seatsRequest.getSeatNumber());
+     *         seats.setStudioName(seatsRequest.getStudioName());
+     *         seats.setIsAvailable(seatsRequest.getIsAvailable());
+     *         return seatsService.updateSeat(seats);
+     *     }
      */
-    @PutMapping("/v1/Seats/{id}")
-    public Seats updateSeat(@PathVariable Long id, @Valid @RequestBody Seats seatsRequest) {
-        Optional<Seats> seatId = seatsService.findById(id);
-        Seats seats = seatId.get();
-        seats.setSeatNumber(seatsRequest.getSeatNumber());
-        seats.setStudioName(seatsRequest.getStudioName());
-        seats.setIsAvailable(seatsRequest.getIsAvailable());
-        return seatsService.updateSeat(seats);
-    }
     @PutMapping("/v2/Seats/{id}")
-    public ResponseEntity<Object> updateSeat2(@PathVariable Long id, @Valid @RequestBody Seats seatsRequest) {
+    public ResponseEntity<Object> updateSeat2(@PathVariable Long id, @Valid @RequestBody SeatsRequestDTO seatsRequestDTO) {
         try {
             Optional<Seats> seatId = seatsService.findById(id);
+            Seats seatsRequest = seatsRequestDTO.convertToModel();
             Seats seats = seatId.get();
             seats.setSeatNumber(seatsRequest.getSeatNumber());
             seats.setStudioName(seatsRequest.getStudioName());
             seats.setIsAvailable(seatsRequest.getIsAvailable());
-            Seats results = seatsService.updateSeat(seats);
-            logger.info(Line + "Logger Start Get By Id " + Line);
+            seatsService.updateSeat(seats);
+            SeatsResponseDTO results = seats.convertToResponse();
+            logger.info(Line + "Logger Start Update By Id " + Line);
             logger.info(results);
-            logger.info(Line + "Logger End Get By Id " + Line);
+            logger.info(Line + "Logger End Update By Id " + Line);
             return ResponseHandler.generateResponse("Success Update Seat", HttpStatus.OK, results);
         } catch (Exception e) {
             logger.error(Line + " Logger Start Error " + Line);
@@ -148,11 +152,11 @@ public class SeatsController {
      * Delete by ID
      * v1 = bentuk paling sederhana
      * v2 = versi akhir
+     *     @DeleteMapping("/v1/Seats/{id}")
+     *     public void deleteSeat(@PathVariable Long id) {
+     *         seatsService.deleteSeat(id);
+     *     }
      */
-    @DeleteMapping("/v1/Seats/{id}")
-    public void deleteSeat(@PathVariable Long id) {
-        seatsService.deleteSeat(id);
-    }
     @DeleteMapping("/v2/Seats/{id}")
     public ResponseEntity<Object> deleteSeat2(@PathVariable Long id) {
         try {
@@ -173,15 +177,19 @@ public class SeatsController {
      * Custom Query
      * v1 = bentuk paling sederhana
      * v2 = versi akhir
+     *     @PostMapping("/v1/Seats/isAvailable")
+     *     public List<Seats> getIsAvailable(@RequestBody Seats seatsRequest) {
+     *         return seatsService.getSeatsAvailable(seatsRequest.getIsAvailable());
+     *     }
      */
-    @PostMapping("/v1/Seats/isAvailable")
-    public List<Seats> getIsAvailable(@RequestBody Seats seatsRequest) {
-        return seatsService.getSeatsAvailable(seatsRequest.getIsAvailable());
-    }
     @PostMapping("/v2/Seats/isAvailable")
-    public ResponseEntity<Object> getIsAvailable2(@RequestBody Seats seatsRequest) {
+    public ResponseEntity<Object> getIsAvailable2(@RequestBody SeatsRequestDTO seatsRequestDTO) {
         try {
-            List<Seats> results = seatsService.getSeatsAvailable(seatsRequest.getIsAvailable());
+            Seats seatsRequest = seatsRequestDTO.convertToModel();
+            List<Seats> seats = seatsService.getSeatsAvailable(seatsRequest.getIsAvailable());
+            List<SeatsResponseDTO> results = seats.stream()
+                    .map(Seats::convertToResponse)
+                    .collect(Collectors.toList());
             logger.info(Line + "Logger Start Query " + Line);
             logger.info(results);
             logger.info(Line + "Logger End Query " + Line);
