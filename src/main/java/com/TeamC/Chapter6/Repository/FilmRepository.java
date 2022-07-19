@@ -13,10 +13,10 @@ import java.util.List;
 @Repository
 public interface FilmRepository extends JpaRepository<Film, Long> {
 
-    @Query(value = "SELECT * FROM films WHERE is_playing=?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM films f WHERE is_playing=?1", nativeQuery = true)
     public List<Film> getFilmByStatus(Boolean isPlaying);
 
-    @Query("SELECT f FROM Film f where f.filmName LIKE %:name& ORDER BY f.filmName ASC")
+    @Query("SELECT f FROM Film f where f.filmName LIKE %:name% ORDER BY f.filmName ASC")
     public List<Film> getFilmByName(@Param("name") String name);
 
 }
