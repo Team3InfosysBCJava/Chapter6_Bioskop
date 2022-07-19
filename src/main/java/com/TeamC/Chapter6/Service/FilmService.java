@@ -36,6 +36,10 @@ public class FilmService {
         return filmRepository.findById(id);
     }
 
+    public Film getReferenceById (Long id) {
+        return this.filmRepository.getReferenceById(id);
+    }
+
     //GET BY NAME
     public List<Film> findFilmByName(String name){
         List<Film> filmByName = filmRepository.getFilmByName(name);
