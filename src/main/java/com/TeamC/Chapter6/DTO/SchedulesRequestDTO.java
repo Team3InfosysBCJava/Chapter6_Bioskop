@@ -2,7 +2,7 @@ package com.TeamC.Chapter6.DTO;
 
 
 import com.TeamC.Chapter6.Model.Film;
-import com.TeamC.Chapter6.Model.Schedule;
+import com.TeamC.Chapter6.Model.Schedules;
 import com.TeamC.Chapter6.Model.Seats;
 import lombok.*;
 
@@ -14,7 +14,7 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ScheduleRequestDTO {
+public class SchedulesRequestDTO {
 
     private Integer scheduleId;
     private Film films;
@@ -24,8 +24,8 @@ public class ScheduleRequestDTO {
     private LocalTime showEnd;
     private Integer price;
 
-    public Schedule convertToEntity(){
-        return Schedule.builder().scheduleId(this.scheduleId).films(this.films).seats(this.seats)
+    public Schedules convertToEntity(){
+        return Schedules.builder().scheduleId(this.scheduleId).films(this.films).seats(this.seats)
                 .dateShow(this.dateShow).showStart(this.showStart)
                 .showEnd(this.showEnd).price(this.price)
                 .build();

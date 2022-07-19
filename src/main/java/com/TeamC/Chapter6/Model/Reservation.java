@@ -1,11 +1,10 @@
 package com.TeamC.Chapter6.Model;
 
-import com.TeamC.Chapter6.DTO.BookingResponseDTO;
-import com.TeamC.Chapter6.DTO.BookingResponsePost;
+import com.TeamC.Chapter6.DTO.ReservationResponseDTO;
+import com.TeamC.Chapter6.DTO.ReservationResponsePost;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -28,7 +27,7 @@ public class Reservation {
 
     @ManyToOne
     @JoinColumn(name = "schedule_id")
-    private Schedule schedule;
+    private Schedules schedule;
 
     @CreationTimestamp
     @Column(nullable = false,updatable = false)
@@ -37,18 +36,18 @@ public class Reservation {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
-    public BookingResponseDTO convertToResponse(){
-        return BookingResponseDTO.builder()
+    public ReservationResponseDTO convertToResponse(){
+        return ReservationResponseDTO.builder()
                 .reservation_id(this.reservationId)
                 .user_id(this.getUser().getUserId())
                 .user_name(this.getUser().getUsername())
                 .schedule_id(this.getSchedule().getScheduleId())
                 .email_user(this.getUser().getEmailId())
-                .film_name(this.getSchedule().getFilms().getName())
+                .film_name(this.getSchedule().getFilms().getFilmName())
                 .price(this.getSchedule().getPrice())
                 .studio(this.getSchedule().getSeats().getStudioName())
                 .status_show(this.getSchedule().getFilms().getIsPlaying())
-                .seat_num(this.getSchedule().getSeats().getSeatNumber())
+                .seat_number(this.getSchedule().getSeats().getSeatNumber())
                 .status_seat(this.getSchedule().getSeats().getIsAvailable())
                 .date_film(this.getSchedule().getDateShow())
                 .start_film(this.getSchedule().getShowStart())
@@ -58,8 +57,8 @@ public class Reservation {
                 .build();
     }
 
-    public BookingResponsePost convertToResponsePost(){
-        return BookingResponsePost.builder()
+    public ReservationResponsePost convertToResponsePost(){
+        return ReservationResponsePost.builder()
                 .reservation_id(this.reservationId)
                 .user_id(this.getUser().getUserId())
                 .schedule_id(this.getSchedule().getScheduleId())

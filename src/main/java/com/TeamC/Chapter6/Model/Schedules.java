@@ -1,9 +1,9 @@
 package com.TeamC.Chapter6.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.TeamC.Chapter6.DTO.ScheduleResponseDTO;
-import com.TeamC.Chapter6.DTO.ScheduleResponseNameLikeDTO;
-import com.TeamC.Chapter6.DTO.ScheduleResponsePost;
+import com.TeamC.Chapter6.DTO.SchedulesResponseDTO;
+import com.TeamC.Chapter6.DTO.SchedulesResponseFilm;
+import com.TeamC.Chapter6.DTO.SchedulesResponsePost;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -20,7 +20,8 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @Entity
 @Builder
-public class Schedule {
+@Table(name = "schedules")
+public class Schedules {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,16 +58,16 @@ public class Schedule {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
-    public ScheduleResponseDTO convertToResponse(){
-        return ScheduleResponseDTO.builder()
+    public SchedulesResponseDTO convertToResponse(){
+        return SchedulesResponseDTO.builder()
                 .scheduleId(this.scheduleId).films(this.films)
                 .seats(this.seats).dateShow(this.dateShow)
                 .showStart(this.showStart).showEnd(this.showEnd).price(this.price)
                 .created_at(this.createdAt).updated_at(this.updatedAt).build();
     }
 
-    public ScheduleResponsePost convertToResponsePost(){
-        return ScheduleResponsePost.builder()
+    public SchedulesResponsePost convertToResponsePost(){
+        return SchedulesResponsePost.builder()
                 .scheduleId(this.scheduleId)
                 .filmId(this.films.getFilmId())
                 .seatId(this.seats.getSeatId())
@@ -78,8 +79,8 @@ public class Schedule {
                 .build();
 
     }
-    public ScheduleResponseNameLikeDTO convertToResponseNameLike(){
-        return ScheduleResponseNameLikeDTO.builder()
+    public SchedulesResponseFilm convertToResponseNameLike(){
+        return SchedulesResponseFilm.builder()
                 .filmName(this.getFilms().getFilmName())
                 .studioName(this.getSeats().getStudioName())
                 .price(this.price)

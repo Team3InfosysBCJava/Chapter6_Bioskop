@@ -12,7 +12,7 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ScheduleResponsePost {
+public class SchedulesResponsePost {
 
     private Integer scheduleId;
     private Long filmId;
@@ -33,7 +33,7 @@ public class ScheduleResponsePost {
 
     @Override
     public String toString() {
-        return "ScheduleResponseFilmSeatDTO{" +
+        return "SchedulesResponseFilmSeatDTO{" +
                 "scheduleId=" + scheduleId +
                 ", filmId=" + filmId +
                 ", seatId=" + seatId +

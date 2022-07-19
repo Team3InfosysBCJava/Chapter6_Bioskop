@@ -14,7 +14,7 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ScheduleResponseDTO {
+public class SchedulesResponseDTO {
 
     private Integer scheduleId;
     private Film films;
@@ -34,7 +34,7 @@ public class ScheduleResponseDTO {
 
     @Override
     public String toString() {
-        return "ScheduleResponseDTO{" +
+        return "SchedulesResponseDTO{" +
                 "scheduleId=" + scheduleId +
                 ", films=" + films +
                 ", seats=" + seats +

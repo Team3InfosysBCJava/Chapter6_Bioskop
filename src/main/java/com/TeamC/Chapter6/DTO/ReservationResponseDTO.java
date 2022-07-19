@@ -2,7 +2,6 @@ package com.TeamC.Chapter6.DTO;
 
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -12,7 +11,7 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class BookingResponseDTO {
+public class ReservationResponseDTO {
     private Long reservation_id;
     private Long user_id;
     private String user_name;
@@ -22,7 +21,7 @@ public class BookingResponseDTO {
     private Integer schedule_id;
     private String studio;
     private Boolean status_show;
-    private Long seat_num;
+    private Integer seat_number;
     private Boolean status_seat;
     private LocalDate date_film;
 
@@ -36,7 +35,7 @@ public class BookingResponseDTO {
 
     @Override
     public String toString() {
-        return "BookingResponseDTO{" +
+        return "ReservationResponseDTO{" +
                 "reservation_id=" + reservation_id +
                 ", user_id=" + user_id +
                 ", schedule_id=" + schedule_id +
@@ -46,7 +45,7 @@ public class BookingResponseDTO {
                 ", price=" + price +
                 ", studio='" + studio + '\'' +
                 ", status_show=" + status_show +
-                ", seat_num=" + seat_num +
+                ", seat_number=" + seat_number +
                 ", status_seat=" + status_seat +
                 ", date_film=" + date_film +
                 ", start_film=" + start_film +

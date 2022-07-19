@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class BookingResponsePost {
+public class ReservationResponsePost {
     private Long reservation_id;
     private Integer schedule_id;
     private Long user_id;
