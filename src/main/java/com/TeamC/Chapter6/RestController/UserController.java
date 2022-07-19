@@ -8,8 +8,9 @@ import com.TeamC.Chapter6.Response.ResponseHandler;
 import com.TeamC.Chapter6.Service.UserServiceImplements;
 import lombok.AllArgsConstructor;
 import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -81,14 +82,12 @@ public class UserController {
                     .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + users_Id));
             UserResponseDTO userget = userResult.convertToResponse();
             //           Map<UserResponseDTO> user = new HashMap<>();
-            List<Map<String, Object>> maps = new ArrayList<>();
-
+            // List<Map<String, Object>> maps = new ArrayList<>();
             logger.info("==================== Logger Start Find By ID Users ====================");
             logger.info("ID       : " + userResult.getUserId());
             logger.info("Username : " + userResult.getUsername());
             logger.info("Email    : " + userResult.getEmailId());
             logger.info("Password : " + userResult.getPassword());
-
 //            user.put("ID             ", userResult.getUserId());
 //            user.put("Username       ", userResult.getUsername());
 //            user.put("Email          ", userResult.getEmailId());
@@ -159,11 +158,11 @@ public class UserController {
         try {
             User user = userServiceImplements.getUserById(users_Id)
                     .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + users_Id));
-            UserResponseDTO userget = user.convertToResponse();
             user.setUsername(userDetails.getUsername());
             user.setEmailId(userDetails.getEmailId());
             user.setPassword(userDetails.getPassword());
-            User updatedUser = userRepository.save(user);
+            userRepository.save(user);
+            UserResponseDTO userget = user.convertToResponse();
 
             logger.info("==================== Logger Start Update Users ====================");
             logger.info("User Data Successfully Updated !");

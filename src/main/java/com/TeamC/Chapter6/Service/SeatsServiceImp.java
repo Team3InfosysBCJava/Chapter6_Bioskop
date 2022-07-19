@@ -3,13 +3,10 @@ package com.TeamC.Chapter6.Service;
 import com.TeamC.Chapter6.Model.Seats;
 import com.TeamC.Chapter6.Repository.SeatsRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
-import javax.print.attribute.standard.PageRanges;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;

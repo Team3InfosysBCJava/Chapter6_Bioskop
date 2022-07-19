@@ -1,6 +1,6 @@
 package com.TeamC.Chapter6.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import com.TeamC.Chapter6.DTO.SchedulesResponseDTO;
 import com.TeamC.Chapter6.DTO.SchedulesResponseFilm;
 import com.TeamC.Chapter6.DTO.SchedulesResponsePost;

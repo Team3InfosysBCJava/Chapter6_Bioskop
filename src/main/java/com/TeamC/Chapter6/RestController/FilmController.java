@@ -50,7 +50,7 @@ public class FilmController {
             Optional<Film> films = filmService.findFilmById(filmId);
             Film filmget = films.get();
             FilmResponseDTO filmsResponseDTO = filmget.convertToResponse();
-            return ResponseHandler.generateResponse("Succes Get", HttpStatus.OK, filmget);
+            return ResponseHandler.generateResponse("Succes Get", HttpStatus.OK, filmsResponseDTO);
     }
 
 
