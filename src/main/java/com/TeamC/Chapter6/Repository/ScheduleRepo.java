@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface ScheduleRepo extends JpaRepository {
+public interface ScheduleRepo extends JpaRepository<Schedule, Integer> {
 
     @Query("Select s from Schedule s where s.films.name =?1")
     public List<Schedule> getScheduleByFilmName(String name);

@@ -151,9 +151,9 @@ public class ScheduleControllerDTO {
      *throws ResourceNotFoundException if film name is not found
      */
     @PostMapping("/schedule/byfilmnameLike")
-    public ResponseEntity<Object> findScheduleByFilmName(@RequestBody Films film) {
+    public ResponseEntity<Object> findScheduleByFilmName(@RequestBody Film film) {
         try {
-            List<Schedule> scheduleByFilmName = scheduleService.getScheduleByFilmNameLike(film.getName());
+            List<Schedule> scheduleByFilmName = scheduleService.getScheduleByFilmNameLike(film.getFilmName());
             List<ScheduleResponseNameLikeDTO> results = scheduleByFilmName.stream()
                     .map(Schedule::convertToResponseNameLike)
                     .collect(Collectors.toList());

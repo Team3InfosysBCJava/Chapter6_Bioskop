@@ -1,7 +1,9 @@
 package com.TeamC.Chapter6.DTO;
 
 
+import com.TeamC.Chapter6.Model.Film;
 import com.TeamC.Chapter6.Model.Schedule;
+import com.TeamC.Chapter6.Model.Seats;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -15,7 +17,7 @@ import java.time.LocalTime;
 public class ScheduleRequestDTO {
 
     private Integer scheduleId;
-    private Films films;
+    private Film films;
     private Seats seats;
     private LocalDate dateShow;
     private LocalTime showStart;

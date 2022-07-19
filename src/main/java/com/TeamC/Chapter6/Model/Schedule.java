@@ -1,6 +1,6 @@
 package com.TeamC.Chapter6.Model;
 
-
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.TeamC.Chapter6.DTO.ScheduleResponseDTO;
 import com.TeamC.Chapter6.DTO.ScheduleResponseNameLikeDTO;
 import com.TeamC.Chapter6.DTO.ScheduleResponsePost;
@@ -29,12 +29,11 @@ public class Schedule {
 
     @ManyToOne
     @JoinColumn(name = "film_id")
-    private Films films;
+    private Film films;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "date_show")
     private LocalDate dateShow;
-
 
     @ManyToOne
     @JoinColumn(name = "seat_id")
@@ -81,7 +80,7 @@ public class Schedule {
     }
     public ScheduleResponseNameLikeDTO convertToResponseNameLike(){
         return ScheduleResponseNameLikeDTO.builder()
-                .filmName(this.getFilms().getName())
+                .filmName(this.getFilms().getFilmName())
                 .studioName(this.getSeats().getStudioName())
                 .price(this.price)
                 .created_at(this.createdAt)

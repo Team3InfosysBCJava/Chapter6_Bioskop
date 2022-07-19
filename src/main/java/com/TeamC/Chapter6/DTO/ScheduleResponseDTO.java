@@ -1,5 +1,7 @@
 package com.TeamC.Chapter6.DTO;
 
+import com.TeamC.Chapter6.Model.Film;
+import com.TeamC.Chapter6.Model.Seats;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
@@ -15,7 +17,7 @@ import java.time.LocalTime;
 public class ScheduleResponseDTO {
 
     private Integer scheduleId;
-    private Films films;
+    private Film films;
     private Seats seats;
 
     @JsonFormat(pattern = "yyyy-MM-dd")

@@ -26,7 +26,7 @@ public class ScheduleController {
     private static final String Line = "============================================================";
 
     private ScheduleService scheduleService;
-    private FilmsService filmsService;
+    private FilmService filmsService;
     private SeatsService seatsService;
 
     /**
@@ -65,7 +65,7 @@ public class ScheduleController {
     @PostMapping("/schedule")
     public ResponseEntity<Object>createSchedule(@RequestBody Schedule schedule){
         try{
-            Films films = filmsService.getReferenceById(schedule.getFilms().getFilmId());
+            Film films = filmsService.getReferenceById(schedule.getFilms().getFilmId());
             Seats seats = seatsService.getReferenceById(schedule.getSeats().getSeatId());
             schedule.setFilms(films);
             schedule.setSeats(seats);
@@ -117,7 +117,7 @@ public class ScheduleController {
             Optional<Schedule> scheduleByid = scheduleService.getScheduleById(id);
             Schedule schedule = scheduleByid.get();
 //        Schedule updateSchedule = scheduleService.getReferenceById(scheduleDetails.getScheduleId());
-            Films films = filmsService.getReferenceById(scheduleDetails.getFilms().getFilmId());
+            Film films = filmsService.getReferenceById(scheduleDetails.getFilms().getFilmId());
             Seats seats = seatsService.getReferenceById(scheduleDetails.getSeats().getSeatId());
             schedule.setSeats(seats);
             schedule.setFilms(films);
@@ -171,9 +171,9 @@ public class ScheduleController {
      *  throws ExceptionHandler if film name is not found
      */
     @PostMapping("/schedule/byfilmname")
-    public ResponseEntity<Object> findScheduleByFilmName(@RequestBody Films film){
+    public ResponseEntity<Object> findScheduleByFilmName(@RequestBody Film film){
         try {
-            List<Schedule> scheduleByFilmName = scheduleService.getScheduleByFilmName(film.getName());
+            List<Schedule> scheduleByFilmName = scheduleService.getScheduleByFilmName(film.getFilmName());
             List<ScheduleResponseNameLikeDTO> results = scheduleByFilmName.stream()
                     .map(Schedule::convertToResponseNameLike)
                     .collect(Collectors.toList());
@@ -198,9 +198,9 @@ public class ScheduleController {
      *throws ResourceNotFoundException if film name is not found
      */
     @PostMapping("/schedule/byfilmnameLike")
-    public ResponseEntity<Object> findScheduleByFilmNameLike(@RequestBody Films film){
+    public ResponseEntity<Object> findScheduleByFilmNameLike(@RequestBody Film film){
         try {
-            List<Schedule> scheduleByFilmName = scheduleService.getScheduleByFilmNameLike(film.getName());
+            List<Schedule> scheduleByFilmName = scheduleService.getScheduleByFilmNameLike(film.getFilmName());
             List<ScheduleResponseNameLikeDTO> results = scheduleByFilmName.stream()
                     .map(Schedule::convertToResponseNameLike)
                     .collect(Collectors.toList());
