@@ -3,6 +3,7 @@ package com.TeamC.Chapter6.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,8 +13,11 @@ public class ResponseHandler {
         map.put("message", message);
         map.put("status",status.value());
         map.put("data",responseObj);
+
         return new ResponseEntity<Object>(map,status);
     }
 }
+
+
 
 
