@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ScheduleResponseNameLikeDTO {
+public class SchedulesResponseFilm {
 
     private String filmName;
     private String studioName;
@@ -19,7 +19,7 @@ public class ScheduleResponseNameLikeDTO {
 
     @Override
     public String toString() {
-        return "ScheduleResponseNameLikeDTO{" +
+        return "SchedulesResponseFilm{" +
                 "filmName='" + filmName + '\'' +
                 ", studioName='" + studioName + '\'' +
                 ", price=" + price +

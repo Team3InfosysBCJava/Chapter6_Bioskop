@@ -1,10 +1,10 @@
 package com.TeamC.Chapter6.RestController;
 
 
-import com.TeamC.Chapter6.DTO.ScheduleRequestDTO;
-import com.TeamC.Chapter6.DTO.ScheduleResponseDTO;
-import com.TeamC.Chapter6.DTO.ScheduleResponseNameLikeDTO;
-import com.TeamC.Chapter6.DTO.ScheduleResponsePost;
+import com.TeamC.Chapter6.DTO.SchedulesRequestDTO;
+import com.TeamC.Chapter6.DTO.SchedulesResponseDTO;
+import com.TeamC.Chapter6.DTO.SchedulesResponseFilm;
+import com.TeamC.Chapter6.DTO.SchedulesResponsePost;
 import com.TeamC.Chapter6.Helper.ExceptionHandler;
 import com.TeamC.Chapter6.Model.*;
 import com.TeamC.Chapter6.Response.ResponseHandler;
@@ -22,37 +22,33 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping("/teamC/v1/DTO")
 @AllArgsConstructor
-public class ScheduleControllerDTO {
+public class SchedulesControllerDTO {
 
-    private static final Logger logger = LogManager.getLogger(ScheduleControllerDTO.class);
+    private static final Logger logger = LogManager.getLogger(SchedulesControllerDTO.class);
     private static final String Line = "============================================================";
 
-    private ScheduleService scheduleService;
+    private SchedulesService SchedulesService;
 
     /**
-     *Get all of data from schedules table
+     *Get all of data from Scheduless table
      */
-    @GetMapping("/schedule")
-    public ResponseEntity<Object> ScheduleList(){
+    @GetMapping("/Schedules")
+    public ResponseEntity<Object> SchedulesList(){
         try {
-            List<Schedule> result = scheduleService.getAll();
-            List<ScheduleResponseDTO> scheduleMaps = new ArrayList<>();
-            logger.info(Line + "Logger Start Find All Schedule" + Line);
-            for (Schedule dataResult:result){
-                Map<String,Object> schedule = new HashMap<>();
+            List<Schedules> result = SchedulesService.getAll();
+            List<SchedulesResponseDTO> SchedulesMaps = new ArrayList<>();
+            logger.info(Line + "Logger Start Find All Schedules" + Line);
+            for (Schedules dataResult:result){
                 logger.info("================================");
-                schedule.put("Schedule id : ", dataResult.getScheduleId());
-                schedule.put("Film : ", dataResult.getFilms());
-                schedule.put("Seat : ", dataResult.getSeats());
-                logger.info("Schedule id :"+dataResult.getScheduleId());
+                logger.info("Schedules id :"+dataResult.getScheduleId());
                 logger.info("Film :"+dataResult.getFilms());
                 logger.info("Seats :"+dataResult.getSeats());
                 logger.info("================================");
-                ScheduleResponseDTO scheduleDTO = dataResult.convertToResponse();
-                scheduleMaps.add(scheduleDTO);
+                SchedulesResponseDTO SchedulesDTO = dataResult.convertToResponse();
+                SchedulesMaps.add(SchedulesDTO);
             }
-            logger.info(Line + "Logger End Find All Schedule" + Line);
-            return ResponseHandler.generateResponse("Successfully  getAll data!", HttpStatus.OK, scheduleMaps);
+            logger.info(Line + "Logger End Find All Schedules" + Line);
+            return ResponseHandler.generateResponse("Successfully  getAll data!", HttpStatus.OK, SchedulesMaps);
         }
         catch (ExceptionHandler e) {
             logger.error("------------------------------------");
@@ -63,18 +59,18 @@ public class ScheduleControllerDTO {
     }
 
     /**
-     *create new schedule into schedules table
+     *create new Schedules into Scheduless table
      * throws ResourceNotFoundException if bad request happened
      */
-    @PostMapping("/schedule")
-    public ResponseEntity<Object> createScheduleDTO(@RequestBody ScheduleRequestDTO scheduleRequestDTO) {
+    @PostMapping("/Schedules")
+    public ResponseEntity<Object> createSchedulesDTO(@RequestBody SchedulesRequestDTO SchedulesRequestDTO) {
         try {
-            Schedule scheduleCreate = scheduleRequestDTO.convertToEntity();
-            scheduleService.createSchedule(scheduleCreate);
-            ScheduleResponsePost result = scheduleCreate.convertToResponsePost();
-            logger.info(Line + " Logger Start Created New Schedule" + Line);
+            Schedules SchedulesCreate = SchedulesRequestDTO.convertToEntity();
+            SchedulesService.createSchedules(SchedulesCreate);
+            SchedulesResponsePost result = SchedulesCreate.convertToResponsePost();
+            logger.info(Line + " Logger Start Created New Schedules" + Line);
             logger.info(result);
-            logger.info(Line + " Logger Stop Create New Schedule" + Line);
+            logger.info(Line + " Logger Stop Create New Schedules" + Line);
             return ResponseHandler.generateResponse("Successfully added data!", HttpStatus.CREATED, result);
         } catch (Exception e) {
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND, "Bad Request!!");
@@ -82,18 +78,19 @@ public class ScheduleControllerDTO {
     }
 
     /**
-     * update schedule
+     * update Schedules
      * throws ResourceNotFoundException if data not found
      */
-    @PutMapping("/schedule/{id}")
-    public ResponseEntity<Object> updateScheduleDTO(@PathVariable Integer id, @RequestBody ScheduleRequestDTO scheduleRequestDTO) {
+    @PutMapping("/Schedules/{id}")
+    public ResponseEntity<Object> updateSchedulesDTO(@PathVariable Integer id, @RequestBody SchedulesRequestDTO SchedulesRequestDTO) {
         try {
-            Schedule schedule = scheduleRequestDTO.convertToEntity();
-            schedule.setScheduleId(id);
-            Schedule scheduleUpdate = scheduleService.updateSchedule(schedule);
-            ScheduleResponseDTO result = scheduleUpdate.convertToResponse();
+
+            Schedules Schedules = SchedulesRequestDTO.convertToEntity();
+            Schedules.setScheduleId(id);
+            Schedules SchedulesUpdate = SchedulesService.updateSchedules(Schedules);
+            SchedulesResponseDTO result = SchedulesUpdate.convertToResponse();
             logger.info(Line + " Logger Start Updated Data" + Line);
-            logger.info("Update : " + scheduleUpdate);
+            logger.info("Update : " + SchedulesUpdate);
             logger.info(Line + " Logger Finish Updated Data" + Line);
             return ResponseHandler.generateResponse("Data Updated!", HttpStatus.CREATED, result);
         } catch (Exception e) {
@@ -104,17 +101,17 @@ public class ScheduleControllerDTO {
         }
     }
     /**
-     * delete schedule by id
+     * delete Schedules by id
      * throws ResourceNotFoundException if data is not found
      */
-    @DeleteMapping("/schedule/{id}")
+    @DeleteMapping("/Schedules/{id}")
     public ResponseEntity<Object> deleteBooking(@PathVariable Integer id) {
         try {
-            scheduleService.deleteScheduleById(id);
+            SchedulesService.deleteSchedulesById(id);
             Boolean result = Boolean.TRUE;
-            logger.info(Line + " Logger Start Delete Schedule " + Line);
-            logger.info("Success Delete Schedule by ID :" + result);
-            logger.info(Line + " Logger End Delete Schedule " + Line);
+            logger.info(Line + " Logger Start Delete Schedules " + Line);
+            logger.info("Success Delete Schedules by ID :" + result);
+            logger.info(Line + " Logger End Delete Schedules " + Line);
             return ResponseHandler.generateResponse("Success Delete Booking by ID", HttpStatus.OK, result);
         } catch (ExceptionHandler e) {
             logger.error("------------------------------------");
@@ -124,19 +121,19 @@ public class ScheduleControllerDTO {
         }
     }
     /**
-     *Get Schedule by Schedule id
+     *Get Schedules by Schedules id
      * throws ResourceNotFoundException if data is not found
      */
-    @GetMapping("/schedule/{id}")
-    public ResponseEntity<Object> getscheduleById(@PathVariable Integer id) {
+    @GetMapping("/Schedules/{id}")
+    public ResponseEntity<Object> getSchedulesById(@PathVariable Integer id) {
         try {
-            Optional<Schedule> schedule = scheduleService.getScheduleById(id);
-            Schedule scheduleget = schedule.get();
-            ScheduleResponseDTO result = scheduleget.convertToResponse();
-            logger.info(Line + " Logger Start Find Schedule ById " + Line);
+            Optional<Schedules> Schedules = SchedulesService.getSchedulesById(id);
+            Schedules Schedulesget = Schedules.get();
+            SchedulesResponseDTO result = Schedulesget.convertToResponse();
+            logger.info(Line + " Logger Start Find Schedules ById " + Line);
             logger.info("GetById");
             logger.info(result);
-            logger.info(Line + " Logger End Find Schedule By Id");
+            logger.info(Line + " Logger End Find Schedules By Id");
             return ResponseHandler.generateResponse("Successfully retrivied data!", HttpStatus.OK, result);
         } catch (ExceptionHandler e) {
             logger.error("------------------------------------");
@@ -150,16 +147,16 @@ public class ScheduleControllerDTO {
      * Query Find colum Film,Studio Name, Price
      *throws ResourceNotFoundException if film name is not found
      */
-    @PostMapping("/schedule/byfilmnameLike")
-    public ResponseEntity<Object> findScheduleByFilmName(@RequestBody Film film) {
+    @PostMapping("/Schedules/byfilmnameLike")
+    public ResponseEntity<Object> findSchedulesByFilmName(@RequestBody Film film) {
         try {
-            List<Schedule> scheduleByFilmName = scheduleService.getScheduleByFilmNameLike(film.getFilmName());
-            List<ScheduleResponseNameLikeDTO> results = scheduleByFilmName.stream()
-                    .map(Schedule::convertToResponseNameLike)
+            List<Schedules> SchedulesByFilmName = SchedulesService.getSchedulesByFilmNameLike(film.getFilmName());
+            List<SchedulesResponseFilm> results = SchedulesByFilmName.stream()
+                    .map(Schedules::convertToResponseNameLike)
                     .collect(Collectors.toList());
-            logger.info(Line + "Logger Start Create New Schedule" + Line);
+            logger.info(Line + "Logger Start Create New Schedules" + Line);
             logger.info("Get Response :" + results);
-            logger.info(Line + "Logger Finish Create New Schedule" + Line);
+            logger.info(Line + "Logger Finish Create New Schedules" + Line);
             return ResponseHandler.generateResponse("Success" ,HttpStatus.CREATED,results);
         } catch (Exception e) {
             logger.error("------------------------------------");

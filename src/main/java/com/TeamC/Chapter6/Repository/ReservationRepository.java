@@ -9,20 +9,20 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface BookingRepository extends JpaRepository<Reservation,Long> {
-    @Query("Select r from Reservation r where r.schedule.films.name like %:name%")
-    public List<Reservation> getBookingByFilmName(@Param("name")String name);
+public interface ReservationRepository extends JpaRepository<Reservation,Long> {
+    @Query("Select r from Reservation r where r.schedule.films.filmName like %:name%")
+    public List<Reservation> getReservationByFilmName(@Param("name")String name);
 
     @Query("SELECT r FROM Reservation r WHERE CONCAT(r.reservationId, ' ', " +
-            "r.schedule.films.name, ' ', r.schedule.films.isPlaying, ' ', " +
+            "r.schedule.films.filmName, ' ', r.schedule.films.isPlaying, ' ', " +
             "r.schedule.scheduleId, ' ', r.schedule.dateShow, ' ', r.schedule.showStart, ' ', r.schedule.showEnd, ' ', r.schedule.price, ' ', " +
             "r.schedule.seats.seatId, ' ', r.schedule.seats.seatNumber, ' ', r.schedule.seats.studioName, ' ', r.schedule.seats.isAvailable, ' ', " +
             "r.user.userId, ' ', r.user.username, ' ', r.user.emailId) LIKE %?1% ORDER BY r.reservationId ASC")
     public Page<Reservation> search(String keyword, Pageable pageable);
 
-    @Query("Select r from Reservation r where r.schedule.films.name like %:name% ORDER BY r.schedule.films.name ASC")
-    public Page<Reservation> getBookingFilm(@Param("name")String name , Pageable pageable);
+    @Query("Select r from Reservation r where r.schedule.films.filmName like %:name% ORDER BY r.schedule.films.filmName ASC")
+    public Page<Reservation> getReservationFilm(@Param("name")String name , Pageable pageable);
 
     @Query("Select r from Reservation r where r.reservationId =?1 ORDER BY r.reservationId ASC")
-    public Page<Reservation> getBookingId(Long id , Pageable pageable);
+    public Page<Reservation> getReservationId(Long id , Pageable pageable);
 }
