@@ -11,6 +11,7 @@
 	<groupId>com.TeamC</groupId>
 	<artifactId>Chapter6</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 	<name>Chapter6</name>
 	<description>Project Chapter 6</description>
 	<properties>
@@ -25,7 +26,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
