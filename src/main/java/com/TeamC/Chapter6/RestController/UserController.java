@@ -22,7 +22,7 @@ import java.util.Map;
 
 
 @RestController
-@RequestMapping("/teamC/v1/")
+//@RequestMapping("/teamC/v1/")
 @AllArgsConstructor
 public class UserController {
 
@@ -46,12 +46,12 @@ public class UserController {
 
                 logger.info("-------------------------");
                 logger.info("ID       : " + userData.getUserId());
-                logger.info("Username : " + userData.getUsername());
+                logger.info("Username : " + userData.getUserName());
                 logger.info("Email    : " + userData.getEmailId());
                 logger.info("Password : " + userData.getPassword());
 
                 user.put("ID            ", userData.getUserId());
-                user.put("Username      ", userData.getUsername());
+                user.put("Username      ", userData.getUserName());
                 user.put("Email         ", userData.getEmailId());
                 user.put("Password      ", userData.getPassword());
                 maps.add(user);
@@ -85,7 +85,7 @@ public class UserController {
             // List<Map<String, Object>> maps = new ArrayList<>();
             logger.info("==================== Logger Start Find By ID Users ====================");
             logger.info("ID       : " + userResult.getUserId());
-            logger.info("Username : " + userResult.getUsername());
+            logger.info("Username : " + userResult.getUserName());
             logger.info("Email    : " + userResult.getEmailId());
             logger.info("Password : " + userResult.getPassword());
 //            user.put("ID             ", userResult.getUserId());
@@ -112,7 +112,7 @@ public class UserController {
      * @param user
      * @return
      */
-    @PostMapping("/users")
+    @PostMapping("/create-user")
     public ResponseEntity <Object> createUser(@RequestBody User user) {
 
         try {
@@ -125,12 +125,12 @@ public class UserController {
             logger.info("==================== Logger Start Create Users ====================");
             logger.info("User Successfully Created !");
             logger.info("ID       : " + userResult.getUserId());
-            logger.info("Username : " + userResult.getUsername());
+            logger.info("Username : " + userResult.getUserName());
             logger.info("Email    : " + userResult.getEmailId());
             logger.info("Password : " + userResult.getPassword());
 
             userMap.put("ID             ", userResult.getUserId());
-            userMap.put("Username       ", userResult.getUsername());
+            userMap.put("Username       ", userResult.getUserName());
             userMap.put("Email          ", userResult.getEmailId());
             userMap.put("Password       ", userResult.getPassword());
             maps.add(userMap);
@@ -153,12 +153,12 @@ public class UserController {
      * @param userDetails
      * @return
      */
-    @PutMapping("/users/{users_Id}")
+    @PutMapping("/users/update/{users_Id}")
     public ResponseEntity<Object> updateUser(@PathVariable Long users_Id, @RequestBody User userDetails){
         try {
             User user = userServiceImplements.getUserById(users_Id)
                     .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + users_Id));
-            user.setUsername(userDetails.getUsername());
+            user.setUserName(userDetails.getUserName());
             user.setEmailId(userDetails.getEmailId());
             user.setPassword(userDetails.getPassword());
             userRepository.save(user);
@@ -167,7 +167,7 @@ public class UserController {
             logger.info("==================== Logger Start Update Users ====================");
             logger.info("User Data Successfully Updated !");
             logger.info("ID       : " + user.getUserId());
-            logger.info("Username : " + user.getUsername());
+            logger.info("Username : " + user.getUserName());
             logger.info("Email    : " + user.getEmailId());
             logger.info("Password : " + user.getPassword());
             logger.info("==================== Logger End Update Users   ====================");
@@ -188,7 +188,7 @@ public class UserController {
      * @param users_Id
      * @return
      */
-    @DeleteMapping("/users/{users_Id}")
+    @DeleteMapping("/users/delete/{users_Id}")
     public ResponseEntity<Object> deleteUser(@PathVariable Long users_Id){
         try {
             userServiceImplements.deleteUserById(users_Id);

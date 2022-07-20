@@ -1,26 +1,29 @@
 package com.TeamC.Chapter6.Security;
 
 import com.TeamC.Chapter6.Model.User;
+import com.TeamC.Chapter6.Repository.UserRepository;
 import com.TeamC.Chapter6.Service.UserServiceImplements;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Service
 public class MyUserDetailService implements UserDetailsService {
-    UserServiceImplements userServiceImplements;
+
+    @Autowired
+    UserRepository userRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 
-        Optional<User> user = userServiceImplements.getUserById(email); //*
+        Optional<User> user = userRepository.findByUserName(userName); //*
 
-        return null;
+        user.orElseThrow(() -> new UsernameNotFoundException("Not Found " + userName));
+
+        return user.map(MyUserDetails::new).get();
     }
 }
-
-
-//BELUM ADA METHOD DIMANA DIPAKAI UNTUK GET ONE BY USERNAME
-//BELOM ADA KOLOM USERNAME DI DATABASE
-//BELOM ADA KOLOM ROLES DI DATABASE

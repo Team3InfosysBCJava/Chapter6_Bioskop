@@ -21,7 +21,7 @@ public class UserRequestDTO {
 
 
     public User convertToEntity(){
-        return User.builder().userId(this.user_id).username(this.user_name).emailId(this.email_id)
+        return User.builder().userId(this.user_id).userName(this.user_name).emailId(this.email_id)
                 .password(this.pass_word).build();
 
 
