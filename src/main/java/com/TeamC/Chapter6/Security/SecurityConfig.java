@@ -1,5 +1,7 @@
 package com.TeamC.Chapter6.Security;
 
+import com.TeamC.Chapter6.Model.Filter.CustomAuthenticationFilter;
+import com.TeamC.Chapter6.Model.Filter.CustomAuthorizationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.SecurityBuilder;
@@ -34,9 +36,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        CustomAuthenticationFilter customAuthenticationFilter = new CustomAuthenticationFilter(authenticationManagerBean());
-//        customAuthenticationFilter.setFilterProcessesUrl("/login");
-
+        CustomAuthenticationFilter customAuthenticationFilter = new CustomAuthenticationFilter(authenticationManagerBean());
+        customAuthenticationFilter.setFilterProcessesUrl("/login");
         http.csrf().disable();
         http.authorizeRequests()
                 //ADMIN
@@ -49,9 +50,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //ALL VISITOR ACCESS
                 .antMatchers("/**").permitAll()
                 .and().formLogin();
-
-//        http.addFilter(customAuthenticationFilter);
-//        http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
+        http.addFilter(customAuthenticationFilter);
+        http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
 
     }
 
