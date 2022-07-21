@@ -13,6 +13,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -22,13 +23,13 @@ import java.util.Map;
 
 
 @RestController
-//@RequestMapping("/teamC/v1/")
 @AllArgsConstructor
 public class UserController {
 
     private static final Logger logger = LogManager.getLogger(UserController.class);
     private final UserServiceImplements userServiceImplements;
     private final UserRepository userRepository;
+    private PasswordEncoder passwordEncoder;
 
     /***
      * Get All Users, Logger And Response DONE
@@ -160,8 +161,8 @@ public class UserController {
                     .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + users_Id));
             user.setUserName(userDetails.getUserName());
             user.setEmailId(userDetails.getEmailId());
-            user.setPassword(userDetails.getPassword());
-            userRepository.save(user);
+            user.setPassword(passwordEncoder.encode(userDetails.getPassword()));
+            userServiceImplements.updateUser(user);
             UserResponseDTO userget = user.convertToResponse();
 
             logger.info("==================== Logger Start Update Users ====================");
