@@ -86,7 +86,6 @@ public class UserServiceImplements implements UserService {
         if (optionalUser.isEmpty()) {
             throw new ResourceNotFoundException("User not exist with id :" + user.getUserId());
         }
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return this.userRepository.save(user);
     }
 
