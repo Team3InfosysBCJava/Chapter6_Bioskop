@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -33,6 +34,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+//        CustomAuthenticationFilter customAuthenticationFilter = new CustomAuthenticationFilter(authenticationManagerBean());
+//        customAuthenticationFilter.setFilterProcessesUrl("/login");
+
         http.csrf().disable();
         http.authorizeRequests()
                 //ADMIN
@@ -40,11 +44,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(PUT,"/films/update/{filmId}").hasRole("ADMIN")
                 .antMatchers(DELETE,"/films/delete/{filmId}").hasRole("ADMIN")
                 //USER
-                .antMatchers(PUT,"/users/update/{users_Id}").hasRole("USER")
-                .antMatchers(DELETE,"/users/delete/{users_Id}").hasRole("USER")
+                .antMatchers(PUT,"/users/update/{users_Id}").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(DELETE,"/users/delete/{users_Id}").hasAnyRole("CUSTOMER","ADMIN")
                 //ALL VISITOR ACCESS
                 .antMatchers("/**").permitAll()
                 .and().formLogin();
+
+//        http.addFilter(customAuthenticationFilter);
+//        http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
+
     }
 
     @Bean
