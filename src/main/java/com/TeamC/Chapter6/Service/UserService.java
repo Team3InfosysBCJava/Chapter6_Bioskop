@@ -20,4 +20,5 @@ public interface UserService {
     List<User> getUserByIsPlaying(String name);
 
     Page<User> search(String keyword, Integer pageNumber);
+    User getUserByUsername(String username);
 }

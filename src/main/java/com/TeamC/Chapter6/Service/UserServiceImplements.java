@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -124,6 +125,12 @@ public class UserServiceImplements implements UserService {
             return userRepository.findAll(PageRequest.of(pageNumber, 10,Sort.by("userId")));
 
         }
+    }
+
+    @Override
+    public User getUserByUsername(String userName) {
+        return userRepository.findByUserName(userName)
+                .orElseThrow(() -> new UsernameNotFoundException("Not Found " + userName));
     }
 
 

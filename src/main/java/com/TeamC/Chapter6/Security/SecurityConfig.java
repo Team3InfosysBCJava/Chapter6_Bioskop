@@ -47,8 +47,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //USER
                 .antMatchers(PUT,"/users/update/{users_Id}").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(DELETE,"/users/delete/{users_Id}").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(GET,"/reports/print/reservations/:userName").hasAnyRole("CUSTOMER","ADMIN")
                 //ALL VISITOR ACCESS
-                .antMatchers("/**").permitAll()
+                .antMatchers("/**").hasAnyRole("ADMIN","CUSTOMER","USER")
                 .and().formLogin();
         http.addFilter(customAuthenticationFilter);
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
