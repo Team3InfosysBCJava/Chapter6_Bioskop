@@ -55,7 +55,7 @@ public class FilmController {
 
 
     //READ BY NAME
-    @GetMapping("/films/:name")
+    @GetMapping("/films/name")
     public ResponseEntity<Object> getFilmByName(String name) {
         List<Film> film = filmService.findFilmByName(name);
         List<FilmResponseDTO> result = new ArrayList<>();

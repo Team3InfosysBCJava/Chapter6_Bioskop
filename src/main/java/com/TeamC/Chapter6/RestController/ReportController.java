@@ -69,7 +69,7 @@ public class ReportController {
         response.getOutputStream().close();
     }
 
-    @GetMapping("/print/reservations/:userName")
+    @GetMapping("/print/reservations/byuserName")
     public void getProductUReportReservationByUsername(String userName) throws Exception{
         response.setContentType("application/pdf");
         response.setHeader("Content-Disposition", "attachment; filename=\"ReservationsByName.pdf\"");
