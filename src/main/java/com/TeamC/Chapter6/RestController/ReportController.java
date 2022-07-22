@@ -49,11 +49,11 @@ public class ReportController {
         response.getOutputStream().close();
     }
 
-    @GetMapping("/print/reservation")
-    public void getProductUReportReservation() throws Exception{
+    @GetMapping("/print/reservations")
+    public void getProductUReportReservations() throws Exception{
         response.setContentType("application/pdf");
-        response.setHeader("Content-Disposition", "attachment; filename=\"Reservation.pdf\"");
-        JasperPrint jasperPrint = reportService.generateJasperPrintReservation();
+        response.setHeader("Content-Disposition", "attachment; filename=\"Reservations.pdf\"");
+        JasperPrint jasperPrint = reportService.generateJasperPrintReservations();
         JasperExportManager.exportReportToPdfStream(jasperPrint, response.getOutputStream());
         response.getOutputStream().flush();
         response.getOutputStream().close();
