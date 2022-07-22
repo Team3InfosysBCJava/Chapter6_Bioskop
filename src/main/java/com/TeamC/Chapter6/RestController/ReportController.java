@@ -29,6 +29,16 @@ public class ReportController {
         response.getOutputStream().close();
     }
 
+    @GetMapping("/print/film/{id}")
+    public void getProductUReportFilmByid(Long filmId) throws Exception{
+        response.setContentType("application/pdf");
+        response.setHeader("Content-Disposition", "attachment; filename=\"FilmById.pdf\"");
+        JasperPrint jasperPrint = reportService.generateJasperPrintFilmBy(filmId);
+        JasperExportManager.exportReportToPdfStream(jasperPrint, response.getOutputStream());
+        response.getOutputStream().flush();
+        response.getOutputStream().close();
+    }
+
     @GetMapping("/print/user")
     public void getProductUserReport() throws Exception{
         response.setContentType("application/pdf");
@@ -54,6 +64,16 @@ public class ReportController {
         response.setContentType("application/pdf");
         response.setHeader("Content-Disposition", "attachment; filename=\"Reservations.pdf\"");
         JasperPrint jasperPrint = reportService.generateJasperPrintReservations();
+        JasperExportManager.exportReportToPdfStream(jasperPrint, response.getOutputStream());
+        response.getOutputStream().flush();
+        response.getOutputStream().close();
+    }
+
+    @GetMapping("/print/reservations/:userName")
+    public void getProductUReportReservationByUsername(String userName) throws Exception{
+        response.setContentType("application/pdf");
+        response.setHeader("Content-Disposition", "attachment; filename=\"ReservationsByName.pdf\"");
+        JasperPrint jasperPrint = reportService.generateJasperPrintReservationBy(userName);
         JasperExportManager.exportReportToPdfStream(jasperPrint, response.getOutputStream());
         response.getOutputStream().flush();
         response.getOutputStream().close();
