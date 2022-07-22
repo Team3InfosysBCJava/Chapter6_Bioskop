@@ -23,15 +23,15 @@ public class FilmController {
 
 
     //CREATE
-    @PostMapping("/films")
+    @PostMapping("films/create-film")
     public ResponseEntity<Object> createFilm(@RequestBody FilmRequestDTO filmRequestDTO) {
-            Film filmsCreate = filmRequestDTO.convertToEntity();
-            filmService.addFilm(filmsCreate);
-            return ResponseHandler.generateResponse("Succes Create", HttpStatus.CREATED, filmsCreate);
+        Film filmsCreate = filmRequestDTO.convertToEntity();
+        filmService.addFilm(filmsCreate);
+        return ResponseHandler.generateResponse("Succes Create", HttpStatus.CREATED, filmsCreate);
     }
 
     //READ
-    @GetMapping("/film")
+    @GetMapping("/films")
     public ResponseEntity<Object> getAllFilm(){
         List<Film> films = filmService.findAllFilm();
         List<FilmResponseDTO> result = new ArrayList<>();
@@ -45,17 +45,17 @@ public class FilmController {
 
 
     //READ BY ID
-    @GetMapping("/film/{filmId}")
+    @GetMapping("/films/{filmId}")
     public ResponseEntity<Object> getfilmById(@PathVariable Long filmId) {
-            Optional<Film> films = filmService.findFilmById(filmId);
-            Film filmget = films.get();
-            FilmResponseDTO filmsResponseDTO = filmget.convertToResponse();
-            return ResponseHandler.generateResponse("Succes Get", HttpStatus.OK, filmget);
+        Optional<Film> films = filmService.findFilmById(filmId);
+        Film filmget = films.get();
+        FilmResponseDTO filmsResponseDTO = filmget.convertToResponse();
+        return ResponseHandler.generateResponse("Succes Get", HttpStatus.OK, filmsResponseDTO);
     }
 
 
     //READ BY NAME
-    @GetMapping("/film/:name")
+    @GetMapping("/films/:name")
     public ResponseEntity<Object> getFilmByName(String name) {
         List<Film> film = filmService.findFilmByName(name);
         List<FilmResponseDTO> result = new ArrayList<>();
@@ -70,7 +70,7 @@ public class FilmController {
 
 
     //UPDATE
-    @PutMapping("/film/{filmId}")
+    @PutMapping("/films/update/{filmId}")
     public ResponseEntity<Object> filmsupdate(@PathVariable Long filmId, @RequestBody FilmRequestDTO filmRequestDTO) {
         Film film = filmRequestDTO.convertToEntity();
         film.setFilmId(filmId);
@@ -81,7 +81,7 @@ public class FilmController {
 
 
     //DELETE
-    @DeleteMapping("/films/{filmId}")
+    @DeleteMapping("films/delete/{filmId}")
     public ResponseEntity<Object> deleteFilm(@PathVariable Long filmId) {
         filmService.deleteFilm(filmId);
         Map<String, Boolean> response = new HashMap<>();

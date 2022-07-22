@@ -6,13 +6,13 @@ import com.TeamC.Chapter6.Model.Seats;
 import com.TeamC.Chapter6.Response.ResponseHandler;
 import com.TeamC.Chapter6.Service.SeatsService;
 import lombok.AllArgsConstructor;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -126,7 +126,7 @@ public class SeatsController {
      *     }
      */
     @PutMapping("/v2/Seats/{id}")
-    public ResponseEntity<Object> updateSeat2(@PathVariable Long id, @Valid @RequestBody SeatsRequestDTO seatsRequestDTO) {
+    public ResponseEntity<Object> updateSeat2(@PathVariable Long id, @RequestBody SeatsRequestDTO seatsRequestDTO) {
         try {
             Optional<Seats> seatId = seatsService.findById(id);
             Seats seatsRequest = seatsRequestDTO.convertToModel();

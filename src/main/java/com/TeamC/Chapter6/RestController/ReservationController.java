@@ -8,7 +8,9 @@ import com.TeamC.Chapter6.Model.Film;
 import com.TeamC.Chapter6.Model.Reservation;
 import com.TeamC.Chapter6.Service.ReservationServices;
 import lombok.AllArgsConstructor;
-import org.apache.logging.log4j.LogManager;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +18,6 @@ import com.TeamC.Chapter6.Response.ResponseHandler;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 @RestController

@@ -1,23 +1,28 @@
 package com.TeamC.Chapter6.Service;
 
-import java.util.List;
-import java.util.Optional;
+import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
+import com.TeamC.Chapter6.Model.User;
 import com.TeamC.Chapter6.Repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import com.TeamC.Chapter6.Model.User;
-import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
 
 
 @Service
 @AllArgsConstructor
 public class UserServiceImplements implements UserService {
 
-    private final UserRepository userRepository;
 
+    private final UserRepository userRepository;
+    private PasswordEncoder passwordEncoder;
     public static Integer currentPage;
 
     /***
@@ -52,7 +57,7 @@ public class UserServiceImplements implements UserService {
      * @return
      */
     public User createUser(User user) {
-
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return this.userRepository.save(user);
     }
 
@@ -142,7 +147,7 @@ public class UserServiceImplements implements UserService {
 
         return pageNumber;
     }
-}
 
+}
 
 

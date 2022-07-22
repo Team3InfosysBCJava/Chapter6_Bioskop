@@ -21,7 +21,7 @@ public class User {
 
 
     @Column(name = "username")
-    private String username;
+    private String userName;
 
     @Column(name = "email_id")
     private String emailId;
@@ -29,10 +29,13 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "roles")
+    private String role;
+
     public UserResponseDTO convertToResponse(){
         return UserResponseDTO.builder()
                 .user_id(this.userId)
-                .user_name(this.username)
+                .user_name(this.userName)
                 .email_id(this.emailId)
                 .pass_word(this.password)
                 .build();
@@ -50,7 +53,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "userId=" + userId +
-                ", username='" + username + '\'' +
+                ", username='" + userName + '\'' +
                 ", emailId='" + emailId + '\'' +
                 ", password='" + password + '\'' +
                 '}';

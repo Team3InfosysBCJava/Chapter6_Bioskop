@@ -40,7 +40,7 @@ public class Reservation {
         return ReservationResponseDTO.builder()
                 .reservation_id(this.reservationId)
                 .user_id(this.getUser().getUserId())
-                .user_name(this.getUser().getUsername())
+                .user_name(this.getUser().getUserName())
                 .schedule_id(this.getSchedule().getScheduleId())
                 .email_user(this.getUser().getEmailId())
                 .film_name(this.getSchedule().getFilms().getFilmName())
@@ -77,4 +77,3 @@ public class Reservation {
     }
 
 }
-
