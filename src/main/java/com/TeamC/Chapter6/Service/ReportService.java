@@ -49,8 +49,8 @@ public class ReportService {
         return jasperPrint;
     }
 
-    public JasperPrint generateJasperPrintReservation() throws Exception{
-        InputStream fileReport = new ClassPathResource("reports/Reservation.jasper").getInputStream();
+    public JasperPrint generateJasperPrintReservations() throws Exception{
+        InputStream fileReport = new ClassPathResource("reports/Reservations.jasper").getInputStream();
         JasperReport jasperReport = (JasperReport) JRLoader.loadObject(fileReport);
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, dataSource.getConnection());
         return jasperPrint;
