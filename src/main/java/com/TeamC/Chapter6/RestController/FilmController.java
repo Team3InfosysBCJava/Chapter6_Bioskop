@@ -6,6 +6,8 @@ import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
 import com.TeamC.Chapter6.Model.Film;
 import com.TeamC.Chapter6.Response.ResponseHandler;
 import com.TeamC.Chapter6.Service.FilmService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +17,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
+@Tag(name = "4. Film Controller")
+@SecurityRequirement(name = "bearer-key")
 @AllArgsConstructor
+@RequestMapping("/team3")
 public class FilmController {
 
     @Autowired

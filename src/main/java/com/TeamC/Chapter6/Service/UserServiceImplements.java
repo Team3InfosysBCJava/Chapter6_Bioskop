@@ -4,6 +4,7 @@ import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
 import com.TeamC.Chapter6.Model.User;
 import com.TeamC.Chapter6.Repository.UserRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -11,6 +12,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -19,11 +21,15 @@ import java.util.Optional;
 
 @Service
 @AllArgsConstructor
+@Transactional
 public class UserServiceImplements implements UserService {
 
 
     private final UserRepository userRepository;
-    private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
     public static Integer currentPage;
 
     /***

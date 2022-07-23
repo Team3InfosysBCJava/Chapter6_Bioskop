@@ -13,5 +13,10 @@ public class Chapter6Application {
 		SpringApplication.run(Chapter6Application.class, args);
 	}
 
+	@Bean
+	PasswordEncoder passwordEncoder(){
+		return new BCryptPasswordEncoder();
+	}
+
 }
 

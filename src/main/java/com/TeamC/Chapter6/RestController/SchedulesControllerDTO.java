@@ -9,6 +9,8 @@ import com.TeamC.Chapter6.Helper.ExceptionHandler;
 import com.TeamC.Chapter6.Model.*;
 import com.TeamC.Chapter6.Response.ResponseHandler;
 import com.TeamC.Chapter6.Service.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -20,7 +22,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/teamC/v1/DTO")
+@Tag(name = "6. Schedules Controller")
+@SecurityRequirement(name = "bearer-key")
+@RequestMapping("/team3")
 @AllArgsConstructor
 public class SchedulesControllerDTO {
 

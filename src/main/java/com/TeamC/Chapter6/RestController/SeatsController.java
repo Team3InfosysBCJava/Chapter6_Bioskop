@@ -5,6 +5,8 @@ import com.TeamC.Chapter6.DTO.SeatsResponseDTO;
 import com.TeamC.Chapter6.Model.Seats;
 import com.TeamC.Chapter6.Response.ResponseHandler;
 import com.TeamC.Chapter6.Service.SeatsService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 
 import org.apache.log4j.LogManager;
@@ -17,6 +19,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
+@Tag(name = "5. Seats Controller")
+@SecurityRequirement(name = "bearer-key")
 @RequestMapping("/team3")
 @AllArgsConstructor
 public class SeatsController {
