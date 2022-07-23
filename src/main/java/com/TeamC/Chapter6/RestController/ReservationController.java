@@ -7,6 +7,8 @@ import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
 import com.TeamC.Chapter6.Model.Film;
 import com.TeamC.Chapter6.Model.Reservation;
 import com.TeamC.Chapter6.Service.ReservationServices;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 
 import org.apache.log4j.LogManager;
@@ -21,7 +23,9 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/teamC/v1/DTO")
+@Tag(name = "7. Reservations Controller")
+@SecurityRequirement(name = "bearer-key")
+@RequestMapping("/team3")
 @AllArgsConstructor
 public class ReservationController {
 

@@ -6,6 +6,8 @@ import com.TeamC.Chapter6.Model.User;
 import com.TeamC.Chapter6.Repository.UserRepository;
 import com.TeamC.Chapter6.Response.ResponseHandler;
 import com.TeamC.Chapter6.Service.UserServiceImplements;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
 
@@ -24,12 +26,55 @@ import java.util.Map;
 
 @RestController
 @AllArgsConstructor
+@Tag(name = "3. User Controller")
+@RequestMapping("/team3")
+@SecurityRequirement(name = "bearer-key")
 public class UserController {
 
     private static final Logger logger = LogManager.getLogger(UserController.class);
-    private final UserServiceImplements userServiceImplements;
-    private final UserRepository userRepository;
+    private UserServiceImplements userServiceImplements;
+    private UserRepository userRepository;
     private PasswordEncoder passwordEncoder;
+
+    /***
+     * Create User, Logger and Response DONE
+     * @param user
+     * @return
+     */
+    @PostMapping("/sign-up")
+    public ResponseEntity <Object> createUser(@RequestBody User user) {
+        try {
+            userServiceImplements.createUser(user);
+            User userResult = userServiceImplements.createUser(user);
+            UserResponseDTO userget = userResult.convertToResponse();
+            Map<String, Object> userMap = new HashMap<>();
+            List<Map<String, Object>> maps = new ArrayList<>();
+
+            logger.info("==================== Logger Start Create Users ====================");
+            logger.info("User Successfully Created !");
+            logger.info("ID       : " + userResult.getUserId());
+            logger.info("Username : " + userResult.getUserName());
+            logger.info("Email    : " + userResult.getEmailId());
+            logger.info("Password : " + userResult.getPassword());
+            logger.info("Roles    : " + userResult.getRole());
+
+            userMap.put("ID             ", userResult.getUserId());
+            userMap.put("Username       ", userResult.getUserName());
+            userMap.put("Email          ", userResult.getEmailId());
+            userMap.put("Password       ", userResult.getPassword());
+            userMap.put("Roles          ",userResult.getRole());
+            maps.add(userMap);
+            logger.info("==================== Logger End Create Users   ====================");
+            logger.info(" ");
+            return ResponseHandler.generateResponse("Successfully Created User!", HttpStatus.CREATED, userget);
+        } catch (Exception e) {
+            logger.info("==================== Logger Start Create Users     ====================");
+            logger.error(ResponseHandler.generateResponse(e.getMessage(),HttpStatus.BAD_REQUEST,"User Already Exist!"));
+            logger.info("==================== Logger End Create Users     ====================");
+            logger.info(" ");
+            return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.BAD_REQUEST, "User Already Exist!");
+        }
+    }
 
     /***
      * Get All Users, Logger And Response DONE
@@ -41,7 +86,6 @@ public class UserController {
             List<User> result = userServiceImplements.getAll();
             List<Map<String, Object>> maps = new ArrayList<>();
             logger.info("==================== Logger Start Get All Users     ====================");
-
             for(User userData : result){
                 Map<String, Object> user = new HashMap<>();
 
@@ -50,7 +94,6 @@ public class UserController {
                 logger.info("Username : " + userData.getUserName());
                 logger.info("Email    : " + userData.getEmailId());
                 logger.info("Password : " + userData.getPassword());
-
                 user.put("ID            ", userData.getUserId());
                 user.put("Username      ", userData.getUserName());
                 user.put("Email         ", userData.getEmailId());
@@ -66,7 +109,6 @@ public class UserController {
             logger.info("==================== Logger End Get All Users     ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, "Table Has No Value!");
-
         }
     }
 
@@ -78,23 +120,14 @@ public class UserController {
     @GetMapping("/users/{users_Id}")
     public ResponseEntity<Object> getUserById(@PathVariable Long users_Id) {
         try {
-//            User userResult = userRepository.getReferenceById(users_Id);
             User userResult = userServiceImplements.getUserById(users_Id)
                     .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + users_Id));
             UserResponseDTO userget = userResult.convertToResponse();
-            //           Map<UserResponseDTO> user = new HashMap<>();
-            // List<Map<String, Object>> maps = new ArrayList<>();
             logger.info("==================== Logger Start Find By ID Users ====================");
             logger.info("ID       : " + userResult.getUserId());
             logger.info("Username : " + userResult.getUserName());
             logger.info("Email    : " + userResult.getEmailId());
             logger.info("Password : " + userResult.getPassword());
-//            user.put("ID             ", userResult.getUserId());
-//            user.put("Username       ", userResult.getUsername());
-//            user.put("Email          ", userResult.getEmailId());
-////            user.put("Password       ", userResult.getPassword());
-//            maps.add(user);
-
             logger.info("==================== Logger End Find By ID Users   ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse("Successfully Get User By ID!", HttpStatus.OK, userget);
@@ -105,47 +138,6 @@ public class UserController {
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND, "Data Not Found!" );
         }
-
-    }
-
-    /***
-     * Create User, Logger and Response DONE
-     * @param user
-     * @return
-     */
-    @PostMapping("/create-user")
-    public ResponseEntity <Object> createUser(@RequestBody User user) {
-
-        try {
-            userServiceImplements.createUser(user);
-            User userResult = userServiceImplements.createUser(user);
-            UserResponseDTO userget = userResult.convertToResponse();
-            Map<String, Object> userMap = new HashMap<>();
-            List<Map<String, Object>> maps = new ArrayList<>();
-
-            logger.info("==================== Logger Start Create Users ====================");
-            logger.info("User Successfully Created !");
-            logger.info("ID       : " + userResult.getUserId());
-            logger.info("Username : " + userResult.getUserName());
-            logger.info("Email    : " + userResult.getEmailId());
-            logger.info("Password : " + userResult.getPassword());
-
-            userMap.put("ID             ", userResult.getUserId());
-            userMap.put("Username       ", userResult.getUserName());
-            userMap.put("Email          ", userResult.getEmailId());
-            userMap.put("Password       ", userResult.getPassword());
-            maps.add(userMap);
-            logger.info("==================== Logger End Create Users   ====================");
-            logger.info(" ");
-            return ResponseHandler.generateResponse("Successfully Created User!", HttpStatus.CREATED, userget);
-        } catch (Exception e) {
-            logger.info("==================== Logger Start Create Users     ====================");
-            logger.error(ResponseHandler.generateResponse(e.getMessage(),HttpStatus.BAD_REQUEST,"User Already Exist!"));
-            logger.info("==================== Logger End Create Users     ====================");
-            logger.info(" ");
-            return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.BAD_REQUEST, "User Already Exist!");
-        }
-
     }
 
     /***

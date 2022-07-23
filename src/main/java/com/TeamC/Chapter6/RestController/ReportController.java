@@ -1,6 +1,8 @@
 package com.TeamC.Chapter6.RestController;
 
 import com.TeamC.Chapter6.Service.ReportService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -11,8 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
+@Tag(name = "8. Reports Controller")
+@SecurityRequirement(name = "bearer-key")
 @AllArgsConstructor  //kalau udah pakai AllArgsConstructor ngga perlu lagi pakai anotasi @AutoWired
-@RequestMapping("/reports")
+@RequestMapping("/team3")
 public class ReportController {
 
     private ReportService reportService;
