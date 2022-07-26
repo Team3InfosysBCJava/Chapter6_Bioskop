@@ -42,7 +42,6 @@ public class SignUpController {
     @PostMapping("/sign-up")
     public ResponseEntity <Object> createUser(@RequestBody User user) {
         try {
-            userServiceImplements.createUser(user);
             User userResult = userServiceImplements.createUser(user);
             UserResponseDTO userget = userResult.convertToResponse();
             Map<String, Object> userMap = new HashMap<>();
