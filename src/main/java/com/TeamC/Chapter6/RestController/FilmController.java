@@ -2,7 +2,6 @@ package com.TeamC.Chapter6.RestController;
 
 import com.TeamC.Chapter6.DTO.FilmRequestDTO;
 import com.TeamC.Chapter6.DTO.FilmResponseDTO;
-import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
 import com.TeamC.Chapter6.Model.Film;
 import com.TeamC.Chapter6.Response.ResponseHandler;
 import com.TeamC.Chapter6.Service.FilmService;
@@ -19,82 +18,138 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
+@AllArgsConstructor
 @Tag(name = "4. Film Controller")
 @SecurityRequirement(name = "bearer-key")
-@AllArgsConstructor
-@RequestMapping("/team3/v2")
+@RequestMapping("/team3")
 public class FilmController {
 
     @Autowired
     public FilmService filmService;
-
     private static final Logger logger = LoggerFactory.getLogger(FilmController.class);
+    private static final String Line = "====================";
+
     //CREATE
-    @PostMapping("/films/create-film")
+    @PostMapping("/dashboard/create/films")
     public ResponseEntity<Object> createFilm(@RequestBody FilmRequestDTO filmRequestDTO) {
+        try {
             Film filmsCreate = filmRequestDTO.convertToEntity();
             filmService.addFilm(filmsCreate);
-            return ResponseHandler.generateResponse("Succes Create", HttpStatus.CREATED, filmsCreate);
+            FilmResponseDTO results = filmsCreate.convertToResponse();
+            logger.info(Line + "Logger Start Create " + Line);
+            logger.info(String.valueOf(results));
+            logger.info(Line + "Logger End Create " + Line);
+            return ResponseHandler.generateResponse("successfully created film", HttpStatus.CREATED, filmsCreate);
+        } catch (Exception e){
+            logger.error(Line + " Logger Start Error " + Line);
+            logger.error(e.getMessage());
+            logger.error(Line + " Logger End Error " + Line);
+            return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, "no data");
+        }
     }
 
     //READ
     @GetMapping("/films")
     public ResponseEntity<Object> getAllFilm(){
-        List<Film> films = filmService.findAllFilm();
-        List<FilmResponseDTO> result = new ArrayList<>();
-        for(Film film : films){
-            FilmResponseDTO filmResponseDTO =film.convertToResponse();
-            result.add(filmResponseDTO);
+        try {
+            List<Film> films = filmService.findAllFilm();
+            List<FilmResponseDTO> result = new ArrayList<>();
+            logger.info(Line + " Logger Start Get All " + Line);
+            for(Film data : films){
+                FilmResponseDTO filmResponseDTO = data.convertToResponse();
+                result.add(filmResponseDTO);
+                logger.info("seatId : " + data.getFilmId() + " film title : " + data.getFilmName() + " isPlaying : " + data.getIsPlaying());
+            }
+            logger.info(Line + " Logger End Get All " + Line);
+            return ResponseHandler.generateResponse("successfully retrieved", HttpStatus.OK,result);
+        } catch (Exception e){
+            logger.error(Line + " Logger Start Error " + Line);
+            logger.error(e.getMessage());
+            logger.error(Line + " Logger End Error " + Line);
+            return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, "no data");
         }
-        return ResponseHandler.generateResponse("Succes All", HttpStatus.OK,result);
     }
-
-
 
     //READ BY ID
     @GetMapping("/films/{filmId}")
     public ResponseEntity<Object> getfilmById(@PathVariable Long filmId) {
-            Optional<Film> films = filmService.findFilmById(filmId);
-            Film filmget = films.get();
-            FilmResponseDTO filmsResponseDTO = filmget.convertToResponse();
-            return ResponseHandler.generateResponse("Succes Get", HttpStatus.OK, filmsResponseDTO);
+            try{
+                Optional<Film> films = filmService.findFilmById(filmId);
+                Film filmget = films.get();
+                FilmResponseDTO result = filmget.convertToResponse();
+                logger.info(Line + "Logger Start Get By Id " + Line);
+                logger.info(String.valueOf(result));
+                logger.info(Line + "Logger End Get By Id " + Line);
+                return ResponseHandler.generateResponse("successfully retrieved", HttpStatus.OK, result);
+            } catch (Exception e){
+                logger.error(Line + " Logger Start Error " + Line);
+                logger.error(e.getMessage());
+                logger.error(Line + " Logger End Error " + Line);
+                return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, "no data");
+            }
     }
-
 
     //READ BY NAME
     @GetMapping("/films/name")
     public ResponseEntity<Object> getFilmByName(@RequestBody FilmRequestDTO filmRequestDTO) {
-        List<Film> film = filmService.findFilmByName(filmRequestDTO.getFilmTitle());
-        List<FilmResponseDTO> result = new ArrayList<>();
-
-        for (Film data : film) {
-            FilmResponseDTO filmResponseDTO = data.convertToResponse();
-            result.add(filmResponseDTO);
+        try{
+            List<Film> film = filmService.findFilmByName(filmRequestDTO.getFilmTitle());
+            List<FilmResponseDTO> result = new ArrayList<>();
+            logger.info(Line + " Logger Start Get All " + Line);
+            for (Film data : film) {
+                FilmResponseDTO filmResponseDTO = data.convertToResponse();
+                result.add(filmResponseDTO);
+                logger.info("seatId : " + data.getFilmId() + " film title : " + data.getFilmName() + " isPlaying : " + data.getIsPlaying());
+            }
+            logger.info(Line + " Logger End Get All " + Line);
+            return ResponseHandler.generateResponse("successfully retrieved", HttpStatus.OK, result);
+        } catch (Exception e){
+            logger.error(Line + " Logger Start Error " + Line);
+            logger.error(e.getMessage());
+            logger.error(Line + " Logger End Error " + Line);
+            return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, "no data");
         }
-
-        return ResponseHandler.generateResponse("Succes All", HttpStatus.OK, result);
     }
-
 
     //UPDATE
-    @PutMapping("/films/update/{filmId}")
+    @PutMapping("/dashboard/update/films/{filmId}")
     public ResponseEntity<Object> filmsupdate(@PathVariable Long filmId, @RequestBody FilmRequestDTO filmRequestDTO) {
-        Film film = filmRequestDTO.convertToEntity();
-        film.setFilmId(filmId);
-        Film filmsUpdate = filmService.updateFilm(film);
+        try{
+            Optional<Film> filmTarget = filmService.findFilmById(filmId);
+            Film filmRequest = filmRequestDTO.convertToEntity();
+            Film film = filmTarget.get();
+            film.setFilmName(filmRequest.getFilmName());
+            film.setIsPlaying(filmRequest.getIsPlaying());
 
-        return ResponseHandler.generateResponse("Succes Update", HttpStatus.CREATED, filmsUpdate);
+            filmService.updateFilm(film);
+
+            FilmResponseDTO result = film.convertToResponse();
+            logger.info(Line + "Logger Start Update By Id " + Line);
+            logger.info(String.valueOf(result));
+            logger.info(Line + "Logger End Update By Id " + Line);
+            return ResponseHandler.generateResponse("successfully updated film", HttpStatus.CREATED, result);
+        } catch (Exception e){
+            logger.error(Line + " Logger Start Error " + Line);
+            logger.error(e.getMessage());
+            logger.error(Line + " Logger End Error " + Line);
+            return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, "no data");
+        }
     }
-
 
     //DELETE
-    @DeleteMapping("/films/delete/{filmId}")
+    @DeleteMapping("/dashboard/delete/schedules/{filmId}")
     public ResponseEntity<Object> deleteFilm(@PathVariable Long filmId) {
-        filmService.deleteFilm(filmId);
-        Map<String, Boolean> response = new HashMap<>();
-        response.put("deleted", Boolean.TRUE);
-
-        return ResponseHandler.generateResponse("Succes Delete", HttpStatus.OK, response);
+        try{
+            filmService.deleteFilm(filmId);
+            logger.info(Line + "Logger Start Delete By Id " + Line);
+            logger.info("Delete Success");
+            logger.info(Line + "Logger End Delete By Id " + Line);
+            return ResponseHandler.generateResponse("successfully deleted film", HttpStatus.OK, null);
+        } catch (Exception e){
+            logger.error(Line + " Logger Start Error " + Line);
+            logger.error(e.getMessage());
+            logger.error(Line + " Logger End Error " + Line);
+            return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, "failed");
+        }
     }
-
 }
