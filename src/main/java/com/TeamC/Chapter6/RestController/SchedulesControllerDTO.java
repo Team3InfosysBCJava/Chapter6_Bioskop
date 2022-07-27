@@ -86,7 +86,7 @@ public class SchedulesControllerDTO {
      * update Schedules
      * throws ResourceNotFoundException if data not found
      */
-    @PutMapping("/dashboard/update/schedules/{scheduleId}")
+    @PutMapping("/dashboard/update/schedules/{id}")
     public ResponseEntity<Object> updateSchedulesDTO(@PathVariable Integer id, @RequestBody SchedulesRequestDTO SchedulesRequestDTO) {
         try {
 
@@ -109,7 +109,7 @@ public class SchedulesControllerDTO {
      * delete Schedules by id
      * throws ResourceNotFoundException if data is not found
      */
-    @DeleteMapping("/dashboard/delete/schedules/{scheduleId}")
+    @DeleteMapping("/dashboard/delete/schedules/{id}")
     public ResponseEntity<Object> deleteBooking(@PathVariable Integer id) {
         try {
             SchedulesService.deleteSchedulesById(id);
@@ -129,7 +129,7 @@ public class SchedulesControllerDTO {
      *Get Schedules by Schedules id
      * throws ResourceNotFoundException if data is not found
      */
-    @GetMapping("/schedules/{scheduleId}")
+    @GetMapping("/schedules/{id}")
     public ResponseEntity<Object> getSchedulesById(@PathVariable Integer id) {
         try {
             Optional<Schedules> Schedules = SchedulesService.getSchedulesById(id);
