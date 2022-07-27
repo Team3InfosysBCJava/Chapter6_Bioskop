@@ -8,8 +8,8 @@ import com.TeamC.Chapter6.Service.SeatsService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +24,9 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class SeatsController {
 
-    private static final Logger logger = LogManager.getLogger(SeatsController.class);
+//    private static final Logger logger = LogManager.getLogger(SeatsController.class);
+    private static final Logger logger = LoggerFactory.getLogger(SeatsController.class);
+
     private static final String Line = "====================";
     private SeatsService seatsService;
 
@@ -76,7 +78,7 @@ public class SeatsController {
             Seats seatsGet = seats.get();
             SeatsResponseDTO result = seatsGet.convertToResponse();
             logger.info(Line + "Logger Start Get By Id " + Line);
-            logger.info(result);
+            logger.info(String.valueOf(result));
             logger.info(Line + "Logger End Get By Id " + Line);
             return ResponseHandler.generateResponse("Succes Get By id", HttpStatus.OK, result);
         } catch (Exception e) {
@@ -103,7 +105,7 @@ public class SeatsController {
             seatsService.createSeat(seat);
             SeatsResponseDTO results = seat.convertToResponse();
             logger.info(Line + "Logger Start Create " + Line);
-            logger.info(results);
+            logger.info(String.valueOf(results));
             logger.info(Line + "Logger End Create " + Line);
             return ResponseHandler.generateResponse("Success Create Seat", HttpStatus.CREATED, results);
         } catch (Exception e) {
@@ -140,7 +142,7 @@ public class SeatsController {
             seatsService.updateSeat(seats);
             SeatsResponseDTO results = seats.convertToResponse();
             logger.info(Line + "Logger Start Update By Id " + Line);
-            logger.info(results);
+            logger.info(String.valueOf(results));
             logger.info(Line + "Logger End Update By Id " + Line);
             return ResponseHandler.generateResponse("Success Update Seat", HttpStatus.OK, results);
         } catch (Exception e) {
@@ -194,7 +196,7 @@ public class SeatsController {
                     .map(Seats::convertToResponse)
                     .collect(Collectors.toList());
             logger.info(Line + "Logger Start Query " + Line);
-            logger.info(results);
+            logger.info(String.valueOf(results));
             logger.info(Line + "Logger End Query " + Line);
             return ResponseHandler.generateResponse("Success Query", HttpStatus.OK, results);
         } catch (Exception e) {

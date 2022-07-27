@@ -1,6 +1,7 @@
 package com.TeamC.Chapter6.RestController;
 
 import com.TeamC.Chapter6.DTO.UserResponseDTO;
+import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
 import com.TeamC.Chapter6.Model.User;
 import com.TeamC.Chapter6.Repository.UserRepository;
 import com.TeamC.Chapter6.Response.ResponseHandler;
@@ -14,15 +15,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.info.Info;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -54,7 +51,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @OpenAPIDefinition(info = @Info(title = "Team C Bioskop Rest API - Docs"))
 public class LoginController {
 
-    private static final Logger logger = LogManager.getLogger(UserController.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
     private UserServiceImplements userServiceImplements;
     private UserRepository userRepository;
     private PasswordEncoder passwordEncoder;
@@ -65,6 +62,10 @@ public class LoginController {
     public void getToken(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authentication) throws IOException, ServletException {
         MyUserDetails user = (MyUserDetails) authentication.getPrincipal();
         Algorithm algorithm = Algorithm.HMAC256("secret".getBytes());
+        logger.info("==================== Logger Start Login Users ====================");
+        logger.info("user:"+user.getUsername());
+        logger.info("user:"+user.getPassword());
+        logger.info("==================== Logger End Login Users   ====================");
         String access_token = JWT.create()
                 .withSubject(user.getUsername())
                 .withExpiresAt(new Date(System.currentTimeMillis() + 30 * 60 * 1000))
@@ -91,6 +92,9 @@ public class LoginController {
     @PostMapping("/sign-up")
     public ResponseEntity<Object> createUser(@RequestBody User user) {
         try {
+            if(user.getRole().equals("ROLE_ADMIN")){
+                throw new ResourceNotFoundException("User only can have customer or user");
+            }
             User userResult = userServiceImplements.createUser(user);
             UserResponseDTO userget = userResult.convertToResponse();
             Map<String, Object> userMap = new HashMap<>();
@@ -115,7 +119,7 @@ public class LoginController {
             return ResponseHandler.generateResponse("Successfully Created User!", HttpStatus.CREATED, userget);
         } catch (Exception e) {
             logger.info("==================== Logger Start Create Users     ====================");
-            logger.error(ResponseHandler.generateResponse(e.getMessage(),HttpStatus.BAD_REQUEST,"User Already Exist!"));
+            logger.error(e.getMessage());
             logger.info("==================== Logger End Create Users     ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.BAD_REQUEST, "User Already Exist!");

@@ -14,8 +14,8 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -41,7 +41,9 @@ import com.auth0.jwt.JWT;
 @SecurityRequirement(name = "bearer-key")
 public class UserController {
 
-    private static final Logger logger = LogManager.getLogger(UserController.class);
+//    private static final Logger logger = LogManager.getLogger(UserController.class);
+private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
     private UserServiceImplements userServiceImplements;
     private UserRepository userRepository;
     private PasswordEncoder passwordEncoder;
@@ -78,7 +80,7 @@ public class UserController {
             return ResponseHandler.generateResponse("Successfully Created User!", HttpStatus.CREATED, userget);
         } catch (Exception e) {
             logger.info("==================== Logger Start Create Users     ====================");
-            logger.error(ResponseHandler.generateResponse(e.getMessage(),HttpStatus.BAD_REQUEST,"User Already Exist!"));
+            logger.error(e.getMessage());
             logger.info("==================== Logger End Create Users     ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.BAD_REQUEST, "User Already Exist!");
@@ -114,7 +116,7 @@ public class UserController {
             return ResponseHandler.generateResponse("Successfully Get All User!", HttpStatus.OK, result);
         } catch (Exception e) {
             logger.info("==================== Logger Start Get All Users     ====================");
-            logger.error(ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Table has no value"));
+            logger.error(e.getMessage());
             logger.info("==================== Logger End Get All Users     ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, "Table Has No Value!");
@@ -142,7 +144,7 @@ public class UserController {
             return ResponseHandler.generateResponse("Successfully Get User By ID!", HttpStatus.OK, userget);
         } catch (Exception e) {
             logger.info("==================== Logger Start Get By ID Users     ====================");
-            logger.error(ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Data Not Found!"));
+            logger.error(e.getMessage());
             logger.info("==================== Logger End Get By ID Users     ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND, "Data Not Found!" );
@@ -177,7 +179,7 @@ public class UserController {
             return ResponseHandler.generateResponse("Successfully Updated User!",HttpStatus.OK, userget);
         }catch(Exception e){
             logger.info("==================== Logger Start Update Users     ====================");
-            logger.error(ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Data Not Found!"));
+            logger.error(e.getMessage());
             logger.info("==================== Logger End Update Users     ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Data Not Found!");
@@ -203,7 +205,7 @@ public class UserController {
             return ResponseHandler.generateResponse("Successfully Delete User! ", HttpStatus.OK, response);
         } catch (ResourceNotFoundException e){
             logger.info("==================== Logger Start Delete Users     ====================");
-            logger.error(ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Data Not Found!"));
+            logger.error(e.getMessage());
             logger.info("==================== Logger End Delete Users     ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND, "Data Not Found!" );

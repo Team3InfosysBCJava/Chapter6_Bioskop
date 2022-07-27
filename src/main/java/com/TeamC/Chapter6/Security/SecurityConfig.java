@@ -44,10 +44,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(POST,"/films/create-film").hasRole("ADMIN")
                 .antMatchers(PUT,"/films/update/{filmId}").hasRole("ADMIN")
                 .antMatchers(DELETE,"/films/delete/{filmId}").hasRole("ADMIN")
+                .antMatchers(GET,"/films/delete/{filmId}").hasRole("ADMIN")
                 //USER
                 .antMatchers(PUT,"/users/update/{users_Id}").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(DELETE,"/users/delete/{users_Id}").hasAnyRole("CUSTOMER","ADMIN")
-                .antMatchers(GET,"/reports/print/reservations/:userName").hasAnyRole("CUSTOMER","ADMIN");
+                .antMatchers(GET,"/reports/print/reservations/byuserName").hasAnyRole("CUSTOMER","ADMIN");
                 //ALL VISITOR ACCESS
         http.addFilter(customAuthenticationFilter);
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
