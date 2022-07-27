@@ -54,7 +54,7 @@ public class UserController {
      * @param user
      * @return
      */
-    @PostMapping("/sign-up")
+    @PostMapping("/dashboard/sign-up")
     public ResponseEntity <Object> createUser(@RequestBody User user) {
         try {
             User userResult = userServiceImplements.createUser(user);
@@ -127,7 +127,7 @@ public class UserController {
      * @param users_Id
      * @return
      */
-    @GetMapping("/users/{users_Id}")
+    @GetMapping("/users/{id}")
     public ResponseEntity<Object> getUserById(@PathVariable Long users_Id) {
         try {
             User userResult = userServiceImplements.getUserById(users_Id)
@@ -155,7 +155,7 @@ public class UserController {
      * @param userDetails
      * @return
      */
-    @PutMapping("/users/update/")
+    @PutMapping("/dashboard/update/users/{id}")
     public ResponseEntity<Object> updateUser(@RequestBody User userDetails, Principal principal){
         try {
             String username = principal.getName();
@@ -190,7 +190,7 @@ public class UserController {
      * @param
      * @return
      */
-    @DeleteMapping("/users/delete/")
+    @DeleteMapping("/dashboard/delete/users/{id}")
     public ResponseEntity<Object> deleteUser(Principal principal) {
         try {
             String username = principal.getName();
