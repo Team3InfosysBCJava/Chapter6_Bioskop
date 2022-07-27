@@ -1,0 +1,655 @@
+2022-07-27 18:21:24,018 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 25816 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-27 18:21:24,022 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-27 18:21:24,023 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-27 18:21:31,729 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-27 18:21:31,961 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:21:31,964 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:21:31,964 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:21:31,964 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:21:31,965 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:21:31,966 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:21:34,131 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 11.041 seconds (JVM running for 12.258)
+2022-07-27 18:22:47,339 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:47,474 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:47,511 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:47,511 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:47,559 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:47,567 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:47,596 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:47,596 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:47,857 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:47,940 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:59,297 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-27 18:22:59,448 WARN org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-10] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [111] milliseconds.
+2022-07-27 18:22:59,466 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-27 18:23:10,116 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 18:23:10,447 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-1] ==================== Logger Start Delete Reservation ====================
+2022-07-27 18:23:10,451 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-1] Success Delete Reservatiom by ID :true
+2022-07-27 18:23:10,453 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-1] ==================== Logger End Delete Reservation ====================
+2022-07-27 18:23:27,055 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 18:23:27,059 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 18:23:35,115 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 18:23:35,118 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 18:23:49,345 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 18:23:49,351 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-4] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> com.TeamC.Chapter6.RestController.FilmController.getFilmByName(com.TeamC.Chapter6.DTO.FilmRequestDTO)]
+2022-07-27 18:23:49,358 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 18:23:59,552 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 18:23:59,557 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-7] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> com.TeamC.Chapter6.RestController.FilmController.getFilmByName(com.TeamC.Chapter6.DTO.FilmRequestDTO)]
+2022-07-27 18:23:59,559 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 18:24:35,402 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 18:24:35,411 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-6] ====================Logger Start Get By Id ====================
+2022-07-27 18:24:35,413 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-6] filmResponseDTO{filmId=Avatar 2, title='Avatar 2', status=true}
+2022-07-27 18:24:35,414 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-6] ====================Logger End Get By Id ====================
+2022-07-27 18:24:54,586 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 18:24:54,589 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-8] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> com.TeamC.Chapter6.RestController.FilmController.getFilmByName(com.TeamC.Chapter6.DTO.FilmRequestDTO)]
+2022-07-27 18:24:54,591 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 18:26:45,622 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-27 18:26:45,657 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-27 18:26:45,661 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 18:26:45,664 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 18:26:45,958 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 18:26:45,965 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-27 18:26:46,019 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 18:26:49,912 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 18:26:49,974 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] ==================== Logger Start Get All ====================
+2022-07-27 18:26:49,978 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 1 film title : Jurassic World Dominion isPlaying : true
+2022-07-27 18:26:49,979 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 2 film title : The Roundup isPlaying : true
+2022-07-27 18:26:49,981 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 3 film title : Avatar 2 isPlaying : true
+2022-07-27 18:26:49,982 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 4 film title : Sonic the Hedgehog 2 isPlaying : true
+2022-07-27 18:26:49,983 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 5 film title : The Batman isPlaying : true
+2022-07-27 18:26:49,984 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 6 film title : KKN di Desa Penari isPlaying : true
+2022-07-27 18:26:49,986 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 7 film title : Firestarter isPlaying : true
+2022-07-27 18:26:49,987 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 8 film title : Broker isPlaying : true
+2022-07-27 18:26:49,988 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 9 film title : The Lost City isPlaying : true
+2022-07-27 18:26:49,988 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 10 film title : The Twin isPlaying : true
+2022-07-27 18:26:49,992 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 11 film title : tenggelam kapak vanderwijk isPlaying : true
+2022-07-27 18:26:49,993 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 12 film title : di bawah lindungan kabah isPlaying : false
+2022-07-27 18:26:49,998 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 13 film title : ayat ayat cinta isPlaying : true
+2022-07-27 18:26:50,001 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 14 film title : merantau ke deli isPlaying : false
+2022-07-27 18:26:50,002 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 15 film title : sunset bersama rosie isPlaying : true
+2022-07-27 18:26:50,004 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 16 film title : daun jatuh tak membenci angin isPlaying : false
+2022-07-27 18:26:50,006 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 17 film title : pulang isPlaying : false
+2022-07-27 18:26:50,007 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 18 film title : pergi isPlaying : true
+2022-07-27 18:26:50,009 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 19 film title : pulang - pergi isPlaying : false
+2022-07-27 18:26:50,010 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 20 film title : bumi cinta isPlaying : false
+2022-07-27 18:26:50,012 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 21 film title : 5 sekawan isPlaying : false
+2022-07-27 18:26:50,014 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 22 film title : Alas Pati isPlaying : true
+2022-07-27 18:26:50,015 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 23 film title : Danur isPlaying : true
+2022-07-27 18:26:50,016 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 24 film title : The Nun isPlaying : true
+2022-07-27 18:26:50,017 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 25 film title : Setan Kembar isPlaying : true
+2022-07-27 18:26:50,017 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 26 film title : Keranda Modif isPlaying : true
+2022-07-27 18:26:50,018 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 27 film title : Tak Kasat Mata isPlaying : true
+2022-07-27 18:26:50,019 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 28 film title : Pengabdi Syaiton isPlaying : true
+2022-07-27 18:26:50,020 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 29 film title : Makmum isPlaying : true
+2022-07-27 18:26:50,020 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 30 film title : Nenek Gayung isPlaying : true
+2022-07-27 18:26:50,021 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 31 film title : KKN Desa Dangdut isPlaying : true
+2022-07-27 18:26:50,022 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 32 film title : Jurrasic Office isPlaying : true
+2022-07-27 18:26:50,025 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 33 film title : Fast n Slow isPlaying : false
+2022-07-27 18:26:50,026 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 34 film title : Sapiderman isPlaying : true
+2022-07-27 18:26:50,027 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 35 film title : Badman isPlaying : true
+2022-07-27 18:26:50,027 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 36 film title : Final Fantasprit isPlaying : true
+2022-07-27 18:26:50,027 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 37 film title : HarryKutter isPlaying : true
+2022-07-27 18:26:50,028 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 38 film title : KKN di desa Simbah isPlaying : false
+2022-07-27 18:26:50,028 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 39 film title : Cinta Segiempat isPlaying : false
+2022-07-27 18:26:50,028 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 40 film title : Pengabdi Negara isPlaying : true
+2022-07-27 18:26:50,029 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 41 film title : Ngeri - Ngeri Enak isPlaying : true
+2022-07-27 18:26:50,029 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 42 film title : sedekah ikhlas isPlaying : true
+2022-07-27 18:26:50,031 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 43 film title : jakarta vs everybody isPlaying : true
+2022-07-27 18:26:50,034 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 44 film title : baby blue isPlaying : true
+2022-07-27 18:26:50,035 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 45 film title : the other site isPlaying : true
+2022-07-27 18:26:50,037 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 46 film title : dear nathan isPlaying : true
+2022-07-27 18:26:50,040 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 47 film title : Thank you salma isPlaying : true
+2022-07-27 18:26:50,041 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 48 film title : Thank you santi isPlaying : true
+2022-07-27 18:26:50,041 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 49 film title : Thank you dewi isPlaying : true
+2022-07-27 18:26:50,043 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 50 film title : Thank you amel isPlaying : true
+2022-07-27 18:26:50,046 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 51 film title : Thank you indri isPlaying : true
+2022-07-27 18:26:50,048 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 52 film title : KKN Desa Penari isPlaying : true
+2022-07-27 18:26:50,049 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 53 film title : Ngeri-Ngeri Sedap isPlaying : true
+2022-07-27 18:26:50,050 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 54 film title : Srimulat isPlaying : true
+2022-07-27 18:26:50,050 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 55 film title : Doctor Strange isPlaying : true
+2022-07-27 18:26:50,050 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 56 film title : Black Panther isPlaying : true
+2022-07-27 18:26:50,050 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 57 film title : Warkop isPlaying : true
+2022-07-27 18:26:50,051 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 58 film title : Jurassic Wolrd isPlaying : true
+2022-07-27 18:26:50,051 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 59 film title : Comic 8 isPlaying : true
+2022-07-27 18:26:50,051 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 60 film title : Suara Hati Istri isPlaying : true
+2022-07-27 18:26:50,054 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 61 film title : Siap 86 isPlaying : true
+2022-07-27 18:26:50,058 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 62 film title : gas isPlaying : true
+2022-07-27 18:26:50,060 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] seatId : 63 film title : skatanya isPlaying : true
+2022-07-27 18:26:50,060 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-7] ==================== Logger End Get All ====================
+2022-07-27 18:27:02,866 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 18:27:02,870 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-6] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> com.TeamC.Chapter6.RestController.FilmController.getFilmByName(com.TeamC.Chapter6.DTO.FilmRequestDTO)]
+2022-07-27 18:27:02,871 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 18:27:23,977 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 18:27:23,980 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-8] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> com.TeamC.Chapter6.RestController.FilmController.getFilmByName(com.TeamC.Chapter6.DTO.FilmRequestDTO)]
+2022-07-27 18:27:23,982 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 18:27:33,846 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-27 18:27:33,848 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-9] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> com.TeamC.Chapter6.RestController.FilmController.getFilmByName(com.TeamC.Chapter6.DTO.FilmRequestDTO)]
+2022-07-27 18:27:33,850 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-27 18:28:06,101 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Failed to process authentication request
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:522)
+	at com.TeamC.Chapter6.Model.Filter.CustomAuthenticationFilter.attemptAuthentication(CustomAuthenticationFilter.java:45)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.TeamC.Chapter6.Model.Filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:32)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-07-27 18:28:06,104 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Cleared SecurityContextHolder
+2022-07-27 18:28:06,105 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Handling authentication failure
+2022-07-27 18:28:06,107 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-27 18:28:40,108 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 18:28:40,238 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-1] ====================Logger Start Create ====================
+2022-07-27 18:28:40,240 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-1] filmResponseDTO{filmId=gaskeun, title='gaskeun', status=true}
+2022-07-27 18:28:40,241 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-1] ====================Logger End Create ====================
+2022-07-27 18:29:04,272 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 18:29:04,324 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-3] ====================Logger Start Update By Id ====================
+2022-07-27 18:29:04,325 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-3] filmResponseDTO{filmId=gaskeunkeun, title='gaskeunkeun', status=true}
+2022-07-27 18:29:04,325 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-3] ====================Logger End Update By Id ====================
+2022-07-27 18:29:17,414 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-27 18:29:17,445 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] ==================== Logger Start Get All ====================
+2022-07-27 18:29:17,458 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 1 seatNumber : 2 studioName : A isAvailable : true
+2022-07-27 18:29:17,459 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 2 seatNumber : 2 studioName : A isAvailable : true
+2022-07-27 18:29:17,459 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 3 seatNumber : 3 studioName : A isAvailable : true
+2022-07-27 18:29:17,461 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 4 seatNumber : 4 studioName : A isAvailable : true
+2022-07-27 18:29:17,461 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 5 seatNumber : 5 studioName : A isAvailable : true
+2022-07-27 18:29:17,462 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 6 seatNumber : 6 studioName : A isAvailable : true
+2022-07-27 18:29:17,462 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 7 seatNumber : 7 studioName : A isAvailable : true
+2022-07-27 18:29:17,462 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 8 seatNumber : 8 studioName : A isAvailable : false
+2022-07-27 18:29:17,462 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 9 seatNumber : 9 studioName : A isAvailable : false
+2022-07-27 18:29:17,463 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 10 seatNumber : 3 studioName : A isAvailable : false
+2022-07-27 18:29:17,463 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 11 seatNumber : 3 studioName : B isAvailable : false
+2022-07-27 18:29:17,464 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 12 seatNumber : 2 studioName : B isAvailable : false
+2022-07-27 18:29:17,467 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 13 seatNumber : 3 studioName : B isAvailable : false
+2022-07-27 18:29:17,470 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 14 seatNumber : 4 studioName : B isAvailable : false
+2022-07-27 18:29:17,475 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 15 seatNumber : 5 studioName : B isAvailable : false
+2022-07-27 18:29:17,485 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 16 seatNumber : 6 studioName : B isAvailable : false
+2022-07-27 18:29:17,487 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 17 seatNumber : 7 studioName : B isAvailable : false
+2022-07-27 18:29:17,490 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 18 seatNumber : 8 studioName : B isAvailable : true
+2022-07-27 18:29:17,491 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 19 seatNumber : 9 studioName : B isAvailable : true
+2022-07-27 18:29:17,495 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 20 seatNumber : 3 studioName : B isAvailable : true
+2022-07-27 18:29:17,496 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 21 seatNumber : 3 studioName : C isAvailable : true
+2022-07-27 18:29:17,497 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 22 seatNumber : 2 studioName : C isAvailable : false
+2022-07-27 18:29:17,499 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 23 seatNumber : 3 studioName : C isAvailable : false
+2022-07-27 18:29:17,502 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 24 seatNumber : 4 studioName : C isAvailable : false
+2022-07-27 18:29:17,505 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 25 seatNumber : 5 studioName : C isAvailable : false
+2022-07-27 18:29:17,507 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 26 seatNumber : 6 studioName : C isAvailable : false
+2022-07-27 18:29:17,509 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 27 seatNumber : 7 studioName : C isAvailable : false
+2022-07-27 18:29:17,510 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 28 seatNumber : 8 studioName : C isAvailable : false
+2022-07-27 18:29:17,511 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 29 seatNumber : 9 studioName : C isAvailable : false
+2022-07-27 18:29:17,514 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 30 seatNumber : 2 studioName : C isAvailable : false
+2022-07-27 18:29:17,516 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 31 seatNumber : 3 studioName : D isAvailable : false
+2022-07-27 18:29:17,517 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 32 seatNumber : 2 studioName : D isAvailable : false
+2022-07-27 18:29:17,517 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 33 seatNumber : 3 studioName : D isAvailable : true
+2022-07-27 18:29:17,518 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 34 seatNumber : 4 studioName : D isAvailable : true
+2022-07-27 18:29:17,518 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 35 seatNumber : 5 studioName : D isAvailable : true
+2022-07-27 18:29:17,519 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 36 seatNumber : 6 studioName : D isAvailable : true
+2022-07-27 18:29:17,524 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 37 seatNumber : 7 studioName : D isAvailable : true
+2022-07-27 18:29:17,525 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 38 seatNumber : 8 studioName : D isAvailable : true
+2022-07-27 18:29:17,526 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 39 seatNumber : 9 studioName : D isAvailable : true
+2022-07-27 18:29:17,526 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 40 seatNumber : 2 studioName : D isAvailable : true
+2022-07-27 18:29:17,527 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 41 seatNumber : 2 studioName : E isAvailable : true
+2022-07-27 18:29:17,527 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 42 seatNumber : 2 studioName : E isAvailable : true
+2022-07-27 18:29:17,528 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 43 seatNumber : 3 studioName : E isAvailable : true
+2022-07-27 18:29:17,530 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 44 seatNumber : 4 studioName : E isAvailable : true
+2022-07-27 18:29:17,531 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 45 seatNumber : 5 studioName : E isAvailable : false
+2022-07-27 18:29:17,533 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 46 seatNumber : 6 studioName : E isAvailable : false
+2022-07-27 18:29:17,534 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 47 seatNumber : 7 studioName : E isAvailable : false
+2022-07-27 18:29:17,534 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 48 seatNumber : 8 studioName : E isAvailable : true
+2022-07-27 18:29:17,534 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 49 seatNumber : 9 studioName : E isAvailable : true
+2022-07-27 18:29:17,535 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 50 seatNumber : 2 studioName : E isAvailable : true
+2022-07-27 18:29:17,536 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 51 seatNumber : 3 studioName : C isAvailable : true
+2022-07-27 18:29:17,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] seatId : 52 seatNumber : 20 studioName : D isAvailable : true
+2022-07-27 18:29:17,545 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-5] ==================== Logger End Get All ====================
+2022-07-27 18:29:28,750 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 18:29:28,825 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-4] ====================Logger Start Query ====================
+2022-07-27 18:29:28,827 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-4] [SeatsResponseDTO{seat_id=1, number_seat=2, name_studio='A', available=true}, SeatsResponseDTO{seat_id=2, number_seat=2, name_studio='A', available=true}, SeatsResponseDTO{seat_id=3, number_seat=3, name_studio='A', available=true}, SeatsResponseDTO{seat_id=4, number_seat=4, name_studio='A', available=true}, SeatsResponseDTO{seat_id=5, number_seat=5, name_studio='A', available=true}, SeatsResponseDTO{seat_id=6, number_seat=6, name_studio='A', available=true}, SeatsResponseDTO{seat_id=7, number_seat=7, name_studio='A', available=true}, SeatsResponseDTO{seat_id=18, number_seat=8, name_studio='B', available=true}, SeatsResponseDTO{seat_id=19, number_seat=9, name_studio='B', available=true}, SeatsResponseDTO{seat_id=20, number_seat=3, name_studio='B', available=true}, SeatsResponseDTO{seat_id=21, number_seat=3, name_studio='C', available=true}, SeatsResponseDTO{seat_id=33, number_seat=3, name_studio='D', available=true}, SeatsResponseDTO{seat_id=34, number_seat=4, name_studio='D', available=true}, SeatsResponseDTO{seat_id=35, number_seat=5, name_studio='D', available=true}, SeatsResponseDTO{seat_id=36, number_seat=6, name_studio='D', available=true}, SeatsResponseDTO{seat_id=37, number_seat=7, name_studio='D', available=true}, SeatsResponseDTO{seat_id=38, number_seat=8, name_studio='D', available=true}, SeatsResponseDTO{seat_id=39, number_seat=9, name_studio='D', available=true}, SeatsResponseDTO{seat_id=40, number_seat=2, name_studio='D', available=true}, SeatsResponseDTO{seat_id=41, number_seat=2, name_studio='E', available=true}, SeatsResponseDTO{seat_id=42, number_seat=2, name_studio='E', available=true}, SeatsResponseDTO{seat_id=43, number_seat=3, name_studio='E', available=true}, SeatsResponseDTO{seat_id=44, number_seat=4, name_studio='E', available=true}, SeatsResponseDTO{seat_id=48, number_seat=8, name_studio='E', available=true}, SeatsResponseDTO{seat_id=49, number_seat=9, name_studio='E', available=true}, SeatsResponseDTO{seat_id=50, number_seat=2, name_studio='E', available=true}, SeatsResponseDTO{seat_id=51, number_seat=3, name_studio='C', available=true}, SeatsResponseDTO{seat_id=52, number_seat=20, name_studio='D', available=true}]
+2022-07-27 18:29:28,827 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-4] ====================Logger End Query ====================
+2022-07-27 18:29:50,289 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 18:29:50,307 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-7] ------------------------------------
+2022-07-27 18:29:50,308 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-7] Schedules with film name avatar is not exist!!!!!
+2022-07-27 18:29:50,309 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-7] ------------------------------------
+2022-07-27 18:30:00,269 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 18:30:00,275 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-6] ------------------------------------
+2022-07-27 18:30:00,277 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-6] Schedules with film name avatar is not exist!!!!!
+2022-07-27 18:30:00,277 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-6] ------------------------------------
+2022-07-27 18:30:03,386 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 18:30:03,390 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-8] ------------------------------------
+2022-07-27 18:30:03,391 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-8] Schedules with film name avatar is not exist!!!!!
+2022-07-27 18:30:03,391 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-8] ------------------------------------
+2022-07-27 18:30:35,820 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-27 18:30:36,210 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ============================================================Logger Start Find All Schedules============================================================
+2022-07-27 18:30:36,213 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,216 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :1
+2022-07-27 18:30:36,220 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=1, name='Jurassic World Dominion', isPlaying=true}
+2022-07-27 18:30:36,257 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=1, seatNumber=2, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,259 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,266 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,266 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :2
+2022-07-27 18:30:36,267 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=2, name='The Roundup', isPlaying=true}
+2022-07-27 18:30:36,272 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=2, seatNumber=2, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,274 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,275 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,276 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :3
+2022-07-27 18:30:36,278 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=3, name='Avatar 2', isPlaying=true}
+2022-07-27 18:30:36,279 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=3, seatNumber=3, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,279 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,279 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,279 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :4
+2022-07-27 18:30:36,279 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=4, name='Sonic the Hedgehog 2', isPlaying=true}
+2022-07-27 18:30:36,279 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=4, seatNumber=4, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,280 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,280 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,280 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :5
+2022-07-27 18:30:36,280 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=5, name='The Batman', isPlaying=true}
+2022-07-27 18:30:36,281 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=5, seatNumber=5, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,282 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,286 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,287 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :6
+2022-07-27 18:30:36,288 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=6, name='KKN di Desa Penari', isPlaying=true}
+2022-07-27 18:30:36,290 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=6, seatNumber=6, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,291 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,291 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,291 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :7
+2022-07-27 18:30:36,291 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=7, name='Firestarter', isPlaying=true}
+2022-07-27 18:30:36,291 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=7, seatNumber=7, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,292 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,292 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,292 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :8
+2022-07-27 18:30:36,292 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=8, name='Broker', isPlaying=true}
+2022-07-27 18:30:36,293 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=8, seatNumber=8, studioName='A', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,293 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,293 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,293 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :9
+2022-07-27 18:30:36,294 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=9, name='The Lost City', isPlaying=true}
+2022-07-27 18:30:36,294 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=9, seatNumber=9, studioName='A', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,295 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,297 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,297 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :10
+2022-07-27 18:30:36,298 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=10, name='The Twin', isPlaying=true}
+2022-07-27 18:30:36,298 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=10, seatNumber=3, studioName='A', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,299 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,299 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,300 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :11
+2022-07-27 18:30:36,300 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=11, name='tenggelam kapak vanderwijk', isPlaying=true}
+2022-07-27 18:30:36,301 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=11, seatNumber=3, studioName='B', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,301 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,301 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,301 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :12
+2022-07-27 18:30:36,302 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=12, name='di bawah lindungan kabah', isPlaying=false}
+2022-07-27 18:30:36,308 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=12, seatNumber=2, studioName='B', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,309 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,309 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,309 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :13
+2022-07-27 18:30:36,312 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=18, name='pergi', isPlaying=true}
+2022-07-27 18:30:36,318 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=18, seatNumber=8, studioName='B', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,321 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,322 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,323 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :14
+2022-07-27 18:30:36,323 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=19, name='pulang - pergi', isPlaying=false}
+2022-07-27 18:30:36,323 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=19, seatNumber=9, studioName='B', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,324 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,325 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,326 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :15
+2022-07-27 18:30:36,326 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=20, name='bumi cinta', isPlaying=false}
+2022-07-27 18:30:36,326 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=20, seatNumber=3, studioName='B', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,326 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,326 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,327 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :16
+2022-07-27 18:30:36,327 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=21, name='5 sekawan', isPlaying=false}
+2022-07-27 18:30:36,327 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=21, seatNumber=3, studioName='C', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,328 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,328 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,328 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :17
+2022-07-27 18:30:36,329 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=22, name='Alas Pati', isPlaying=true}
+2022-07-27 18:30:36,329 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=22, seatNumber=2, studioName='C', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,329 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,329 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,330 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :18
+2022-07-27 18:30:36,330 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=23, name='Danur', isPlaying=true}
+2022-07-27 18:30:36,330 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=23, seatNumber=3, studioName='C', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,331 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,331 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,332 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :19
+2022-07-27 18:30:36,333 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=24, name='The Nun', isPlaying=true}
+2022-07-27 18:30:36,333 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=24, seatNumber=4, studioName='C', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,334 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,334 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,335 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :20
+2022-07-27 18:30:36,335 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=25, name='Setan Kembar', isPlaying=true}
+2022-07-27 18:30:36,336 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=25, seatNumber=5, studioName='C', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,337 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,337 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,337 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :21
+2022-07-27 18:30:36,339 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=26, name='Keranda Modif', isPlaying=true}
+2022-07-27 18:30:36,341 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=26, seatNumber=6, studioName='C', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,342 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,343 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,343 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :22
+2022-07-27 18:30:36,344 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=27, name='Tak Kasat Mata', isPlaying=true}
+2022-07-27 18:30:36,346 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=27, seatNumber=7, studioName='C', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,347 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,348 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,348 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :23
+2022-07-27 18:30:36,349 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=28, name='Pengabdi Syaiton', isPlaying=true}
+2022-07-27 18:30:36,349 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=28, seatNumber=8, studioName='C', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,350 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,350 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,350 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :24
+2022-07-27 18:30:36,351 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=29, name='Makmum', isPlaying=true}
+2022-07-27 18:30:36,351 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=29, seatNumber=9, studioName='C', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,351 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,353 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,354 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :25
+2022-07-27 18:30:36,355 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=30, name='Nenek Gayung', isPlaying=true}
+2022-07-27 18:30:36,355 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=30, seatNumber=2, studioName='C', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,355 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,356 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,356 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :26
+2022-07-27 18:30:36,356 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=31, name='KKN Desa Dangdut', isPlaying=true}
+2022-07-27 18:30:36,356 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=31, seatNumber=3, studioName='D', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,356 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,357 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,357 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :27
+2022-07-27 18:30:36,357 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=32, name='Jurrasic Office', isPlaying=true}
+2022-07-27 18:30:36,358 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=32, seatNumber=2, studioName='D', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,358 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,358 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,360 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :28
+2022-07-27 18:30:36,361 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=33, name='Fast n Slow', isPlaying=false}
+2022-07-27 18:30:36,362 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=33, seatNumber=3, studioName='D', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,363 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,363 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,363 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :29
+2022-07-27 18:30:36,363 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=34, name='Sapiderman', isPlaying=true}
+2022-07-27 18:30:36,363 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=34, seatNumber=4, studioName='D', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,364 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,364 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,364 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :30
+2022-07-27 18:30:36,364 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=35, name='Badman', isPlaying=true}
+2022-07-27 18:30:36,365 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=35, seatNumber=5, studioName='D', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,366 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,368 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,369 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :31
+2022-07-27 18:30:36,370 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=36, name='Final Fantasprit', isPlaying=true}
+2022-07-27 18:30:36,370 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=36, seatNumber=6, studioName='D', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,370 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,371 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,371 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :32
+2022-07-27 18:30:36,371 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=37, name='HarryKutter', isPlaying=true}
+2022-07-27 18:30:36,372 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=37, seatNumber=7, studioName='D', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,372 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,372 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,373 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :33
+2022-07-27 18:30:36,374 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=38, name='KKN di desa Simbah', isPlaying=false}
+2022-07-27 18:30:36,375 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=38, seatNumber=8, studioName='D', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,376 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,377 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,377 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :34
+2022-07-27 18:30:36,377 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=39, name='Cinta Segiempat', isPlaying=false}
+2022-07-27 18:30:36,377 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=39, seatNumber=9, studioName='D', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,378 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,378 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,378 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :35
+2022-07-27 18:30:36,380 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=40, name='Pengabdi Negara', isPlaying=true}
+2022-07-27 18:30:36,382 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=40, seatNumber=2, studioName='D', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,382 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,383 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,384 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :36
+2022-07-27 18:30:36,385 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=41, name='Ngeri - Ngeri Enak', isPlaying=true}
+2022-07-27 18:30:36,385 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=41, seatNumber=2, studioName='E', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,385 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,385 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,385 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :37
+2022-07-27 18:30:36,386 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=42, name='sedekah ikhlas', isPlaying=true}
+2022-07-27 18:30:36,386 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=42, seatNumber=2, studioName='E', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,386 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,386 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,386 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :38
+2022-07-27 18:30:36,387 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=43, name='jakarta vs everybody', isPlaying=true}
+2022-07-27 18:30:36,387 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=43, seatNumber=3, studioName='E', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,387 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,387 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,387 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :39
+2022-07-27 18:30:36,388 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=44, name='baby blue', isPlaying=true}
+2022-07-27 18:30:36,388 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=44, seatNumber=4, studioName='E', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,388 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,388 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,389 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :40
+2022-07-27 18:30:36,389 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=45, name='the other site', isPlaying=true}
+2022-07-27 18:30:36,389 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=45, seatNumber=5, studioName='E', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,389 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,390 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,390 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :41
+2022-07-27 18:30:36,390 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=46, name='dear nathan', isPlaying=true}
+2022-07-27 18:30:36,390 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=46, seatNumber=6, studioName='E', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,390 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,390 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,391 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :42
+2022-07-27 18:30:36,391 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=47, name='Thank you salma', isPlaying=true}
+2022-07-27 18:30:36,391 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=47, seatNumber=7, studioName='E', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,391 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,391 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,392 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :43
+2022-07-27 18:30:36,392 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=48, name='Thank you santi', isPlaying=true}
+2022-07-27 18:30:36,392 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=48, seatNumber=8, studioName='E', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,393 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,393 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,393 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :44
+2022-07-27 18:30:36,393 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=49, name='Thank you dewi', isPlaying=true}
+2022-07-27 18:30:36,393 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=49, seatNumber=9, studioName='E', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,393 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,394 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,394 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :45
+2022-07-27 18:30:36,394 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=50, name='Thank you amel', isPlaying=true}
+2022-07-27 18:30:36,395 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=50, seatNumber=2, studioName='E', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,395 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,396 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,397 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :46
+2022-07-27 18:30:36,397 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=59, name='Comic 8', isPlaying=true}
+2022-07-27 18:30:36,397 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=9, seatNumber=9, studioName='A', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,397 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,398 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,398 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :47
+2022-07-27 18:30:36,398 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=60, name='Suara Hati Istri', isPlaying=true}
+2022-07-27 18:30:36,399 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=10, seatNumber=3, studioName='A', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,401 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,403 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,405 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :48
+2022-07-27 18:30:36,405 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=1, name='Jurassic World Dominion', isPlaying=true}
+2022-07-27 18:30:36,406 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=11, seatNumber=3, studioName='B', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,406 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,406 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,407 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :49
+2022-07-27 18:30:36,407 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=51, name='Thank you indri', isPlaying=true}
+2022-07-27 18:30:36,407 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=1, seatNumber=2, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,407 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,407 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,408 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :50
+2022-07-27 18:30:36,409 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=52, name='KKN Desa Penari', isPlaying=true}
+2022-07-27 18:30:36,410 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=2, seatNumber=2, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,411 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,411 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,411 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :51
+2022-07-27 18:30:36,411 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=53, name='Ngeri-Ngeri Sedap', isPlaying=true}
+2022-07-27 18:30:36,412 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=3, seatNumber=3, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,412 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,412 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,413 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :52
+2022-07-27 18:30:36,413 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=54, name='Srimulat', isPlaying=true}
+2022-07-27 18:30:36,413 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=4, seatNumber=4, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,413 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,413 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,413 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :53
+2022-07-27 18:30:36,414 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=55, name='Doctor Strange', isPlaying=true}
+2022-07-27 18:30:36,414 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=5, seatNumber=5, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,414 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,415 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,416 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :54
+2022-07-27 18:30:36,417 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=56, name='Black Panther', isPlaying=true}
+2022-07-27 18:30:36,418 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=6, seatNumber=6, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,418 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,419 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,419 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :55
+2022-07-27 18:30:36,419 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=57, name='Warkop', isPlaying=true}
+2022-07-27 18:30:36,419 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=7, seatNumber=7, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,419 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,419 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,420 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :56
+2022-07-27 18:30:36,420 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=58, name='Jurassic Wolrd', isPlaying=true}
+2022-07-27 18:30:36,420 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=8, seatNumber=8, studioName='A', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,420 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,420 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,420 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :57
+2022-07-27 18:30:36,420 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=59, name='Comic 8', isPlaying=true}
+2022-07-27 18:30:36,421 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=9, seatNumber=9, studioName='A', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,421 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,421 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,422 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :58
+2022-07-27 18:30:36,422 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=60, name='Suara Hati Istri', isPlaying=true}
+2022-07-27 18:30:36,422 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=10, seatNumber=3, studioName='A', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,422 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,422 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,422 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :59
+2022-07-27 18:30:36,423 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=1, name='Jurassic World Dominion', isPlaying=true}
+2022-07-27 18:30:36,423 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=11, seatNumber=3, studioName='B', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,424 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,424 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,424 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Schedules id :60
+2022-07-27 18:30:36,424 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Film :Films{filmId=2, name='The Roundup', isPlaying=true}
+2022-07-27 18:30:36,425 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] Seats :Seats{seatId=12, seatNumber=2, studioName='B', isAvailable=false, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}
+2022-07-27 18:30:36,425 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ================================
+2022-07-27 18:30:36,425 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-9] ============================================================Logger End Find All Schedules============================================================
+2022-07-27 18:30:45,749 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-27 18:30:45,758 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-10] ============================================================ Logger Start Find Schedules ById ============================================================
+2022-07-27 18:30:45,759 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-10] GetById
+2022-07-27 18:30:45,775 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-10] SchedulesResponseDTO{scheduleId=3, films=Films{filmId=3, name='Avatar 2', isPlaying=true}, seats=Seats{seatId=3, seatNumber=3, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}, dateShow=2022-06-19, showStart=18:00, showEnd=19:00, price=35000, updated_at=2022-07-26T18:01:21.249222, created_at=2022-07-26T18:01:21.249222}
+2022-07-27 18:30:45,776 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-10] ============================================================ Logger End Find Schedules By Id
+2022-07-27 18:30:57,656 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 18:31:04,060 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 18:31:10,644 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 18:32:34,354 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 18:32:34,411 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-4] ============================================================ Logger Start Created New Schedules============================================================
+2022-07-27 18:32:34,429 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-4] SchedulesResponseFilmSeatDTO{scheduleId=61, filmId=3, seatId=7, dateShow=2022-06-19, showStart=00:00, showEnd=00:00, price=20000, updatedAt=2022-07-27T18:32:34.381626300}
+2022-07-27 18:32:34,431 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-4] ============================================================ Logger Stop Create New Schedules============================================================
+2022-07-27 18:32:42,093 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 18:32:47,259 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 18:33:24,221 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 18:33:24,232 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-8] ============================================================ Logger Start Find Schedules ById ============================================================
+2022-07-27 18:33:24,233 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-8] GetById
+2022-07-27 18:33:24,234 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-8] SchedulesResponseDTO{scheduleId=3, films=Films{filmId=3, name='Avatar 2', isPlaying=true}, seats=Seats{seatId=3, seatNumber=3, studioName='A', isAvailable=true, createdAt=2022-07-26T18:01:21.239868, updatedAt=2022-07-26T18:01:21.239868}, dateShow=2022-06-19, showStart=18:00, showEnd=19:00, price=35000, updated_at=2022-07-26T18:01:21.249222, created_at=2022-07-26T18:01:21.249222}
+2022-07-27 18:33:24,235 INFO com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-8] ============================================================ Logger End Find Schedules By Id
+2022-07-27 18:33:39,257 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-27 18:33:39,259 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-9] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.Object> com.TeamC.Chapter6.RestController.FilmController.getFilmByName(com.TeamC.Chapter6.DTO.FilmRequestDTO)]
+2022-07-27 18:33:39,261 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-27 18:34:34,975 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-27 18:35:47,323 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 18:36:28,028 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 7400 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-27 18:36:28,034 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-27 18:36:28,036 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-27 18:36:37,717 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-27 18:36:37,976 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:36:37,978 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:36:37,979 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:36:37,979 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:36:37,980 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:36:37,980 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 18:36:40,446 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 13.932 seconds (JVM running for 15.169)
+2022-07-27 18:36:44,784 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 18:36:44,945 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 18:36:44,960 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 18:36:44,961 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 18:36:45,215 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 18:36:45,220 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-27 18:36:45,319 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-27 18:36:57,222 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 18:36:57,392 WARN org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-4] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [135] milliseconds.
+2022-07-27 18:36:57,418 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 18:38:00,193 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 18:38:00,305 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-6] ====================Logger Start Delete By Id ====================
+2022-07-27 18:38:00,307 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-6] Delete Success
+2022-07-27 18:38:00,309 INFO com.TeamC.Chapter6.RestController.FilmController [http-nio-8090-exec-6] ====================Logger End Delete By Id ====================
+2022-07-27 18:38:20,323 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 18:38:20,420 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-8] ====================Logger Start Create ====================
+2022-07-27 18:38:20,438 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-8] SeatsResponseDTO{seat_id=53, number_seat=13, name_studio='C', available=true}
+2022-07-27 18:38:20,440 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-8] ====================Logger End Create ====================
+2022-07-27 18:38:36,625 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 18:38:36,670 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-1] ====================Logger Start Update By Id ====================
+2022-07-27 18:38:36,671 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-1] SeatsResponseDTO{seat_id=53, number_seat=11, name_studio='A', available=true}
+2022-07-27 18:38:36,673 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-1] ====================Logger End Update By Id ====================
+2022-07-27 18:38:51,344 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 18:38:51,357 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-4] ====================Logger Start Delete By Id ====================
+2022-07-27 18:38:51,359 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-4] Delete Success
+2022-07-27 18:38:51,361 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-4] ====================Logger End Delete By Id ====================
+2022-07-27 18:39:08,719 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 18:39:08,749 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-7] ------------------------------------
+2022-07-27 18:39:08,751 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-7] Schedules not exist with id : 64
+2022-07-27 18:39:08,753 ERROR com.TeamC.Chapter6.RestController.SchedulesControllerDTO [http-nio-8090-exec-7] ------------------------------------
+2022-07-27 18:39:48,218 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 18:39:48,376 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] ==================== Logger Start Create Users ====================
+2022-07-27 18:39:48,379 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] User Successfully Created !
+2022-07-27 18:39:48,382 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] ID       : 75
+2022-07-27 18:39:48,383 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] Username : cocok
+2022-07-27 18:39:48,385 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] Email    : cocok
+2022-07-27 18:39:48,388 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] Password : $2a$10$J9qF60NtLXJhyeWSCRPiveJkEag1FArWU2KiDF/H1V9abLRK0upq.
+2022-07-27 18:39:48,389 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] Roles    : ROLE_ADMIN
+2022-07-27 18:39:48,390 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] ==================== Logger End Create Users   ====================
+2022-07-27 18:39:48,391 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6]  
+2022-07-27 18:40:04,047 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 18:40:04,054 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8] ==================== Logger Start Delete Users ====================
+2022-07-27 18:40:04,055 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8] User Data Successfully Deleted! :true
+2022-07-27 18:40:04,056 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8] ==================== Logger End Delete Users   ====================
+2022-07-27 18:40:04,057 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8]  

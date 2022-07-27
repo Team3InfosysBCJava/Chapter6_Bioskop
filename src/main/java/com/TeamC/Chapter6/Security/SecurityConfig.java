@@ -40,19 +40,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/login/**","/sign-up/**", "/token/refresh/**","/swagger-ui/**").permitAll();
         http.authorizeRequests()
                 //ADMIN
-                .antMatchers("/team3/dashboard/**").hasAnyRole("ADMIN","CUSTOMER","USER")
-
-                .antMatchers(POST,"/team3/v2/films/create-film").hasRole("ADMIN")
-                .antMatchers(PUT,"/films/update/{filmId}").hasRole("ADMIN")
-                .antMatchers(DELETE,"/films/delete/{filmId}").hasRole("ADMIN")
-                .antMatchers("/dashboard/**").hasRole("ADMIN") //POST, PUT, DELETE
-                //sign-up
+                .antMatchers("/team3/dashboard/**").hasRole("ADMIN") //POST, PUT, DELETE
+//                .antMatchers(POST,"/team3/films/create-film").hasRole("ADMIN")
+//                .antMatchers(PUT,"/team3/films/update/{filmId}").hasRole("ADMIN")
+//                .antMatchers(DELETE,"/team3/films/delete/{filmId}").hasRole("ADMIN")
+//
                 //CUSTOMER
-                .antMatchers(PUT,"/users/update/").hasAnyRole("CUSTOMER","ADMIN")
-                .antMatchers(GET,"/users").hasAnyRole("CUSTOMER","ADMIN")
-                .antMatchers(GET,"/users/{id}").hasAnyRole("CUSTOMER","ADMIN")
-                .antMatchers(DELETE,"/users/delete/").hasAnyRole("CUSTOMER","ADMIN")
-                .antMatchers(GET,"/print/reservations/byuserName").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(PUT,"/team3/users/update/").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(GET,"/team3/users").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(GET,"/team3/users/{id}").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(DELETE,"/team3/users/delete/").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(GET,"/team3/print/reservations/byuserName").hasAnyRole("CUSTOMER","ADMIN")
 
                 //ALL VISITOR ACCESS
                 .antMatchers("/**").permitAll();

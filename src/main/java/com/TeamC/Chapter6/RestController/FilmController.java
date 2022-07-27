@@ -90,7 +90,7 @@ public class FilmController {
     }
 
     //READ BY NAME
-    @GetMapping("/films/name")
+    @GetMapping("/search/films/name")
     public ResponseEntity<Object> getFilmByName(@RequestBody FilmRequestDTO filmRequestDTO) {
         try{
             List<Film> film = filmService.findFilmByName(filmRequestDTO.getFilmTitle());
@@ -137,7 +137,7 @@ public class FilmController {
     }
 
     //DELETE
-    @DeleteMapping("/dashboard/delete/schedules/{filmId}")
+    @DeleteMapping("/dashboard/delete/films/{filmId}")
     public ResponseEntity<Object> deleteFilm(@PathVariable Long filmId) {
         try{
             filmService.deleteFilm(filmId);
