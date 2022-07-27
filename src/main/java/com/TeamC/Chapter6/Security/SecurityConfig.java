@@ -44,8 +44,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .antMatchers(POST,"/team3/v2/films/create-film").hasRole("ADMIN")
                 .antMatchers(PUT,"/films/update/{filmId}").hasRole("ADMIN")
-                .antMatchers(DELETE,"/team3/v2/films/delete/{filmId}").hasRole("ADMIN")
-
+                .antMatchers(DELETE,"/films/delete/{filmId}").hasRole("ADMIN")
+                .antMatchers("/dashboard/**").hasRole("ADMIN") //POST, PUT, DELETE
+                //sign-up
                 //CUSTOMER
                 .antMatchers(PUT,"/users/update/").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(GET,"/users").hasAnyRole("CUSTOMER","ADMIN")
