@@ -37,7 +37,7 @@ public class SchedulesControllerDTO {
     /**
      *Get all of data from Scheduless table
      */
-    @GetMapping("/Schedules")
+    @GetMapping("/schedules")
     public ResponseEntity<Object> SchedulesList(){
         try {
             List<Schedules> result = SchedulesService.getAll();
@@ -67,7 +67,7 @@ public class SchedulesControllerDTO {
      *create new Schedules into Scheduless table
      * throws ResourceNotFoundException if bad request happened
      */
-    @PostMapping("/Schedules")
+    @PostMapping("/dashboard/create/schedules")
     public ResponseEntity<Object> createSchedulesDTO(@RequestBody SchedulesRequestDTO SchedulesRequestDTO) {
         try {
             Schedules SchedulesCreate = SchedulesRequestDTO.convertToEntity();
@@ -86,7 +86,7 @@ public class SchedulesControllerDTO {
      * update Schedules
      * throws ResourceNotFoundException if data not found
      */
-    @PutMapping("/Schedules/{id}")
+    @PutMapping("/dashboard/update/schedules/{scheduleId}")
     public ResponseEntity<Object> updateSchedulesDTO(@PathVariable Integer id, @RequestBody SchedulesRequestDTO SchedulesRequestDTO) {
         try {
 
@@ -109,7 +109,7 @@ public class SchedulesControllerDTO {
      * delete Schedules by id
      * throws ResourceNotFoundException if data is not found
      */
-    @DeleteMapping("/Schedules/{id}")
+    @DeleteMapping("/dashboard/delete/schedules/{scheduleId}")
     public ResponseEntity<Object> deleteBooking(@PathVariable Integer id) {
         try {
             SchedulesService.deleteSchedulesById(id);
@@ -129,7 +129,7 @@ public class SchedulesControllerDTO {
      *Get Schedules by Schedules id
      * throws ResourceNotFoundException if data is not found
      */
-    @GetMapping("/Schedules/{id}")
+    @GetMapping("/schedules/{scheduleId}")
     public ResponseEntity<Object> getSchedulesById(@PathVariable Integer id) {
         try {
             Optional<Schedules> Schedules = SchedulesService.getSchedulesById(id);
@@ -152,7 +152,7 @@ public class SchedulesControllerDTO {
      * Query Find colum Film,Studio Name, Price
      *throws ResourceNotFoundException if film name is not found
      */
-    @PostMapping("/Schedules/byfilmnameLike")
+    @PostMapping("search/schedules/byfilmnameLike")
     public ResponseEntity<Object> findSchedulesByFilmName(@RequestBody Film film) {
         try {
             List<Schedules> SchedulesByFilmName = SchedulesService.getSchedulesByFilmNameLike(film.getFilmName());
