@@ -1,33 +1,64 @@
-2022-07-27 12:07:26,127 INFO org.springframework.boot.StartupInfoLogger [main] Starting Chapter6ApplicationTests using Java 17.0.3.1 on DESKTOP-VVKE1SS with PID 8516 (started by Win 10 in C:\Users\Win 10\IdeaProjects\Chapter6_Bioskop)
-2022-07-27 12:07:26,129 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-27 12:07:26,129 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
-2022-07-27 12:07:31,688 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-27 12:07:31,931 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [main] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:07:31,933 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [main] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:07:31,933 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [main] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:07:31,934 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [main] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:07:31,934 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [main] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:07:31,935 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [main] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:07:34,377 INFO org.springframework.boot.StartupInfoLogger [main] Started Chapter6ApplicationTests in 8.808 seconds (JVM running for 10.059)
-2022-07-27 12:08:18,231 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3.1 on DESKTOP-VVKE1SS with PID 10992 (C:\Users\Win 10\IdeaProjects\Chapter6_Bioskop\target\classes started by Win 10 in C:\Users\Win 10\IdeaProjects\Chapter6_Bioskop)
-2022-07-27 12:08:18,234 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
-2022-07-27 12:08:18,235 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-07-27 12:08:22,598 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-07-27 12:08:22,715 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:08:22,716 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:08:22,716 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:08:22,716 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:08:22,717 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:08:22,717 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2022-07-27 12:08:23,646 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 5.874 seconds (JVM running for 6.671)
-2022-07-27 12:17:59,748 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Failed to process authentication request
-org.springframework.security.authentication.BadCredentialsException: Bad credentials
-	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:522)
-	at com.TeamC.Chapter6.Model.Filter.CustomAuthenticationFilter.attemptAuthentication(CustomAuthenticationFilter.java:45)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+2022-07-28 00:00:11,711 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:11,853 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:11,856 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:11,856 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:13,203 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:13,231 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:13,232 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:13,232 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:13,392 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:13,395 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:13,467 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:18,868 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:18,891 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:18,895 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:18,896 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:18,988 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:18,994 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-28 00:00:19,007 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:02:19,884 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 00:02:19,894 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Refresh token is missing] with root cause
+java.lang.RuntimeException: Refresh token is missing
+	at com.TeamC.Chapter6.RestController.LoginController.refreshToken(LoginController.java:153)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
 	at com.TeamC.Chapter6.Model.Filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:32)
@@ -83,33 +114,61 @@ org.springframework.security.authentication.BadCredentialsException: Bad credent
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-07-27 12:17:59,749 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Cleared SecurityContextHolder
-2022-07-27 12:17:59,750 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Handling authentication failure
-2022-07-27 12:17:59,752 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
-2022-07-27 12:18:05,888 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
-2022-07-27 12:18:05,987 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
-2022-07-27 12:18:05,989 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
-2022-07-27 12:18:05,991 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
-2022-07-27 12:18:06,206 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
-2022-07-27 12:18:06,244 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
-2022-07-27 12:19:15,129 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
-2022-07-27 12:19:15,287 INFO com.TeamC.Chapter6.RestController.SignUpController [http-nio-8090-exec-2] ==================== Logger Start Create Users ====================
-2022-07-27 12:19:15,287 INFO com.TeamC.Chapter6.RestController.SignUpController [http-nio-8090-exec-2] User Successfully Created !
-2022-07-27 12:19:15,287 INFO com.TeamC.Chapter6.RestController.SignUpController [http-nio-8090-exec-2] ID       : 66
-2022-07-27 12:19:15,287 INFO com.TeamC.Chapter6.RestController.SignUpController [http-nio-8090-exec-2] Username : bayuji1
-2022-07-27 12:19:15,288 INFO com.TeamC.Chapter6.RestController.SignUpController [http-nio-8090-exec-2] Email    : bayuaji1@gmail.com
-2022-07-27 12:19:15,288 INFO com.TeamC.Chapter6.RestController.SignUpController [http-nio-8090-exec-2] Password : $2a$10$651r0O31a6i.QeWUThPx6eg5dvl4NKg9ymTA62t7Ge1WQtt1kPq06
-2022-07-27 12:19:15,288 INFO com.TeamC.Chapter6.RestController.SignUpController [http-nio-8090-exec-2] Roles    : ROLE_ADMIN
-2022-07-27 12:19:15,288 INFO com.TeamC.Chapter6.RestController.SignUpController [http-nio-8090-exec-2] ==================== Logger End Create Users   ====================
-2022-07-27 12:19:15,289 INFO com.TeamC.Chapter6.RestController.SignUpController [http-nio-8090-exec-2]  
-2022-07-27 12:19:58,325 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Failed to process authentication request
-org.springframework.security.authentication.BadCredentialsException: Bad credentials
-	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:514)
-	at com.TeamC.Chapter6.Model.Filter.CustomAuthenticationFilter.attemptAuthentication(CustomAuthenticationFilter.java:45)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+2022-07-28 00:02:19,901 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 00:11:13,733 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 8320 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-28 00:11:13,736 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-28 00:11:13,737 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-28 00:11:19,844 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-28 00:11:20,149 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:11:20,153 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:11:20,154 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:11:20,155 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:11:20,158 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:11:20,159 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:11:22,162 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 9.243 seconds (JVM running for 9.971)
+2022-07-28 00:11:40,558 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 00:11:40,606 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Refresh token is missing] with root cause
+java.lang.RuntimeException: Refresh token is missing
+	at com.TeamC.Chapter6.RestController.LoginController.refreshToken(LoginController.java:152)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
 	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
 	at com.TeamC.Chapter6.Model.Filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:32)
@@ -165,138 +224,231 @@ org.springframework.security.authentication.BadCredentialsException: Bad credent
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-07-27 12:19:58,325 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Cleared SecurityContextHolder
-2022-07-27 12:19:58,326 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Handling authentication failure
-2022-07-27 12:19:58,327 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
-2022-07-27 12:20:36,246 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Failed to process authentication request
-org.springframework.security.authentication.BadCredentialsException: Bad credentials
-	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:514)
-	at com.TeamC.Chapter6.Model.Filter.CustomAuthenticationFilter.attemptAuthentication(CustomAuthenticationFilter.java:45)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at com.TeamC.Chapter6.Model.Filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:32)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-07-27 12:20:36,247 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Cleared SecurityContextHolder
-2022-07-27 12:20:36,247 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Handling authentication failure
-2022-07-27 12:20:36,248 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
-2022-07-27 12:20:42,696 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Failed to process authentication request
-org.springframework.security.authentication.BadCredentialsException: Bad credentials
-	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
-	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$AuthenticationManagerDelegator.authenticate(WebSecurityConfigurerAdapter.java:514)
-	at com.TeamC.Chapter6.Model.Filter.CustomAuthenticationFilter.attemptAuthentication(CustomAuthenticationFilter.java:45)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at com.TeamC.Chapter6.Model.Filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:32)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1787)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-07-27 12:20:42,696 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Cleared SecurityContextHolder
-2022-07-27 12:20:42,697 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Handling authentication failure
-2022-07-27 12:20:42,699 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 00:11:40,609 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 00:14:46,488 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 22344 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-28 00:14:46,490 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-28 00:14:46,491 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-28 00:14:51,780 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-28 00:14:51,937 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:14:51,938 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:14:51,939 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:14:51,939 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:14:51,940 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:14:51,940 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:14:53,357 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 7.5 seconds (JVM running for 8.233)
+2022-07-28 00:16:33,397 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:16:33,467 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:16:53,164 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 00:16:53,169 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 00:16:56,573 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 00:16:56,575 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 00:16:57,159 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-28 00:16:57,161 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-28 00:17:14,675 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:17:14,720 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-28 00:17:14,721 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-28 00:17:14,723 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 00:17:14,877 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 00:17:14,879 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 00:17:14,912 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 00:17:56,742 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 00:17:56,745 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 00:18:22,181 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 26540 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-28 00:18:22,183 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-28 00:18:22,185 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-28 00:18:27,497 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-28 00:18:27,662 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:18:27,664 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:18:27,664 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:18:27,664 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:18:27,665 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:18:27,665 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:18:29,161 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 7.593 seconds (JVM running for 8.333)
+2022-07-28 00:19:02,088 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-28 00:19:02,160 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-28 00:19:49,722 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 13764 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-28 00:19:49,725 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-28 00:19:49,726 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-28 00:19:55,618 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-28 00:19:55,836 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:19:55,838 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:19:55,838 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:19:55,838 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:19:55,839 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:19:55,839 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:19:57,331 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 8.335 seconds (JVM running for 9.311)
+2022-07-28 00:20:42,728 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:20:42,800 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-28 00:20:42,800 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-28 00:20:42,800 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 00:20:44,426 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 00:20:44,447 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 00:20:44,450 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 00:20:44,450 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-28 00:20:44,601 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-28 00:20:44,611 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-28 00:20:44,721 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:21:49,208 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:35,450 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 26400 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-28 00:38:35,452 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-28 00:38:35,454 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-28 00:38:40,879 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-28 00:38:41,135 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:38:41,136 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:38:41,137 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:38:41,137 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:38:41,138 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:38:41,139 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:38:42,724 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 7.9 seconds (JVM running for 8.6)
+2022-07-28 00:38:50,325 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:50,420 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:50,422 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:50,422 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:53,515 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:53,534 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:53,536 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:53,537 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:53,681 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:53,686 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:38:53,805 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 00:39:15,548 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-28 00:40:47,226 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 16856 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-28 00:40:47,229 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-28 00:40:47,230 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-28 00:40:52,659 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-28 00:40:52,821 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:40:52,823 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:40:52,823 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:40:52,823 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:40:52,825 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:40:52,825 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:40:54,255 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 7.643 seconds (JVM running for 8.361)
+2022-07-28 00:41:41,975 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:55:15,172 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 1564 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-28 00:55:15,174 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-28 00:55:15,175 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-28 00:55:21,087 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-28 00:55:21,287 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:55:21,288 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:55:21,288 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:55:21,288 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:55:21,289 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:55:21,289 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:55:22,781 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 8.365 seconds (JVM running for 9.215)
+2022-07-28 00:57:32,167 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 10564 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-28 00:57:32,173 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-28 00:57:32,176 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-28 00:57:38,729 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-28 00:57:38,945 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:57:38,948 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:57:38,949 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:57:38,949 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:57:38,950 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:57:38,950 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 00:57:40,775 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 9.447 seconds (JVM running for 10.274)
+2022-07-28 00:58:16,142 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:58:16,260 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-28 00:58:16,262 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-28 00:58:16,264 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 00:58:16,434 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 00:58:16,436 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 00:58:16,489 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 00:59:40,247 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 00:59:40,307 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 01:00:32,970 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 01:00:32,994 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-6] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 4, column: 4] (through reference chain: com.TeamC.Chapter6.DTO.ReservationRequestDTO["user"])]
+2022-07-28 01:00:32,997 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 01:00:41,323 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 01:00:41,327 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-5] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected end-of-input: expected close marker for Object (start marker at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 1]); nested exception is com.fasterxml.jackson.core.io.JsonEOFException: Unexpected end-of-input: expected close marker for Object (start marker at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 1, column: 1])<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 7, column: 2]]
+2022-07-28 01:00:41,329 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 01:01:01,223 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 01:01:01,230 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] ==================== Logger Start Error ====================
+2022-07-28 01:01:01,231 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Input invalid
+2022-07-28 01:01:01,232 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] ==================== Logger End Error ====================
+2022-07-28 01:01:12,350 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-28 01:01:12,467 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-10] ==================== Logger Start Create Reservation ====================
+2022-07-28 01:01:12,487 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-10] Create Reservation : BookingResponsePost{reservation_id=53, schedule_id=19, user_id=62, created_at=2022-07-28T01:01:12.431161800, updated_at=2022-07-28T01:01:12.431161800}
+2022-07-28 01:01:12,489 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-10] ==================== Logger End Create Reservation ====================
+2022-07-28 01:01:44,395 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-28 01:01:44,397 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-28 01:06:25,500 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-28 01:06:25,651 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] ==================== Logger Start Find All Reservation ====================
+2022-07-28 01:06:25,670 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 1, Title Film : The Batman, Status Playing : true, Studio : A, Seat Number : 5, Status Seat : true, Price : 25000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,673 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 2, Title Film : Avatar 2, Status Playing : true, Studio : A, Seat Number : 3, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,674 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 3, Title Film : Sonic the Hedgehog 2, Status Playing : true, Studio : A, Seat Number : 4, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,674 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 4, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-28 01:06:25,674 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 6, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-28 01:06:25,675 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 7, Title Film : Setan Kembar, Status Playing : true, Studio : C, Seat Number : 5, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-28 01:06:25,678 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 8, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-28 01:06:25,679 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 9, Title Film : Jurassic World Dominion, Status Playing : true, Studio : A, Seat Number : 2, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,679 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 10, Title Film : Keranda Modif, Status Playing : true, Studio : C, Seat Number : 6, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,681 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 11, Title Film : pergi, Status Playing : true, Studio : B, Seat Number : 8, Status Seat : true, Price : 20000, Date Show : 2022-08-08, Show Start : 09:09, Show End : 12:12
+2022-07-28 01:06:25,683 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 12, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-28 01:06:25,683 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 13, Title Film : Final Fantasprit, Status Playing : true, Studio : D, Seat Number : 6, Status Seat : true, Price : 15000, Date Show : 2022-07-21, Show Start : 16:30, Show End : 18:00
+2022-07-28 01:06:25,684 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 14, Title Film : Alas Pati, Status Playing : true, Studio : C, Seat Number : 2, Status Seat : false, Price : 35000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-28 01:06:25,685 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 15, Title Film : KKN di Desa Penari, Status Playing : true, Studio : A, Seat Number : 6, Status Seat : true, Price : 25000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,686 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 16, Title Film : The Lost City, Status Playing : true, Studio : A, Seat Number : 9, Status Seat : false, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,686 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 17, Title Film : The Twin, Status Playing : true, Studio : A, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,686 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 18, Title Film : Jurassic World Dominion, Status Playing : true, Studio : A, Seat Number : 2, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,686 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 19, Title Film : bumi cinta, Status Playing : false, Studio : B, Seat Number : 3, Status Seat : true, Price : 20000, Date Show : 2022-06-25, Show Start : 13:06, Show End : 09:09
+2022-07-28 01:06:25,687 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 20, Title Film : Makmum, Status Playing : true, Studio : C, Seat Number : 9, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,687 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 21, Title Film : The Roundup, Status Playing : true, Studio : A, Seat Number : 2, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,687 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 22, Title Film : Jurassic World Dominion, Status Playing : true, Studio : A, Seat Number : 2, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,689 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 23, Title Film : Alas Pati, Status Playing : true, Studio : C, Seat Number : 2, Status Seat : false, Price : 35000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-28 01:06:25,691 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 24, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-28 01:06:25,692 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 25, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-28 01:06:25,693 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 26, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-28 01:06:25,694 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 27, Title Film : Setan Kembar, Status Playing : true, Studio : C, Seat Number : 5, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-28 01:06:25,698 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 28, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-28 01:06:25,700 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 29, Title Film : Jurassic World Dominion, Status Playing : true, Studio : A, Seat Number : 2, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,701 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 30, Title Film : Keranda Modif, Status Playing : true, Studio : C, Seat Number : 6, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,702 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 31, Title Film : pergi, Status Playing : true, Studio : B, Seat Number : 8, Status Seat : true, Price : 20000, Date Show : 2022-08-08, Show Start : 09:09, Show End : 12:12
+2022-07-28 01:06:25,702 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 32, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-28 01:06:25,702 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 33, Title Film : Final Fantasprit, Status Playing : true, Studio : D, Seat Number : 6, Status Seat : true, Price : 15000, Date Show : 2022-07-21, Show Start : 16:30, Show End : 18:00
+2022-07-28 01:06:25,703 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 34, Title Film : Alas Pati, Status Playing : true, Studio : C, Seat Number : 2, Status Seat : false, Price : 35000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-28 01:06:25,703 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 35, Title Film : KKN di Desa Penari, Status Playing : true, Studio : A, Seat Number : 6, Status Seat : true, Price : 25000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,703 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 36, Title Film : The Lost City, Status Playing : true, Studio : A, Seat Number : 9, Status Seat : false, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,704 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 37, Title Film : The Twin, Status Playing : true, Studio : A, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,706 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 38, Title Film : pergi, Status Playing : true, Studio : B, Seat Number : 8, Status Seat : true, Price : 20000, Date Show : 2022-08-08, Show Start : 09:09, Show End : 12:12
+2022-07-28 01:06:25,706 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 39, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-28 01:06:25,707 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 40, Title Film : Cinta Segiempat, Status Playing : false, Studio : D, Seat Number : 9, Status Seat : true, Price : 15000, Date Show : 2022-07-22, Show Start : 15:30, Show End : 17:00
+2022-07-28 01:06:25,708 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 41, Title Film : Avatar 2, Status Playing : true, Studio : A, Seat Number : 3, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,709 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 42, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-28 01:06:25,709 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 43, Title Film : Avatar 2, Status Playing : true, Studio : A, Seat Number : 3, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,711 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 44, Title Film : Firestarter, Status Playing : true, Studio : A, Seat Number : 7, Status Seat : true, Price : 25000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,712 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 45, Title Film : KKN di Desa Penari, Status Playing : true, Studio : A, Seat Number : 6, Status Seat : true, Price : 25000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,713 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 46, Title Film : The Nun, Status Playing : true, Studio : C, Seat Number : 4, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 20:30
+2022-07-28 01:06:25,714 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 47, Title Film : Setan Kembar, Status Playing : true, Studio : C, Seat Number : 5, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-28 01:06:25,714 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 48, Title Film : pergi, Status Playing : true, Studio : B, Seat Number : 8, Status Seat : true, Price : 20000, Date Show : 2022-08-08, Show Start : 09:09, Show End : 12:12
+2022-07-28 01:06:25,715 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 49, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-28 01:06:25,715 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 5, Title Film : The Roundup, Status Playing : true, Studio : A, Seat Number : 2, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,717 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 51, Title Film : Jurassic World Dominion, Status Playing : true, Studio : A, Seat Number : 2, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-28 01:06:25,718 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 52, Title Film : The Nun, Status Playing : true, Studio : C, Seat Number : 4, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 20:30
+2022-07-28 01:06:25,719 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Reservation id : 53, Title Film : The Nun, Status Playing : true, Studio : C, Seat Number : 4, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 20:30
+2022-07-28 01:06:25,720 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] ==================== Logger End Find All Reservation ====================
+2022-07-28 01:31:39,233 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 2448 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Chapter6_Bioskop)
+2022-07-28 01:31:39,235 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-28 01:31:39,236 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-28 01:31:44,907 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-28 01:31:45,067 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 01:31:45,070 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 01:31:45,070 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 01:31:45,070 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 01:31:45,071 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 01:31:45,071 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 01:31:46,557 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 7.942 seconds (JVM running for 8.678)
+2022-07-28 01:32:02,360 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 01:32:02,500 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-28 01:32:02,516 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 01:32:02,516 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-28 01:32:02,788 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 01:32:02,790 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 01:32:02,851 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-28 01:35:18,187 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 01:35:18,377 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-4] ==================== Logger Start Create Reservation ====================
+2022-07-28 01:35:18,392 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-4] Create Reservation : BookingResponsePost{reservation_id=54, schedule_id=3, user_id=22, created_at=2022-07-28T01:35:18.333494500, updated_at=2022-07-28T01:35:18.333494500}
+2022-07-28 01:35:18,394 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-4] ==================== Logger End Create Reservation ====================
+2022-07-28 01:35:32,732 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 01:35:32,776 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-6] ==================== Logger Start Get By id Reservation ====================
+2022-07-28 01:35:32,796 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-6] Update RReservation : ReservationResponseDTO{reservation_id=33, user_id=13, schedule_id=31, user_name='Tasilia', email_user='Tasilia@hotmail.com', film_name='Final Fantasprit', price=15000, studio='D', status_show=true, seat_number=6, status_seat=true, date_film=2022-07-21, start_film=16:30, end_film=18:00, created_at=2022-07-26T18:01:21.258499, updated_at=2022-07-26T18:01:21.258499}
+2022-07-28 01:35:32,797 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-6] ==================== Logger End Get By id Reservation ====================
