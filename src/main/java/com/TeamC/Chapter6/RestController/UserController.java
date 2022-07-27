@@ -54,7 +54,7 @@ public class UserController {
      * @param user
      * @return
      */
-    @PostMapping("/sign-up")
+    @PostMapping("/dashboard/sign-up")
     public ResponseEntity <Object> createUser(@RequestBody User user) {
         try {
             User userResult = userServiceImplements.createUser(user);
@@ -124,14 +124,14 @@ public class UserController {
 
     /***
      * Get User By Id, Logger and Response DONE
-     * @param users_Id
+     * @param id
      * @return
      */
-    @GetMapping("/users/{users_Id}")
-    public ResponseEntity<Object> getUserById(@PathVariable Long users_Id) {
+    @GetMapping("/users/{id}")
+    public ResponseEntity<Object> getUserById(@PathVariable("id") Long id) {
         try {
-            User userResult = userServiceImplements.getUserById(users_Id)
-                    .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + users_Id));
+            User userResult = userServiceImplements.getUserById(id)
+                    .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + id));
             UserResponseDTO userget = userResult.convertToResponse();
             logger.info("==================== Logger Start Find By ID Users ====================");
             logger.info("ID       : " + userResult.getUserId());
@@ -155,12 +155,54 @@ public class UserController {
      * @param userDetails
      * @return
      */
-    @PutMapping("/users/update/")
+    @PutMapping("/update/users")
     public ResponseEntity<Object> updateUser(@RequestBody User userDetails, Principal principal){
         try {
+            String usernameRequest = userDetails.getUserName();
             String username = principal.getName();
-            User user = userServiceImplements.getUserByUsername(username);
-            user.setUserName(username);
+            if (usernameRequest.equals(username)){
+                User user = userServiceImplements.getUserByUsername(username);
+                user.setUserName(username);
+                user.setEmailId(userDetails.getEmailId());
+                user.setPassword(passwordEncoder.encode(userDetails.getPassword()));
+                userServiceImplements.updateUser(user);
+                UserResponseDTO userget = user.convertToResponse();
+                logger.info("==================== Logger Start Update Users ====================");
+                logger.info("User Data Successfully Updated !");
+                logger.info("ID       : " + user.getUserId());
+                logger.info("Username : " + user.getUserName());
+                logger.info("Email    : " + user.getEmailId());
+                logger.info("Password : " + user.getPassword());
+                logger.info("==================== Logger End Update Users   ====================");
+                logger.info(" ");
+                return ResponseHandler.generateResponse("Successfully Updated User!",HttpStatus.OK, userget);
+            }
+            else {
+                return ResponseHandler.generateResponse("User Unauthorized", FORBIDDEN,"Data Not Found!");
+
+            }
+        }catch(Exception e){
+            logger.info("==================== Logger Start Update Users     ====================");
+            logger.error(String.valueOf(ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND,"Data Not Found!")));
+            logger.info("==================== Logger End Update Users     ====================");
+            logger.info(" ");
+            return ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Data Not Found!");
+        }
+    }
+
+
+    /***
+     * Update User, Logger and Response DONE
+     * @param users_Id
+     * @param userDetails
+     * @return
+     */
+    @PutMapping("/dashboard/update/users/{users_Id}")
+    public ResponseEntity<Object> updateUser(@PathVariable Long users_Id, @RequestBody User userDetails){
+        try {
+            User user = userServiceImplements.getUserById(users_Id)
+                    .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + users_Id));
+            user.setUserName(userDetails.getUserName());
             user.setEmailId(userDetails.getEmailId());
             user.setPassword(passwordEncoder.encode(userDetails.getPassword()));
             userServiceImplements.updateUser(user);
@@ -177,7 +219,7 @@ public class UserController {
             return ResponseHandler.generateResponse("Successfully Updated User!",HttpStatus.OK, userget);
         }catch(Exception e){
             logger.info("==================== Logger Start Update Users     ====================");
-            logger.error(String.valueOf(ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND,"Data Not Found!")));
+            logger.error(e.getMessage());
             logger.info("==================== Logger End Update Users     ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Data Not Found!");
@@ -185,12 +227,14 @@ public class UserController {
 
     }
 
+
+
     /***
      * Delete User,Logger and Response DONE
      * @param
      * @return
      */
-    @DeleteMapping("/users/delete/")
+    @DeleteMapping("/delete/users")
     public ResponseEntity<Object> deleteUser(Principal principal) {
         try {
             String username = principal.getName();
@@ -210,6 +254,27 @@ public class UserController {
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND, "Data Not Found!" );
         }
     }
+
+    @DeleteMapping("/dashboard/delete/users/{users_Id}")
+    public ResponseEntity<Object> deleteUser(@PathVariable Long users_Id){
+        try {
+            userServiceImplements.deleteUserById(users_Id);
+            Map<String, Boolean> response = new HashMap<>();
+            response.put("deleted", Boolean.TRUE);
+            logger.info("==================== Logger Start Delete Users ====================");
+            logger.info("User Data Successfully Deleted! :" + response.put("deleted", Boolean.TRUE));
+            logger.info("==================== Logger End Delete Users   ====================");
+            logger.info(" ");
+            return ResponseHandler.generateResponse("Successfully Delete User! ", HttpStatus.OK, response);
+        } catch (ResourceNotFoundException e){
+            logger.info("==================== Logger Start Delete Users     ====================");
+            logger.error(e.getMessage());
+            logger.info("==================== Logger End Delete Users     ====================");
+            logger.info(" ");
+            return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND, "Data Not Found!" );
+        }
+    }
+
 }
 
 
