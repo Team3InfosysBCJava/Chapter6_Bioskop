@@ -29,6 +29,7 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
+!**/src/main/resources/logs/spring-boot-logger.log
 
 ### VS Code ###
 .vscode/
