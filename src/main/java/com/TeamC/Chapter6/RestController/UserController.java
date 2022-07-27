@@ -124,14 +124,14 @@ public class UserController {
 
     /***
      * Get User By Id, Logger and Response DONE
-     * @param users_Id
+     * @param id
      * @return
      */
     @GetMapping("/users/{id}")
-    public ResponseEntity<Object> getUserById(@PathVariable Long users_Id) {
+    public ResponseEntity<Object> getUserById(@PathVariable("id") Long id) {
         try {
-            User userResult = userServiceImplements.getUserById(users_Id)
-                    .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + users_Id));
+            User userResult = userServiceImplements.getUserById(id)
+                    .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + id));
             UserResponseDTO userget = userResult.convertToResponse();
             logger.info("==================== Logger Start Find By ID Users ====================");
             logger.info("ID       : " + userResult.getUserId());
@@ -158,22 +158,29 @@ public class UserController {
     @PutMapping("/dashboard/update/users/{id}")
     public ResponseEntity<Object> updateUser(@RequestBody User userDetails, Principal principal){
         try {
+            String usernameRequest = userDetails.getUserName();
             String username = principal.getName();
-            User user = userServiceImplements.getUserByUsername(username);
-            user.setUserName(username);
-            user.setEmailId(userDetails.getEmailId());
-            user.setPassword(passwordEncoder.encode(userDetails.getPassword()));
-            userServiceImplements.updateUser(user);
-            UserResponseDTO userget = user.convertToResponse();
-            logger.info("==================== Logger Start Update Users ====================");
-            logger.info("User Data Successfully Updated !");
-            logger.info("ID       : " + user.getUserId());
-            logger.info("Username : " + user.getUserName());
-            logger.info("Email    : " + user.getEmailId());
-            logger.info("Password : " + user.getPassword());
-            logger.info("==================== Logger End Update Users   ====================");
-            logger.info(" ");
-            return ResponseHandler.generateResponse("Successfully Updated User!",HttpStatus.OK, userget);
+            if (usernameRequest.equals(username)){
+                User user = userServiceImplements.getUserByUsername(username);
+                user.setUserName(username);
+                user.setEmailId(userDetails.getEmailId());
+                user.setPassword(passwordEncoder.encode(userDetails.getPassword()));
+                userServiceImplements.updateUser(user);
+                UserResponseDTO userget = user.convertToResponse();
+                logger.info("==================== Logger Start Update Users ====================");
+                logger.info("User Data Successfully Updated !");
+                logger.info("ID       : " + user.getUserId());
+                logger.info("Username : " + user.getUserName());
+                logger.info("Email    : " + user.getEmailId());
+                logger.info("Password : " + user.getPassword());
+                logger.info("==================== Logger End Update Users   ====================");
+                logger.info(" ");
+                return ResponseHandler.generateResponse("Successfully Updated User!",HttpStatus.OK, userget);
+            }
+            else {
+                return ResponseHandler.generateResponse("User Unauthorized", FORBIDDEN,"Data Not Found!");
+
+            }
         }catch(Exception e){
             logger.info("==================== Logger Start Update Users     ====================");
             logger.error(String.valueOf(ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND,"Data Not Found!")));
