@@ -1,6 +1,7 @@
 package com.TeamC.Chapter6.RestController;
 
 import com.TeamC.Chapter6.DTO.UserResponseDTO;
+import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
 import com.TeamC.Chapter6.Model.User;
 import com.TeamC.Chapter6.Repository.UserRepository;
 import com.TeamC.Chapter6.Response.ResponseHandler;
@@ -82,9 +83,12 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
     }
 
     @PostMapping("/sign-up")
-    public ResponseEntity<Object> createUser(@RequestBody User user) {
+    public ResponseEntity<Object> createUser(@RequestBody User user) throws Exception {
         try {
             User userResult = userServiceImplements.createUser(user);
+            if(user.getRole().equals("ROLE_ADMIN")){
+                throw new ResourceNotFoundException("role only customer or user");
+            }
             UserResponseDTO userget = userResult.convertToResponse();
             Map<String, Object> userMap = new HashMap<>();
             List<Map<String, Object>> maps = new ArrayList<>();

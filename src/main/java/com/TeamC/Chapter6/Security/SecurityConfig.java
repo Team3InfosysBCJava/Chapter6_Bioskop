@@ -45,10 +45,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(POST,"/films/create-film").hasRole("ADMIN")
                 .antMatchers(PUT,"/films/update/{filmId}").hasRole("ADMIN")
                 .antMatchers(DELETE,"/films/delete/{filmId}").hasRole("ADMIN")
+                ///sign-up
+
+                .antMatchers(POST,"/Schedules").hasRole("ADMIN")
+                .antMatchers(PUT,"/Schedules/{id}").hasRole("ADMIN")
+                .antMatchers(DELETE,"/films/delete/{filmId}").hasRole("ADMIN")
                 //CUSTOMER
-                .antMatchers(PUT,"/users/update/{users_Id}").hasAnyRole("CUSTOMER","ADMIN")
-                .antMatchers(DELETE,"/users/delete/{users_Id}").hasAnyRole("CUSTOMER","ADMIN")
-                .antMatchers(GET,"/reports/print/reservations/:userName").hasAnyRole("CUSTOMER","ADMIN");
+                .antMatchers(PUT,"/users/update/").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(DELETE,"/users/delete/").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(GET,"/print/reservations/byuserName").hasAnyRole("CUSTOMER","ADMIN");
         http.addFilter(customAuthenticationFilter);
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }

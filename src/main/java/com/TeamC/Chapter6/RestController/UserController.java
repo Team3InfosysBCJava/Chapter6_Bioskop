@@ -30,6 +30,7 @@ import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.security.Principal;
 import java.util.*;
 
 import com.auth0.jwt.JWT;
@@ -72,7 +73,6 @@ public class UserController {
             userMap.put("ID             ", userResult.getUserId());
             userMap.put("Username       ", userResult.getUserName());
             userMap.put("Email          ", userResult.getEmailId());
-            userMap.put("Password       ", userResult.getPassword());
             userMap.put("Roles          ",userResult.getRole());
             maps.add(userMap);
             logger.info("==================== Logger End Create Users   ====================");
@@ -108,7 +108,6 @@ public class UserController {
                 user.put("ID            ", userData.getUserId());
                 user.put("Username      ", userData.getUserName());
                 user.put("Email         ", userData.getEmailId());
-                user.put("Password      ", userData.getPassword());
                 maps.add(user);
             }
             logger.info("==================== Logger End Get All Users     ====================");
@@ -138,7 +137,6 @@ public class UserController {
             logger.info("ID       : " + userResult.getUserId());
             logger.info("Username : " + userResult.getUserName());
             logger.info("Email    : " + userResult.getEmailId());
-            logger.info("Password : " + userResult.getPassword());
             logger.info("==================== Logger End Find By ID Users   ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse("Successfully Get User By ID!", HttpStatus.OK, userget);
@@ -153,16 +151,16 @@ public class UserController {
 
     /***
      * Update User, Logger and Response DONE
-     * @param users_Id
+     * @param
      * @param userDetails
      * @return
      */
-    @PutMapping("/users/update/{users_Id}")
-    public ResponseEntity<Object> updateUser(@PathVariable Long users_Id, @RequestBody User userDetails){
+    @PutMapping("/users/update/")
+    public ResponseEntity<Object> updateUser(@RequestBody User userDetails, Principal principal){
         try {
-            User user = userServiceImplements.getUserById(users_Id)
-                    .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + users_Id));
-            user.setUserName(userDetails.getUserName());
+            String username = principal.getName();
+            User user = userServiceImplements.getUserByUsername(username);
+            user.setUserName(username);
             user.setEmailId(userDetails.getEmailId());
             user.setPassword(passwordEncoder.encode(userDetails.getPassword()));
             userServiceImplements.updateUser(user);
@@ -189,13 +187,14 @@ public class UserController {
 
     /***
      * Delete User,Logger and Response DONE
-     * @param users_Id
+     * @param
      * @return
      */
-    @DeleteMapping("/users/delete/{users_Id}")
-    public ResponseEntity<Object> deleteUser(@PathVariable Long users_Id){
+    @DeleteMapping("/users/delete/")
+    public ResponseEntity<Object> deleteUser(Principal principal) {
         try {
-            userServiceImplements.deleteUserById(users_Id);
+            String username = principal.getName();
+            userServiceImplements.getUserByUsername(username);
             Map<String, Boolean> response = new HashMap<>();
             response.put("deleted", Boolean.TRUE);
             logger.info("==================== Logger Start Delete Users ====================");
