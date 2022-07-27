@@ -30,6 +30,7 @@ import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.security.Principal;
 import java.util.*;
 
 import com.auth0.jwt.JWT;
@@ -53,7 +54,7 @@ public class UserController {
      * @param user
      * @return
      */
-    @PostMapping("/sign-up")
+    @PostMapping("/dashboard/sign-up")
     public ResponseEntity <Object> createUser(@RequestBody User user) {
         try {
             User userResult = userServiceImplements.createUser(user);
@@ -72,7 +73,6 @@ public class UserController {
             userMap.put("ID             ", userResult.getUserId());
             userMap.put("Username       ", userResult.getUserName());
             userMap.put("Email          ", userResult.getEmailId());
-            userMap.put("Password       ", userResult.getPassword());
             userMap.put("Roles          ",userResult.getRole());
             maps.add(userMap);
             logger.info("==================== Logger End Create Users   ====================");
@@ -108,7 +108,6 @@ public class UserController {
                 user.put("ID            ", userData.getUserId());
                 user.put("Username      ", userData.getUserName());
                 user.put("Email         ", userData.getEmailId());
-                user.put("Password      ", userData.getPassword());
                 maps.add(user);
             }
             logger.info("==================== Logger End Get All Users     ====================");
@@ -125,20 +124,19 @@ public class UserController {
 
     /***
      * Get User By Id, Logger and Response DONE
-     * @param users_Id
+     * @param id
      * @return
      */
-    @GetMapping("/users/{users_Id}")
-    public ResponseEntity<Object> getUserById(@PathVariable Long users_Id) {
+    @GetMapping("/users/{id}")
+    public ResponseEntity<Object> getUserById(@PathVariable("id") Long id) {
         try {
-            User userResult = userServiceImplements.getUserById(users_Id)
-                    .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + users_Id));
+            User userResult = userServiceImplements.getUserById(id)
+                    .orElseThrow(() -> new ResourceNotFoundException("User not exist with user_Id :" + id));
             UserResponseDTO userget = userResult.convertToResponse();
             logger.info("==================== Logger Start Find By ID Users ====================");
             logger.info("ID       : " + userResult.getUserId());
             logger.info("Username : " + userResult.getUserName());
             logger.info("Email    : " + userResult.getEmailId());
-            logger.info("Password : " + userResult.getPassword());
             logger.info("==================== Logger End Find By ID Users   ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse("Successfully Get User By ID!", HttpStatus.OK, userget);
@@ -153,11 +151,53 @@ public class UserController {
 
     /***
      * Update User, Logger and Response DONE
+     * @param
+     * @param userDetails
+     * @return
+     */
+    @PutMapping("/update/users")
+    public ResponseEntity<Object> updateUser(@RequestBody User userDetails, Principal principal){
+        try {
+            String usernameRequest = userDetails.getUserName();
+            String username = principal.getName();
+            if (usernameRequest.equals(username)){
+                User user = userServiceImplements.getUserByUsername(username);
+                user.setUserName(username);
+                user.setEmailId(userDetails.getEmailId());
+                user.setPassword(passwordEncoder.encode(userDetails.getPassword()));
+                userServiceImplements.updateUser(user);
+                UserResponseDTO userget = user.convertToResponse();
+                logger.info("==================== Logger Start Update Users ====================");
+                logger.info("User Data Successfully Updated !");
+                logger.info("ID       : " + user.getUserId());
+                logger.info("Username : " + user.getUserName());
+                logger.info("Email    : " + user.getEmailId());
+                logger.info("Password : " + user.getPassword());
+                logger.info("==================== Logger End Update Users   ====================");
+                logger.info(" ");
+                return ResponseHandler.generateResponse("Successfully Updated User!",HttpStatus.OK, userget);
+            }
+            else {
+                return ResponseHandler.generateResponse("User Unauthorized", FORBIDDEN,"Data Not Found!");
+
+            }
+        }catch(Exception e){
+            logger.info("==================== Logger Start Update Users     ====================");
+            logger.error(String.valueOf(ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND,"Data Not Found!")));
+            logger.info("==================== Logger End Update Users     ====================");
+            logger.info(" ");
+            return ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Data Not Found!");
+        }
+    }
+
+
+    /***
+     * Update User, Logger and Response DONE
      * @param users_Id
      * @param userDetails
      * @return
      */
-    @PutMapping("/users/update/{users_Id}")
+    @PutMapping("/dashboard/update/users/{users_Id}")
     public ResponseEntity<Object> updateUser(@PathVariable Long users_Id, @RequestBody User userDetails){
         try {
             User user = userServiceImplements.getUserById(users_Id)
@@ -179,7 +219,7 @@ public class UserController {
             return ResponseHandler.generateResponse("Successfully Updated User!",HttpStatus.OK, userget);
         }catch(Exception e){
             logger.info("==================== Logger Start Update Users     ====================");
-            logger.error(String.valueOf(ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND,"Data Not Found!")));
+            logger.error(e.getMessage());
             logger.info("==================== Logger End Update Users     ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Data Not Found!");
@@ -187,15 +227,18 @@ public class UserController {
 
     }
 
+
+
     /***
      * Delete User,Logger and Response DONE
-     * @param users_Id
+     * @param
      * @return
      */
-    @DeleteMapping("/users/delete/{users_Id}")
-    public ResponseEntity<Object> deleteUser(@PathVariable Long users_Id){
+    @DeleteMapping("/delete/users")
+    public ResponseEntity<Object> deleteUser(Principal principal) {
         try {
-            userServiceImplements.deleteUserById(users_Id);
+            String username = principal.getName();
+            userServiceImplements.getUserByUsername(username);
             Map<String, Boolean> response = new HashMap<>();
             response.put("deleted", Boolean.TRUE);
             logger.info("==================== Logger Start Delete Users ====================");
@@ -212,41 +255,26 @@ public class UserController {
         }
     }
 
-    @GetMapping("/token/refresh")
-    public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String authorizationHeader = request.getHeader(AUTHORIZATION);
-        if(authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-            try {
-                String refresh_token = authorizationHeader.substring("Bearer ".length());
-                Algorithm algorithm = Algorithm.HMAC256("secret".getBytes());
-                JWTVerifier verifier = JWT.require(algorithm).build();
-                DecodedJWT decodedJWT = verifier.verify(refresh_token);
-                String username = decodedJWT.getSubject();
-                User user = userServiceImplements.getUserByUsername(username);
-                String access_token = JWT.create()
-                        .withSubject(user.getUserName())
-                        .withExpiresAt(new Date(System.currentTimeMillis() + 10 * 60 * 1000))
-                        .withIssuer(request.getRequestURL().toString())
-                        .withClaim("roles", user.getRole())
-                        .sign(algorithm);
-                Map<String, String> tokens = new HashMap<>();
-                tokens.put("access_token", access_token);
-                tokens.put("refresh_token", refresh_token);
-                response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-                new ObjectMapper().writeValue(response.getOutputStream(), tokens);
-            }catch (Exception exception) {
-                response.setHeader("error", exception.getMessage());
-                response.setStatus(FORBIDDEN.value());
-                //response.sendError(FORBIDDEN.value());
-                Map<String, String> error = new HashMap<>();
-                error.put("error_message", exception.getMessage());
-                response.setContentType(MimeTypeUtils.APPLICATION_JSON_VALUE);
-                new ObjectMapper().writeValue(response.getOutputStream(), error);
-            }
-        } else {
-            throw new RuntimeException("Refresh token is missing");
+    @DeleteMapping("/dashboard/delete/users/{users_Id}")
+    public ResponseEntity<Object> deleteUser(@PathVariable Long users_Id){
+        try {
+            userServiceImplements.deleteUserById(users_Id);
+            Map<String, Boolean> response = new HashMap<>();
+            response.put("deleted", Boolean.TRUE);
+            logger.info("==================== Logger Start Delete Users ====================");
+            logger.info("User Data Successfully Deleted! :" + response.put("deleted", Boolean.TRUE));
+            logger.info("==================== Logger End Delete Users   ====================");
+            logger.info(" ");
+            return ResponseHandler.generateResponse("Successfully Delete User! ", HttpStatus.OK, response);
+        } catch (ResourceNotFoundException e){
+            logger.info("==================== Logger Start Delete Users     ====================");
+            logger.error(e.getMessage());
+            logger.info("==================== Logger End Delete Users     ====================");
+            logger.info(" ");
+            return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.NOT_FOUND, "Data Not Found!" );
         }
     }
+
 }
 
 

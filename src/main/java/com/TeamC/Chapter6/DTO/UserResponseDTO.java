@@ -11,23 +11,16 @@ import lombok.*;
 public class UserResponseDTO {
     private Long user_id;
 
-
-
     private String user_name;
 
     private String email_id;
 
-    private String pass_word;
-
     @Override
     public String toString() {
-        return "\n ScheduleResponseDTO{" +
-                "userID=" + user_id +
-                ", email=" + email_id +
-                ", password=" + pass_word +
-                ", username=" + user_name +
+        return "UserResponseDTO{" +
+                "user_id=" + user_id +
+                ", user_name='" + user_name + '\'' +
+                ", email_id='" + email_id + '\'' +
                 '}';
     }
-
-
 }

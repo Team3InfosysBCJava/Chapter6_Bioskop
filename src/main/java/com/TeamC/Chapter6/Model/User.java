@@ -37,7 +37,6 @@ public class User {
                 .user_id(this.userId)
                 .user_name(this.userName)
                 .email_id(this.emailId)
-                .pass_word(this.password)
                 .build();
     }
 
