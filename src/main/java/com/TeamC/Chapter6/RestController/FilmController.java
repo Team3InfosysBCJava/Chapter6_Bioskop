@@ -9,6 +9,8 @@ import com.TeamC.Chapter6.Service.FilmService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,15 +22,15 @@ import java.util.*;
 @Tag(name = "4. Film Controller")
 @SecurityRequirement(name = "bearer-key")
 @AllArgsConstructor
-@RequestMapping("/team3")
+@RequestMapping("/team3/v2")
 public class FilmController {
 
     @Autowired
     public FilmService filmService;
 
-
+    private static final Logger logger = LoggerFactory.getLogger(FilmController.class);
     //CREATE
-    @PostMapping("films/create-film")
+    @PostMapping("/films/create-film")
     public ResponseEntity<Object> createFilm(@RequestBody FilmRequestDTO filmRequestDTO) {
             Film filmsCreate = filmRequestDTO.convertToEntity();
             filmService.addFilm(filmsCreate);
@@ -61,8 +63,8 @@ public class FilmController {
 
     //READ BY NAME
     @GetMapping("/films/name")
-    public ResponseEntity<Object> getFilmByName(String name) {
-        List<Film> film = filmService.findFilmByName(name);
+    public ResponseEntity<Object> getFilmByName(@RequestBody FilmRequestDTO filmRequestDTO) {
+        List<Film> film = filmService.findFilmByName(filmRequestDTO.getFilmTitle());
         List<FilmResponseDTO> result = new ArrayList<>();
 
         for (Film data : film) {
@@ -86,7 +88,7 @@ public class FilmController {
 
 
     //DELETE
-    @DeleteMapping("films/delete/{filmId}")
+    @DeleteMapping("/films/delete/{filmId}")
     public ResponseEntity<Object> deleteFilm(@PathVariable Long filmId) {
         filmService.deleteFilm(filmId);
         Map<String, Boolean> response = new HashMap<>();
