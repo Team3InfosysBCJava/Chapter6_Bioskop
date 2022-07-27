@@ -6,17 +6,19 @@ import com.TeamC.Chapter6.DTO.ReservationResponsePost;
 import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
 import com.TeamC.Chapter6.Model.Film;
 import com.TeamC.Chapter6.Model.Reservation;
+import com.TeamC.Chapter6.Model.User;
 import com.TeamC.Chapter6.Service.ReservationServices;
+import com.TeamC.Chapter6.Service.UserServiceImplements;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.TeamC.Chapter6.Response.ResponseHandler;
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -32,12 +34,13 @@ public class ReservationController {
     private static final Logger logger = LoggerFactory.getLogger(FilmController.class);
     private static final String Line = "====================";
     private ReservationServices reservationServices;
+    private UserServiceImplements userServiceImplements;
 
     /**
      *Get All Reservation from Reservation table
      * throws ResourceNotFoundException if not found happened
      */
-    @GetMapping("/Reservation")
+    @GetMapping("/reservation")
     public ResponseEntity<Object> findAll(){
         try {
             List<Reservation> reservations = reservationServices.getAll();
@@ -71,7 +74,7 @@ public class ReservationController {
      *Get Reservation by Reservation id
      * throws ResourceNotFoundException if data is not found
      */
-    @GetMapping("/Reservation/{id}")
+    @GetMapping("/reservation/{id}")
     public ResponseEntity<Object> getReservationById(@PathVariable Long id){
         try {
             Optional<Reservation> reservation = reservationServices.getReservationById(id);
@@ -93,7 +96,7 @@ public class ReservationController {
      * update Reservation
      * throws ResourceNotFoundException if data not found
      */
-    @PutMapping("/Reservation/{id}")
+    @PutMapping("/dashboard/update/reservation/{id}")
     public ResponseEntity<Object> Reservationupdate(@PathVariable Long id, @RequestBody ReservationRequestDTO reservationRequestDTO){
         try {
             if(reservationRequestDTO.getSchedules() == null || reservationRequestDTO.getUser() == null){
@@ -115,10 +118,37 @@ public class ReservationController {
         }
     }
     /**
+     * update Reservation
+     * throws ResourceNotFoundException if data not found
+     */
+    @PutMapping("/update/reservation")
+    public ResponseEntity<Object> Reservationupdateuser(@RequestBody ReservationRequestDTO reservationRequestDTO, Principal principal){
+        try {
+            if(reservationRequestDTO.getSchedules() == null || reservationRequestDTO.getUser() != null){
+                throw new ResourceNotFoundException("Reservation must have schedule id and user id");
+            }
+            Reservation reservation = reservationRequestDTO.covertToEntitiy();
+            String username = principal.getName();
+            User user = userServiceImplements.getUserByUsername(username);
+            reservation.setUser(user);
+            Reservation ReservationUpdate = reservationServices.updateReservation(reservation);
+            ReservationResponseDTO results = ReservationUpdate.convertToResponse();
+            logger.info(Line + " Logger Start Update Reservation " + Line);
+            logger.info("Update Reservation : " + ReservationUpdate);
+            logger.info(Line + " Logger End Update Reservation " + Line);
+            return ResponseHandler.generateResponse("Success Update Reservation",HttpStatus.CREATED,results);
+        }catch (Exception e){
+            logger.error(Line + " Logger Start Error " + Line);
+            logger.error(e.getMessage());
+            logger.error(Line + " Logger End Error " + Line);
+            return ResponseHandler.generateResponse(e.getMessage(),HttpStatus.BAD_REQUEST,"Bad Request");
+        }
+    }
+    /**
      *create new Reservation into Reservation table
      * throws ResourceNotFoundException if bad request happened
      */
-    @PostMapping("/Reservation")
+    @PostMapping("/dashboard/create/reservation")
     public ResponseEntity<Object> ReservationCreate(@RequestBody ReservationRequestDTO reservationRequestDTO){
         try{
             if(reservationRequestDTO.getSchedules() == null || reservationRequestDTO.getUser() == null){
@@ -141,10 +171,38 @@ public class ReservationController {
     }
 
     /**
+     *create new Reservation into Reservation table
+     * throws ResourceNotFoundException if bad request happened
+     */
+    @PostMapping("/create/reservation")
+    public ResponseEntity<Object> ReservationCreateUser(@RequestBody ReservationRequestDTO reservationRequestDTO,Principal principal){
+        try{
+            if(reservationRequestDTO.getSchedules() == null || reservationRequestDTO.getUser() != null){
+                throw new ResourceNotFoundException("Input invalid");
+            }
+            String username = principal.getName();
+            User user = userServiceImplements.getUserByUsername(username);
+            Reservation reservation = reservationRequestDTO.covertToEntitiy();
+            reservation.setUser(user);
+            reservationServices.createReservation(reservation);
+            ReservationResponsePost result = reservation.convertToResponsePost();
+            logger.info(Line + " Logger Start Create Reservation " + Line);
+            logger.info("Create Reservation : " + result);
+            logger.info(Line + " Logger End Create Reservation " + Line);
+            return ResponseHandler.generateResponse("Success Create Reservation",HttpStatus.CREATED,result);
+        }catch (Exception e){
+            logger.error(Line + " Logger Start Error " + Line);
+            logger.error(e.getMessage());
+            logger.error(Line + " Logger End Error " + Line);
+            return ResponseHandler.generateResponse(e.getMessage(),HttpStatus.BAD_REQUEST,"Failed Create Database");
+        }
+    }
+
+    /**
      * delete schedule by id
      * throws ResourceNotFoundException if data is not found
      */
-    @DeleteMapping("/Reservation/{id}")
+    @DeleteMapping("/dashboard/delete/reservation/")
     public ResponseEntity<Object> deleteReservation(@PathVariable Long id){
         try {
             reservationServices.deleteSReservationById(id);
@@ -160,13 +218,12 @@ public class ReservationController {
             return ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Data not found");
         }
     }
-
     /**
      * custom Query Reservation by filmname
      * Query Find by Filmnme
      *throws ResourceNotFoundException if film name is not found
      */
-    @PostMapping("/Reservation/Filmname")
+    @PostMapping("/search/reservation/filmname")
     public ResponseEntity<Object> findReservationBySchdeuleFilmName(@RequestBody Film films){
         try {
             List<Reservation> reservationsByScheduleFilmsname = reservationServices.getReservationByFilmName(films.getFilmName());

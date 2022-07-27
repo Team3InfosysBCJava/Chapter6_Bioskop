@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
+import java.security.Principal;
 
 @RestController
 @Tag(name = "8. Reports Controller")
@@ -74,9 +75,10 @@ public class ReportController {
     }
 
     @GetMapping("/print/reservations/byuserName")
-    public void getProductUReportReservationByUsername(String userName) throws Exception{
+    public void getProductUReportReservationByUsername(Principal principal) throws Exception{
         response.setContentType("application/pdf");
         response.setHeader("Content-Disposition", "attachment; filename=\"ReservationsByName.pdf\"");
+        String userName = principal.getName();
         JasperPrint jasperPrint = reportService.generateJasperPrintReservationBy(userName);
         JasperExportManager.exportReportToPdfStream(jasperPrint, response.getOutputStream());
         response.getOutputStream().flush();

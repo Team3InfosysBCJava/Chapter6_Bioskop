@@ -37,21 +37,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         CustomAuthenticationFilter customAuthenticationFilter = new CustomAuthenticationFilter(authenticationManagerBean());
         customAuthenticationFilter.setFilterProcessesUrl("/login");
         http.csrf().disable();
-        http.authorizeRequests().antMatchers("/login/**","/sign-up/**", "/token/refresh/**","/swagger-ui/**").permitAll();
+        http.authorizeRequests().antMatchers("/login/**","/sign-up/**","/swagger-ui/**").permitAll();
         http.authorizeRequests()
                 //ADMIN
                 .antMatchers("/team3/dashboard/**").hasRole("ADMIN") //POST, PUT, DELETE
-//                .antMatchers(POST,"/team3/films/create-film").hasRole("ADMIN")
-//                .antMatchers(PUT,"/team3/films/update/{filmId}").hasRole("ADMIN")
-//                .antMatchers(DELETE,"/team3/films/delete/{filmId}").hasRole("ADMIN")
-//
+
                 //CUSTOMER
                 .antMatchers(PUT,"/team3/users/update/").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(GET,"/team3/users").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(GET,"/team3/users/{id}").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(DELETE,"/team3/users/delete/").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(GET,"/team3/print/reservations/byuserName").hasAnyRole("CUSTOMER","ADMIN")
-
+                .antMatchers(POST,"/team3/create/reservation").hasAnyRole("CUSTOMER","ADMIN")
                 //ALL VISITOR ACCESS
                 .antMatchers("/**").permitAll();
         http.addFilter(customAuthenticationFilter);
