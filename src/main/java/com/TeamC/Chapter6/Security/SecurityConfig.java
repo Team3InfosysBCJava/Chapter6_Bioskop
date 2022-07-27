@@ -48,6 +48,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 //CUSTOMER
                 .antMatchers(PUT,"/users/update/").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(GET,"/users").hasAnyRole("CUSTOMER","ADMIN")
+                .antMatchers(GET,"/users/{id}").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(DELETE,"/users/delete/").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(GET,"/print/reservations/byuserName").hasAnyRole("CUSTOMER","ADMIN")
 
@@ -73,3 +75,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 }
+
