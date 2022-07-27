@@ -40,7 +40,7 @@ public class SeatsController {
      *         return seatsService.findAll();
      *     }
      */
-    @GetMapping("/v2/Seats")
+    @GetMapping("/seats")
     public ResponseEntity<Object> getAll2() {
         try {
             List<Seats> seats = seatsService.findAll();
@@ -71,7 +71,7 @@ public class SeatsController {
      *         return seats.get();
      *     }
      */
-    @GetMapping("/v2/Seats/{id}")
+    @GetMapping("/seats/{id}")
     public ResponseEntity<Object> getSeatById2(@PathVariable Long id) {
         try {
             Optional<Seats> seats = seatsService.findById(id);
@@ -98,7 +98,7 @@ public class SeatsController {
      *         return seatsService.createSeat(seats);
      *     }
      */
-    @PostMapping("/v2/Seats")
+    @PostMapping("/dashboard/create/seats")
     public ResponseEntity<Object> createSeat2(@RequestBody SeatsRequestDTO seatsRequestDTO) {
         try {
             Seats seat = seatsRequestDTO.convertToModel();
@@ -130,7 +130,7 @@ public class SeatsController {
      *         return seatsService.updateSeat(seats);
      *     }
      */
-    @PutMapping("/v2/Seats/{id}")
+    @PutMapping("/dashboard/update/seats/{id}")
     public ResponseEntity<Object> updateSeat2(@PathVariable Long id, @RequestBody SeatsRequestDTO seatsRequestDTO) {
         try {
             Optional<Seats> seatId = seatsService.findById(id);
@@ -162,7 +162,7 @@ public class SeatsController {
      *         seatsService.deleteSeat(id);
      *     }
      */
-    @DeleteMapping("/v2/Seats/{id}")
+    @DeleteMapping("/dashboard/delete/seats/{id}")
     public ResponseEntity<Object> deleteSeat2(@PathVariable Long id) {
         try {
             seatsService.deleteSeat(id);
@@ -187,7 +187,7 @@ public class SeatsController {
      *         return seatsService.getSeatsAvailable(seatsRequest.getIsAvailable());
      *     }
      */
-    @PostMapping("/v2/Seats/isAvailable")
+    @PostMapping("/search/seats/isavailable")
     public ResponseEntity<Object> getIsAvailable2(@RequestBody SeatsRequestDTO seatsRequestDTO) {
         try {
             Seats seatsRequest = seatsRequestDTO.convertToModel();

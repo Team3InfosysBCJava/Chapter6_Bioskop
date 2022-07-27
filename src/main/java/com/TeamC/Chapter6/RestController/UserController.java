@@ -165,7 +165,6 @@ public class UserController {
             user.setPassword(passwordEncoder.encode(userDetails.getPassword()));
             userServiceImplements.updateUser(user);
             UserResponseDTO userget = user.convertToResponse();
-
             logger.info("==================== Logger Start Update Users ====================");
             logger.info("User Data Successfully Updated !");
             logger.info("ID       : " + user.getUserId());
@@ -182,8 +181,9 @@ public class UserController {
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(),HttpStatus.NOT_FOUND,"Data Not Found!");
         }
-
     }
+
+
 
     /***
      * Delete User,Logger and Response DONE
