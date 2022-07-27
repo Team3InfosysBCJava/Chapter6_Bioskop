@@ -39,21 +39,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.authorizeRequests().antMatchers("/login/**","/sign-up/**", "/token/refresh/**","/swagger-ui/**").permitAll();
         http.authorizeRequests()
-                //ALL VISITOR ACCESS
-                .antMatchers("/team3/**").hasAnyRole("ADMIN","CUSTOMER","USER")
                 //ADMIN
-                .antMatchers(POST,"/films/create-film").hasRole("ADMIN")
-                .antMatchers(PUT,"/films/update/{filmId}").hasRole("ADMIN")
-                .antMatchers(DELETE,"/films/delete/{filmId}").hasRole("ADMIN")
-                ///sign-up
+                .antMatchers("/team3/dashboard/**").hasRole("ADMIN")
 
-                .antMatchers(POST,"/Schedules").hasRole("ADMIN")
-                .antMatchers(PUT,"/Schedules/{id}").hasRole("ADMIN")
-                .antMatchers(DELETE,"/films/delete/{filmId}").hasRole("ADMIN")
+                .antMatchers(POST,"/team3/v2/films/create-film").hasRole("ADMIN")
+                .antMatchers(PUT,"/films/update/{filmId}").hasRole("ADMIN")
+                .antMatchers(DELETE,"/team3/v2/films/delete/{filmId}").hasRole("ADMIN")
+
                 //CUSTOMER
                 .antMatchers(PUT,"/users/update/").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(DELETE,"/users/delete/").hasAnyRole("CUSTOMER","ADMIN")
-                .antMatchers(GET,"/print/reservations/byuserName").hasAnyRole("CUSTOMER","ADMIN");
+                .antMatchers(GET,"/print/reservations/byuserName").hasAnyRole("CUSTOMER","ADMIN")
+
+                //ALL VISITOR ACCESS
+                .antMatchers("/**").permitAll();
         http.addFilter(customAuthenticationFilter);
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }
