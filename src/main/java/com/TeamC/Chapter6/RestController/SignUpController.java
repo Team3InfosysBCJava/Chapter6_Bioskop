@@ -11,8 +11,8 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import com.TeamC.Chapter6.Helper.ResourceNotFoundException;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -29,7 +29,8 @@ import java.util.Map;
 @Tag(name = "2. Sign Up Controller")
 public class SignUpController {
 
-    private static final Logger logger = LogManager.getLogger(UserController.class);
+    private static final Logger logger = LoggerFactory.getLogger(FilmController.class);
+
     private UserServiceImplements userServiceImplements;
     private UserRepository userRepository;
     private PasswordEncoder passwordEncoder;
@@ -66,7 +67,7 @@ public class SignUpController {
             return ResponseHandler.generateResponse("Successfully Created User!", HttpStatus.CREATED, userget);
         } catch (Exception e) {
             logger.info("==================== Logger Start Create Users     ====================");
-            logger.error(ResponseHandler.generateResponse(e.getMessage(),HttpStatus.BAD_REQUEST,"User Already Exist!"));
+            logger.error(String.valueOf(ResponseHandler.generateResponse(e.getMessage(), HttpStatus.BAD_REQUEST,"User Already Exist!")));
             logger.info("==================== Logger End Create Users     ====================");
             logger.info(" ");
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.BAD_REQUEST, "User Already Exist!");
