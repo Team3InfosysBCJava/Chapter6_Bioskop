@@ -39,16 +39,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.authorizeRequests().antMatchers("/login/**","/sign-up/**", "/token/refresh/**","/swagger-ui/**").permitAll();
         http.authorizeRequests()
+                //ALL VISITOR ACCESS
                 .antMatchers("/team3/**").hasAnyRole("ADMIN","CUSTOMER","USER")
                 //ADMIN
                 .antMatchers(POST,"/films/create-film").hasRole("ADMIN")
                 .antMatchers(PUT,"/films/update/{filmId}").hasRole("ADMIN")
                 .antMatchers(DELETE,"/films/delete/{filmId}").hasRole("ADMIN")
-                //USER
+                //CUSTOMER
                 .antMatchers(PUT,"/users/update/{users_Id}").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(DELETE,"/users/delete/{users_Id}").hasAnyRole("CUSTOMER","ADMIN")
                 .antMatchers(GET,"/reports/print/reservations/:userName").hasAnyRole("CUSTOMER","ADMIN");
-                //ALL VISITOR ACCESS
         http.addFilter(customAuthenticationFilter);
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }
