@@ -57,4 +57,13 @@ public class FilmService {
     public void deleteFilm(Long filmid){
         filmRepository.deleteById(filmid);
     }
+
+    //get by isPlayinh
+    public List<Film> getFilmByStatus(Boolean isPlaying){
+        if(isPlaying == null){
+            return filmRepository.findAll();
+        } else {
+            return filmRepository.getFilmByStatus(isPlaying);
+        }
+    }
 }

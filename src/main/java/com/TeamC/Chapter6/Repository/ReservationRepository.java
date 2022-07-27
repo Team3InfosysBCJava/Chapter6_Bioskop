@@ -1,6 +1,7 @@
 package com.TeamC.Chapter6.Repository;
 
 import com.TeamC.Chapter6.Model.Reservation;
+import com.TeamC.Chapter6.Model.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,6 +13,9 @@ import java.util.List;
 public interface ReservationRepository extends JpaRepository<Reservation,Long> {
     @Query("Select r from Reservation r where r.schedule.films.filmName like %:name%")
     public List<Reservation> getReservationByFilmName(@Param("name")String name);
+
+    @Query("Select r from Reservation r where r.user.userName =?1")
+    public Reservation getReservationByUsername(String name);
 
     @Query("SELECT r FROM Reservation r WHERE CONCAT(r.reservationId, ' ', " +
             "r.schedule.films.filmName, ' ', r.schedule.films.isPlaying, ' ', " +

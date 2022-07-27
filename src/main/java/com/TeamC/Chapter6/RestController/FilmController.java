@@ -8,6 +8,7 @@ import com.TeamC.Chapter6.Service.FilmService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ import java.util.*;
 
 @RestController
 @AllArgsConstructor
+@NoArgsConstructor
 @Tag(name = "4. Film Controller")
 @SecurityRequirement(name = "bearer-key")
 @RequestMapping("/team3")
@@ -90,10 +92,30 @@ public class FilmController {
     }
 
     //READ BY NAME
-    @GetMapping("/search/films/name")
+    @PostMapping("/search/films/name")
     public ResponseEntity<Object> getFilmByName(@RequestBody FilmRequestDTO filmRequestDTO) {
         try{
             List<Film> film = filmService.findFilmByName(filmRequestDTO.getFilmTitle());
+            List<FilmResponseDTO> result = new ArrayList<>();
+            logger.info(Line + " Logger Start Get All " + Line);
+            for (Film data : film) {
+                FilmResponseDTO filmResponseDTO = data.convertToResponse();
+                result.add(filmResponseDTO);
+                logger.info("seatId : " + data.getFilmId() + " film title : " + data.getFilmName() + " isPlaying : " + data.getIsPlaying());
+            }
+            logger.info(Line + " Logger End Get All " + Line);
+            return ResponseHandler.generateResponse("successfully retrieved", HttpStatus.OK, result);
+        } catch (Exception e){
+            logger.error(Line + " Logger Start Error " + Line);
+            logger.error(e.getMessage());
+            logger.error(Line + " Logger End Error " + Line);
+            return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, "no data");
+        }
+    }
+    @PostMapping("/search/films/status")
+    public ResponseEntity<Object> getFilmByStatus(@RequestBody FilmRequestDTO filmRequestDTO) {
+        try{
+            List<Film> film = filmService.getFilmByStatus(filmRequestDTO.getStatus());
             List<FilmResponseDTO> result = new ArrayList<>();
             logger.info(Line + " Logger Start Get All " + Line);
             for (Film data : film) {

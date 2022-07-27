@@ -15,6 +15,8 @@ public class FilmRequestDTO {
     private Boolean status;
 
     public Film convertToEntity(){
+
         return Film.builder().filmName(this.filmTitle).isPlaying(this.status).build();
     }
+
 }
