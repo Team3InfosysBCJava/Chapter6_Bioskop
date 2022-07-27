@@ -40,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/login/**","/sign-up/**", "/token/refresh/**","/swagger-ui/**").permitAll();
         http.authorizeRequests()
                 //ADMIN
-                .antMatchers("/team3/dashboard/**").hasRole("ADMIN")
+                .antMatchers("/team3/dashboard/**").hasAnyRole("ADMIN","CUSTOMER","USER")
 
                 .antMatchers(POST,"/team3/v2/films/create-film").hasRole("ADMIN")
                 .antMatchers(PUT,"/films/update/{filmId}").hasRole("ADMIN")
