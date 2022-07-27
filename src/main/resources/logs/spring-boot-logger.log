@@ -653,3 +653,586 @@ org.springframework.security.authentication.BadCredentialsException: Bad credent
 2022-07-27 18:40:04,055 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8] User Data Successfully Deleted! :true
 2022-07-27 18:40:04,056 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8] ==================== Logger End Delete Users   ====================
 2022-07-27 18:40:04,057 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8]  
+2022-07-27 20:32:01,292 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.2 on LAPTOP-PPQBC3CS with PID 20188 (C:\Bootcamp\Chapter6\Chapter6_Bioskop\target\classes started by lenovo in C:\Bootcamp\Chapter6\Chapter6_Bioskop)
+2022-07-27 20:32:01,294 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-27 20:32:01,295 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-27 20:32:07,180 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-27 20:32:07,499 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 20:32:07,502 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 20:32:07,503 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 20:32:07,504 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 20:32:07,507 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 20:32:07,509 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-27 20:32:09,391 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 8.896 seconds (JVM running for 9.859)
+2022-07-27 20:45:20,894 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 20:45:23,212 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 20:45:23,212 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 20:45:23,601 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-27 20:45:24,368 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 20:45:25,127 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 20:46:54,117 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 20:46:54,150 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-1] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 2]]
+2022-07-27 20:46:54,162 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 20:47:17,385 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 20:47:17,823 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-2] SQL Error: 0, SQLState: 23505
+2022-07-27 20:47:17,825 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-2] ERROR: duplicate key value violates unique constraint "users_username_key"
+  Detail: Key (username)=(alya) already exists.
+2022-07-27 20:47:17,877 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-2] ==================== Logger Start Create Users     ====================
+2022-07-27 20:47:17,880 ERROR com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-2] <400 BAD_REQUEST Bad Request,{data=User Already Exist!, message=could not execute statement; SQL [n/a]; constraint [users_username_key]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement, status=400},[]>
+2022-07-27 20:47:17,881 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-2] ==================== Logger End Create Users     ====================
+2022-07-27 20:47:17,881 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-2]  
+2022-07-27 20:47:30,836 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 20:47:30,954 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-3] SQL Error: 0, SQLState: 23505
+2022-07-27 20:47:30,955 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-3] ERROR: duplicate key value violates unique constraint "users_username_key"
+  Detail: Key (username)=(alya) already exists.
+2022-07-27 20:47:30,957 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-3] ==================== Logger Start Create Users     ====================
+2022-07-27 20:47:30,957 ERROR com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-3] <400 BAD_REQUEST Bad Request,{data=User Already Exist!, message=could not execute statement; SQL [n/a]; constraint [users_username_key]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement, status=400},[]>
+2022-07-27 20:47:30,958 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-3] ==================== Logger End Create Users     ====================
+2022-07-27 20:47:30,959 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-3]  
+2022-07-27 20:48:29,388 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-27 20:48:29,500 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-5] SQL Error: 0, SQLState: 23505
+2022-07-27 20:48:29,502 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-5] ERROR: duplicate key value violates unique constraint "users_username_key"
+  Detail: Key (username)=(alya) already exists.
+2022-07-27 20:48:29,505 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-5] ==================== Logger Start Create Users     ====================
+2022-07-27 20:48:29,505 ERROR com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-5] <400 BAD_REQUEST Bad Request,{data=User Already Exist!, message=could not execute statement; SQL [n/a]; constraint [users_username_key]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement, status=400},[]>
+2022-07-27 20:48:29,506 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-5] ==================== Logger End Create Users     ====================
+2022-07-27 20:48:29,506 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-5]  
+2022-07-27 20:49:55,524 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 20:49:55,633 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-8] SQL Error: 0, SQLState: 23505
+2022-07-27 20:49:55,634 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-8] ERROR: duplicate key value violates unique constraint "users_username_key"
+  Detail: Key (username)=(alya) already exists.
+2022-07-27 20:49:55,636 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-8] ==================== Logger Start Create Users     ====================
+2022-07-27 20:49:55,636 ERROR com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-8] <400 BAD_REQUEST Bad Request,{data=User Already Exist!, message=could not execute statement; SQL [n/a]; constraint [users_username_key]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement, status=400},[]>
+2022-07-27 20:49:55,637 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-8] ==================== Logger End Create Users     ====================
+2022-07-27 20:49:55,637 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-8]  
+2022-07-27 20:51:37,020 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-27 20:51:37,740 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-9] ==================== Logger Start Create Users     ====================
+2022-07-27 20:51:37,745 ERROR com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-9] <400 BAD_REQUEST Bad Request,{data=User Already Exist!, message=role only customer or user, status=400},[]>
+2022-07-27 20:51:37,745 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-9] ==================== Logger End Create Users     ====================
+2022-07-27 20:51:37,746 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-9]  
+2022-07-27 20:54:08,215 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 20:54:08,556 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-27 20:54:08,561 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 20:54:08,556 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 20:54:08,908 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 20:54:08,926 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-27 20:54:09,025 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 20:54:24,657 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 20:54:25,149 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-7] ==================== Logger Start Create Users     ====================
+2022-07-27 20:54:25,159 ERROR com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-7] <400 BAD_REQUEST Bad Request,{data=User Already Exist!, message=role only customer or user, status=400},[]>
+2022-07-27 20:54:25,159 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-7] ==================== Logger End Create Users     ====================
+2022-07-27 20:54:25,159 INFO com.TeamC.Chapter6.RestController.LoginController [http-nio-8090-exec-7]  
+2022-07-27 20:55:30,659 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 20:55:30,972 WARN org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [201] milliseconds.
+2022-07-27 21:07:32,357 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 21:07:33,437 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] ==================== Logger Start Get All ====================
+2022-07-27 21:07:33,490 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 1 seatNumber : 2 studioName : A isAvailable : true
+2022-07-27 21:07:33,490 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 2 seatNumber : 2 studioName : A isAvailable : true
+2022-07-27 21:07:33,490 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 3 seatNumber : 3 studioName : A isAvailable : true
+2022-07-27 21:07:33,490 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 4 seatNumber : 4 studioName : A isAvailable : true
+2022-07-27 21:07:33,490 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 5 seatNumber : 5 studioName : A isAvailable : true
+2022-07-27 21:07:33,490 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 6 seatNumber : 6 studioName : A isAvailable : true
+2022-07-27 21:07:33,490 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 7 seatNumber : 7 studioName : A isAvailable : true
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 8 seatNumber : 8 studioName : A isAvailable : false
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 9 seatNumber : 9 studioName : A isAvailable : false
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 10 seatNumber : 3 studioName : A isAvailable : false
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 11 seatNumber : 3 studioName : B isAvailable : false
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 12 seatNumber : 2 studioName : B isAvailable : false
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 13 seatNumber : 3 studioName : B isAvailable : false
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 14 seatNumber : 4 studioName : B isAvailable : false
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 15 seatNumber : 5 studioName : B isAvailable : false
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 16 seatNumber : 6 studioName : B isAvailable : false
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 17 seatNumber : 7 studioName : B isAvailable : false
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 18 seatNumber : 8 studioName : B isAvailable : true
+2022-07-27 21:07:33,498 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 19 seatNumber : 9 studioName : B isAvailable : true
+2022-07-27 21:07:33,506 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 20 seatNumber : 3 studioName : B isAvailable : true
+2022-07-27 21:07:33,506 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 21 seatNumber : 3 studioName : C isAvailable : true
+2022-07-27 21:07:33,506 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 22 seatNumber : 2 studioName : C isAvailable : false
+2022-07-27 21:07:33,506 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 23 seatNumber : 3 studioName : C isAvailable : false
+2022-07-27 21:07:33,506 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 24 seatNumber : 4 studioName : C isAvailable : false
+2022-07-27 21:07:33,506 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 25 seatNumber : 5 studioName : C isAvailable : false
+2022-07-27 21:07:33,506 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 26 seatNumber : 6 studioName : C isAvailable : false
+2022-07-27 21:07:33,506 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 27 seatNumber : 7 studioName : C isAvailable : false
+2022-07-27 21:07:33,515 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 28 seatNumber : 8 studioName : C isAvailable : false
+2022-07-27 21:07:33,515 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 29 seatNumber : 9 studioName : C isAvailable : false
+2022-07-27 21:07:33,515 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 30 seatNumber : 2 studioName : C isAvailable : false
+2022-07-27 21:07:33,515 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 31 seatNumber : 3 studioName : D isAvailable : false
+2022-07-27 21:07:33,531 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 32 seatNumber : 2 studioName : D isAvailable : false
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 33 seatNumber : 3 studioName : D isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 34 seatNumber : 4 studioName : D isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 35 seatNumber : 5 studioName : D isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 36 seatNumber : 6 studioName : D isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 37 seatNumber : 7 studioName : D isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 38 seatNumber : 8 studioName : D isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 39 seatNumber : 9 studioName : D isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 40 seatNumber : 2 studioName : D isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 41 seatNumber : 2 studioName : E isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 42 seatNumber : 2 studioName : E isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 43 seatNumber : 3 studioName : E isAvailable : true
+2022-07-27 21:07:33,543 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 44 seatNumber : 4 studioName : E isAvailable : true
+2022-07-27 21:07:33,548 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 45 seatNumber : 5 studioName : E isAvailable : false
+2022-07-27 21:07:33,548 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 46 seatNumber : 6 studioName : E isAvailable : false
+2022-07-27 21:07:33,548 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 47 seatNumber : 7 studioName : E isAvailable : false
+2022-07-27 21:07:33,548 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 48 seatNumber : 8 studioName : E isAvailable : true
+2022-07-27 21:07:33,548 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 49 seatNumber : 9 studioName : E isAvailable : true
+2022-07-27 21:07:33,551 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] seatId : 50 seatNumber : 2 studioName : E isAvailable : true
+2022-07-27 21:07:33,551 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] ==================== Logger End Get All ====================
+2022-07-27 21:11:29,351 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 21:11:29,851 ERROR com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-8] ==================== Logger Start Error ====================
+2022-07-27 21:11:29,851 ERROR com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-8] No value present
+2022-07-27 21:11:29,851 ERROR com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-8] ==================== Logger End Error ====================
+2022-07-27 21:11:40,103 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 21:11:40,188 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-6] ====================Logger Start Get By Id ====================
+2022-07-27 21:11:40,200 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-6] SeatsResponseDTO{seat_id=3, number_seat=3, name_studio='A', available=true}
+2022-07-27 21:11:40,200 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-6] ====================Logger End Get By Id ====================
+2022-07-27 21:15:47,064 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-27 21:15:48,433 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] ====================Logger Start Create ====================
+2022-07-27 21:15:48,444 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] SeatsResponseDTO{seat_id=51, number_seat=3, name_studio='A', available=true}
+2022-07-27 21:15:48,452 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] ====================Logger End Create ====================
+2022-07-27 21:18:22,974 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-27 21:18:23,435 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-1] ====================Logger Start Update By Id ====================
+2022-07-27 21:18:23,443 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-1] SeatsResponseDTO{seat_id=51, number_seat=3, name_studio='B', available=true}
+2022-07-27 21:18:23,443 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-1] ====================Logger End Update By Id ====================
+2022-07-27 21:22:11,800 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 21:22:12,529 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] ====================Logger Start Query ====================
+2022-07-27 21:22:12,536 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] [SeatsResponseDTO{seat_id=1, number_seat=2, name_studio='A', available=true}, SeatsResponseDTO{seat_id=2, number_seat=2, name_studio='A', available=true}, SeatsResponseDTO{seat_id=3, number_seat=3, name_studio='A', available=true}, SeatsResponseDTO{seat_id=4, number_seat=4, name_studio='A', available=true}, SeatsResponseDTO{seat_id=5, number_seat=5, name_studio='A', available=true}, SeatsResponseDTO{seat_id=6, number_seat=6, name_studio='A', available=true}, SeatsResponseDTO{seat_id=7, number_seat=7, name_studio='A', available=true}, SeatsResponseDTO{seat_id=18, number_seat=8, name_studio='B', available=true}, SeatsResponseDTO{seat_id=19, number_seat=9, name_studio='B', available=true}, SeatsResponseDTO{seat_id=20, number_seat=3, name_studio='B', available=true}, SeatsResponseDTO{seat_id=21, number_seat=3, name_studio='C', available=true}, SeatsResponseDTO{seat_id=33, number_seat=3, name_studio='D', available=true}, SeatsResponseDTO{seat_id=34, number_seat=4, name_studio='D', available=true}, SeatsResponseDTO{seat_id=35, number_seat=5, name_studio='D', available=true}, SeatsResponseDTO{seat_id=36, number_seat=6, name_studio='D', available=true}, SeatsResponseDTO{seat_id=37, number_seat=7, name_studio='D', available=true}, SeatsResponseDTO{seat_id=38, number_seat=8, name_studio='D', available=true}, SeatsResponseDTO{seat_id=39, number_seat=9, name_studio='D', available=true}, SeatsResponseDTO{seat_id=40, number_seat=2, name_studio='D', available=true}, SeatsResponseDTO{seat_id=41, number_seat=2, name_studio='E', available=true}, SeatsResponseDTO{seat_id=42, number_seat=2, name_studio='E', available=true}, SeatsResponseDTO{seat_id=43, number_seat=3, name_studio='E', available=true}, SeatsResponseDTO{seat_id=44, number_seat=4, name_studio='E', available=true}, SeatsResponseDTO{seat_id=48, number_seat=8, name_studio='E', available=true}, SeatsResponseDTO{seat_id=49, number_seat=9, name_studio='E', available=true}, SeatsResponseDTO{seat_id=50, number_seat=2, name_studio='E', available=true}, SeatsResponseDTO{seat_id=51, number_seat=3, name_studio='B', available=true}]
+2022-07-27 21:22:12,537 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-3] ====================Logger End Query ====================
+2022-07-27 21:22:57,268 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 21:22:57,387 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-8] ====================Logger Start Delete By Id ====================
+2022-07-27 21:22:57,387 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-8] Delete Success
+2022-07-27 21:22:57,387 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-8] ====================Logger End Delete By Id ====================
+2022-07-27 21:26:29,469 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 21:26:29,597 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ==================== Logger Start Get All Users     ====================
+2022-07-27 21:26:29,609 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,617 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 1
+2022-07-27 21:26:29,617 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Wahyu Wijanarko
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : WahyuW@gmail.com
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$y8pNgcZ8.CjvyLCYOlY8GO1tjmQgTrLH7x2lTb564FGqJ5m8K.Fde
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 2
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Sri Mulyani
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : S_Mulyani@gmail.com
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$M.dmYgPLZx8GmM5yyAcH0evHE8WtG7nFidpikuhlzge25Yl4hG.JS
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 3
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Budi Setiawan
+2022-07-27 21:26:29,625 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : BudiW@gmail.com
+2022-07-27 21:26:29,629 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$yBJRN2yxSVtoP86l.3Ay3eyY7wsnRuJXLeVm02.RGwA0LIEaIbXE.
+2022-07-27 21:26:29,629 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,629 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 4
+2022-07-27 21:26:29,629 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Nur Aida
+2022-07-27 21:26:29,629 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Aida_Nur@gmail.com
+2022-07-27 21:26:29,629 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$Pm.W9G89OasGoTLlfVOPuukpCqtPTJdOgb6Nj3rUyokRRwSui1BiO
+2022-07-27 21:26:29,629 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,629 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 5
+2022-07-27 21:26:29,629 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Muh Toha
+2022-07-27 21:26:29,633 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Tohaaa@gmail.com
+2022-07-27 21:26:29,633 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$vM61CD9nHIOpTrLf7DRm7uwMonR5U.eE5Ka7TWbofwi5jmDar8EV2
+2022-07-27 21:26:29,633 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,633 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 6
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Lionel
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Lionel@gmail.com
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$aFiB06TFCjQ7MtuhmJ6UD.oq01cERz1VbfL0gP5F9uDTV2eZ4hk/i
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 7
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : David
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : David@gmail.com
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$eOqd7zgIito5tFNR5pr5xegoTnfDU7/cOYtEu3bYhfdTU5kVWDse.
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 8
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Setiawan
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Setiawan@gmail.com
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$9e6tHRPESzSdW2qgmzaL1.wR15t47wqUoj8xwIibPNFC7oVJTlcoi
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 9
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Lily
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Lily@gmail.com
+2022-07-27 21:26:29,635 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$JSg/Qswvd7o469UxqUTS6u9brylSKDNmf5KfnU7gcLv/xmLPs43BK
+2022-07-27 21:26:29,640 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 10
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Tifany
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Tifany@gmail.com
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$5Ks1G8E.UjD88KrJ9DAGse7blLL/57YJC2uyF4HGLHH0jr8QWME2S
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 11
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Terkajuik
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : tarkajuik@hotmail.com
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$sxE/0prgWOQ58BRp/tilX.JiRHdAkwYpnVoo/8fbbXi1Nx0KKOHbe
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 12
+2022-07-27 21:26:29,641 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Tarpingkal
+2022-07-27 21:26:29,649 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : tarpingkal@hotmail.com
+2022-07-27 21:26:29,649 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$yzQ6s2AY.kXasxHsuVVzLenEIv1iKfUMYbEiLILb5uxnf4kAsAEh2
+2022-07-27 21:26:29,649 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,649 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 13
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Tasilia
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Tasilia@hotmail.com
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$xjF1iVf8noPynsuH3ZpZWOHgJJJRjZD1SGuHBno8fYc9yN/LJj2Ka
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 14
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Tasungkua
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Tasungkua@ymail.com
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$zp7CPY.nG0i0ThUNfraJK.VmQ2inuji4YRJAclQtW86C8JLOeaMH6
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 28
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : kaii
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : is@mail
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$15TnNt8scjUqRzQZP8BJ/eGPXIXb0NSY5xOzp4trmz46MkHzAZWWW
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 15
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Tajirangkang
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Tajirangkang@apps.ipb.ac.id
+2022-07-27 21:26:29,657 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$rHPHrFh8uacCd.mWK1Xe5.KqGqjnrJZ/evN7tzoX.hsQUFrw6F0Na
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 16
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Tajungkang
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Tajungkang@apps.ui.ac.id
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$4wkzdO.HBB36Yr1ytxpUN.A7fBRuqLFpUsFZegYRVY4nicdc5kB7i
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 17
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Tagurajai
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Tagurajai@outlook.com
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$Bm4CVz3FEeRIsh6M0.eXleOwZif5mUuycTftn7sXBP67VaF0ojraW
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 18
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Tatungkuk
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Tatungkuk@outlook.com
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$Jnzbqt8GrEp8su7KdzL52uC76xEhhh0r9DC3oqyv8WNjz0t5fuVdq
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 19
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Tijengkang
+2022-07-27 21:26:29,665 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Tijengkang@gmail.com
+2022-07-27 21:26:29,681 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$kDYGdSdTBvFUxIM23zLEvOj94pIqaXt2cHd8vwRuelGUFJ5Tj/lMm
+2022-07-27 21:26:29,688 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,688 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 20
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Ngagolepak
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Ngagolepakg@gmail.com
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$qLx/WXdJ18ByRr50Apdy.uwB5sFppe4TYKlS6ndjJP3LXmYoEN/hK
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 21
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : andrea
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : gomail@andrea
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$2MUxO1Y.zpRJ/N3O7WLmeuYp5Fuo5ZpQQhjNaQzlPRBJk308VuGoG
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 22
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : robust
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : gomail@robust
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$k6X4SKhpJB8qzbsaB0ddoOnFP0kqcUzsl4m1oIKVkxV22.GB4F/Zm
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 23
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : kai
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : gomail@kai
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$7u47sa2/6GpBUOvG.8x5oeSoYvmKAkJEv4.r82bmfc.1yEha2WVHO
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,689 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 24
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : travis
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : gomail@travis
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$o4OIACYwyIMVHSwxb/eHSuVDUYe1mZxAIYZRUuAvTW2sv5XxX.Dq.
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 25
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : cardi
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : gomail@cardi
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$flpgSzh/519ZlQKGpQJ/9ejjf7oy8YiEPCuzXrGrrsJ6kSkPvebL2
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 26
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : rendraprames
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : gmail@rendra
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$PwWUG3OX.Iw9lwglo.8SoeD4EzsR5rXcv5yxeZc5GlDD.Ou2vN29a
+2022-07-27 21:26:29,705 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,709 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 27
+2022-07-27 21:26:29,709 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : antonyS
+2022-07-27 21:26:29,709 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : hu@antony
+2022-07-27 21:26:29,709 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$HI2Em4p1ouOMTq5LDlg0QuFvpKTrvvpmvc6WPfmSy3NcfUN6LgS2C
+2022-07-27 21:26:29,709 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,709 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 29
+2022-07-27 21:26:29,709 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : xavier
+2022-07-27 21:26:29,709 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : gomail@xavier
+2022-07-27 21:26:29,709 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$LcCRllw3z7FjSJxWiXGnWO9.yLVSoOzhc5jnULNUm58.HC1fOpLGi
+2022-07-27 21:26:29,713 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,720 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 30
+2022-07-27 21:26:29,720 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : saxon
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : jmail@rendra
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$F/0rWDNLvdSmW39gXA5TTesNcat60CpDLeiHcfASU3.d0D81WAzkq
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 31
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : siti
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : sitic4nt1c@gmail.com
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$Jd/QKI6NMcNb.gmX4ooc8uOB9ulFY/p1zCdD8Gh1nTOxdrIZLSpca
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 32
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : vini
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : v1n1@gmail.com
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$cszBfpxDV/45nXlRkX.vDOdH95yRTc5AJuYSGAWUznAMasvSgJ6fK
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 33
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : budi
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : budiY@gmail.com
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$W2VVlBRn4OokGbYVkefOL.0co/kRpjOHL1Ckyi5zRxALnll9a.RgC
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 34
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : kemal
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : k3mal@gmail.com
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$mGZ8YqRwpmkVR0cf5eLp8OPJtxiHu27KVKIcb.IqeoMKdziGXzuJy
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 35
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Badriah
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : badril@gmail.com
+2022-07-27 21:26:29,721 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$xbWiFbfGPS5i8swi3d2E1OwwnQ2kSmyeggrNE85u2fywf9a5p6k8W
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 36
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : Joni
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : joni@gmail.com
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$Pa.X8t01Cr.z.Ma5tHXT6OOJ7a/sQGpMLs0UkMRcHKjnPn5iF3PfO
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 37
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : munif
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : moonl@gmail.com
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$VamQrXoZ9JVPN/ylVLsbMOBfDfxD/BcSbBLj6uBVzHrrQLq1m9Uha
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 38
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : coni
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : coni@gmail.com
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$CVmKy9WZK.wI9okdMyOPFubbZgsiHeu0xWVzGzJuiF2Sbvj4aEl3.
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 39
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : menik
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : men1k@gmail.com
+2022-07-27 21:26:29,729 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$zxFeArGauDZ7PpD35VqYZOsB9dC8zSaP02Zv1B444pgR71dKNcedC
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 40
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : putro
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : putr@gmail.com
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$/SHaxy7KCNAUwFqUUeWUBe0mkJcePrA/v3gw2qb/V7TiYoKyZAWdO
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 41
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : billyboen
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : billyboen@gmail.com
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$mxN0gOrgUC7/3N98c3.eB.S.bOyJq/swK5ACxE75lHuVUUghK4nWC
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 42
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : marcelino
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : marcelino@gmail.com
+2022-07-27 21:26:29,737 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$5Ie02CZD7BijWQEgmYE3iO9e9AWiz/TMr5G6FhJmAvy9ZXi7vy5ha
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 43
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : yella
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : yella@gmail.com
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$/jYsPlieDMp9QhXBi7qC5ek8ZZN4r8GIfqiYrWGibb5Ui6KmJaqNC
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 44
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : viona
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : viona@gmail.com
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$1/XMJjbtWdOGet7NzDBJFe55EWbcOitVNiov2a2xhR/geCTTkgiWu
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 45
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : prames
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : prames@gmail.com
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$mfB5E7KYpOn8nVBcweIV3.ooFnXezUF5mMpuUc1KaY7EP/YRnAjUC
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,741 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 46
+2022-07-27 21:26:29,785 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : rendrapm
+2022-07-27 21:26:29,785 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : rendrapm@gmail.com
+2022-07-27 21:26:29,785 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$A4JhbNZ/88XiT473TAllkeszcdcIxkz6f3T5U4wZKZTBs0NusM76q
+2022-07-27 21:26:29,793 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,793 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 47
+2022-07-27 21:26:29,793 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : yohanes
+2022-07-27 21:26:29,793 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : yohanes@gmail.com
+2022-07-27 21:26:29,793 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$lQHD.6u5MVkIOrUiuGdYyeEAa4Notpxy1FcvZYhblsZn/bdMUkJnO
+2022-07-27 21:26:29,793 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,793 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 48
+2022-07-27 21:26:29,793 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : crush
+2022-07-27 21:26:29,801 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : crush@gmail.com
+2022-07-27 21:26:29,801 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$u6ywQ.dNGP9xdvvqgt8eKeg4UuNuOfvu5BF2XDL9M6UtAf556v2pq
+2022-07-27 21:26:29,805 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,805 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 49
+2022-07-27 21:26:29,805 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : bayu
+2022-07-27 21:26:29,805 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : bayu@gmail.com
+2022-07-27 21:26:29,809 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$.c3g6gAsC5oqJg/2RcdAkeSYkMCAk1P88MGISCwQOyhx3FmNWK4oq
+2022-07-27 21:26:29,809 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,809 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 50
+2022-07-27 21:26:29,809 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : ade
+2022-07-27 21:26:29,809 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : kangads@gmail.com
+2022-07-27 21:26:29,809 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$GK5TpgoH9RAr8970cTINxO5gcTebSxfKE9TcdxlJGTyD/InwvmTf.
+2022-07-27 21:26:29,837 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,837 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 51
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : yelliaviona
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : viona@gmail
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$HKbPT0Zxoc32NAVItTeTcugnpXfZWlfUHYrn075A.yMRF4D626DLS
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 52
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : vioona
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : vionaa@gmail
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$ZRqRHyvn/umXwdbCLGu43uxZaXgkdoIk/AuyiVUtYxBQDrg31tx5i
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 53
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : yellia
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : yellia@gmail
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$i2wppmHG5Tp4zVelc6iCCOa0mK.DyPUm9MoEopnCl4LQnTm4vb1o2
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 54
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : yell
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : yella@gmail
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$iGdcpJzAKePrQktlkvb0lODFzZej61/XWDF/R3T9LZ/dk9JTV0z8i
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,841 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 55
+2022-07-27 21:26:29,849 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : ona
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : ona@gmail
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$0GU4KaiHLVUau7Lx1Gxp/elMXfgtOUNCGPkwoIzdF.4LgJ/rECjY.
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 56
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : den
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : den@gmail
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$hYHkt2soAtcxqP6txBhxuuXSFaCM6gBCRKYfOeNaHyJ9trJ2Ke2k6
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 57
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : rendra
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : rendra@gmail
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$I/sUpPfM0AxPZOs8MVQuQu0rjgZPgWCbkHCoopjVuRu65TO6tlzsm
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 58
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : billy
+2022-07-27 21:26:29,938 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : billy@gmail
+2022-07-27 21:26:29,944 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$aXNpvrZ5Dyr.iS0UPYuR5ejXQvxb0Z..GSHfLyqmid7nrmMzoem3W
+2022-07-27 21:26:29,944 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,944 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 59
+2022-07-27 21:26:29,944 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : yohanness
+2022-07-27 21:26:29,944 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : yohannes@gmail
+2022-07-27 21:26:29,946 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$Y6xRiJE/80/0me7C03IJ0ubKa78Nlrq77pSyAERe4Kwuwvj3G5uRe
+2022-07-27 21:26:29,946 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,954 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 60
+2022-07-27 21:26:29,954 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : BayuIndra
+2022-07-27 21:26:29,962 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : Bayu@gmail
+2022-07-27 21:26:29,962 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$06$D5.DlXGIN3PmNKuC1I.ciuyh5vhKErj60w/JW9lNLcKzHUn2QA4Oe
+2022-07-27 21:26:29,962 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,965 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 61
+2022-07-27 21:26:29,965 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : toto
+2022-07-27 21:26:29,965 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : toto
+2022-07-27 21:26:29,965 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$10$J3dwZ8mlyFZErPP4YJnLnuQMQiN7i9r08Gz4J06Qdn2Lz1xhac/vG
+2022-07-27 21:26:29,965 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,965 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 62
+2022-07-27 21:26:29,965 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : tutut
+2022-07-27 21:26:29,965 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : tutut
+2022-07-27 21:26:29,970 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2y$10$r9BgI.h8KjC7IMjz7oGLhuC0aMRYQj7FXKEK51q0k6jfV37QLbaEq
+2022-07-27 21:26:29,970 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] -------------------------
+2022-07-27 21:26:29,970 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ID       : 71
+2022-07-27 21:26:29,970 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Username : alya
+2022-07-27 21:26:29,970 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Email    : adeknyaraisa
+2022-07-27 21:26:29,970 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] Password : $2a$10$VpQg5ztylcZzu.iq3oPSo.9wknoUEDpq0ejNqfiZbhKitAHy4G9q.
+2022-07-27 21:26:29,970 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3] ==================== Logger End Get All Users     ====================
+2022-07-27 21:26:29,976 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-3]  
+2022-07-27 21:28:43,977 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 21:28:44,065 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8] ==================== Logger Start Find By ID Users ====================
+2022-07-27 21:28:44,065 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8] ID       : 3
+2022-07-27 21:28:44,065 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8] Username : Budi Setiawan
+2022-07-27 21:28:44,065 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8] Email    : BudiW@gmail.com
+2022-07-27 21:28:44,065 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8] ==================== Logger End Find By ID Users   ====================
+2022-07-27 21:28:44,065 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-8]  
+2022-07-27 21:33:03,049 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 21:33:04,378 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-6] SQL Error: 0, SQLState: 23502
+2022-07-27 21:33:04,404 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-6] ERROR: null value in column "username" violates not-null constraint
+  Detail: Failing row contains (72, null, luffybajaklaut@onepiece.com, $2a$10$oftFH4Uure7iY2cQtJgMSueZUThX8sl4f6iDroOfL95kK2JH/9Hvu, null, 2022-07-27 21:33:04.103059, 2022-07-27 21:33:04.103059).
+2022-07-27 21:33:04,458 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] ==================== Logger Start Create Users     ====================
+2022-07-27 21:33:04,666 ERROR com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] <400 BAD_REQUEST Bad Request,{data=User Already Exist!, message=could not execute statement; SQL [n/a]; constraint [username]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement, status=400},[]>
+2022-07-27 21:33:04,666 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6] ==================== Logger End Create Users     ====================
+2022-07-27 21:33:04,722 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-6]  
+2022-07-27 21:34:24,646 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 21:34:24,681 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-7] ==================== Logger Start Update Users     ====================
+2022-07-27 21:34:24,704 ERROR com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-7] <404 NOT_FOUND Not Found,{data=Data Not Found!, message=Cannot invoke "String.equals(Object)" because "usernameRequest" is null, status=404},[]>
+2022-07-27 21:34:24,704 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-7] ==================== Logger End Update Users     ====================
+2022-07-27 21:34:24,704 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-7]  
+2022-07-27 21:37:38,532 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 21:37:38,862 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-2] ==================== Logger Start Update Users ====================
+2022-07-27 21:37:38,862 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-2] User Data Successfully Updated !
+2022-07-27 21:37:38,887 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-2] ID       : 8
+2022-07-27 21:37:38,887 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-2] Username : string
+2022-07-27 21:37:38,887 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-2] Email    : string
+2022-07-27 21:37:38,887 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-2] Password : $2a$10$nK2UYeGzLd99TTi0rWI7teiqYLYopHLzH2pNYvwRrQPZ2QXzakDJe
+2022-07-27 21:37:38,894 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-2] ==================== Logger End Update Users   ====================
+2022-07-27 21:37:38,894 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-2]  
+2022-07-27 21:38:40,209 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-27 21:38:40,371 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-5] ==================== Logger Start Delete Users ====================
+2022-07-27 21:38:40,371 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-5] User Data Successfully Deleted! :true
+2022-07-27 21:38:40,377 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-5] ==================== Logger End Delete Users   ====================
+2022-07-27 21:38:40,379 INFO com.TeamC.Chapter6.RestController.UserController [http-nio-8090-exec-5]  
+2022-07-27 21:39:42,306 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 21:39:42,520 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-4] SQL Error: 0, SQLState: 23503
+2022-07-27 21:39:42,553 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8090-exec-4] ERROR: update or delete on table "users" violates foreign key constraint "reservation_user_id_fkey" on table "reservation"
+  Detail: Key (user_id)=(8) is still referenced from table "reservation".
+2022-07-27 21:40:58,862 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-9] Did not match request to Ant [pattern='/login']
+2022-07-27 21:42:21,081 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-7] Did not match request to Ant [pattern='/login']
+2022-07-27 21:42:21,422 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] ==================== Logger Start Find All Reservation ====================
+2022-07-27 21:42:21,503 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 1, Title Film : The Batman, Status Playing : true, Studio : A, Seat Number : 5, Status Seat : true, Price : 25000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,519 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 2, Title Film : Avatar 2, Status Playing : true, Studio : A, Seat Number : 3, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,527 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 3, Title Film : Sonic the Hedgehog 2, Status Playing : true, Studio : A, Seat Number : 4, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,527 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 4, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-27 21:42:21,527 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 5, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-27 21:42:21,527 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 6, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-27 21:42:21,527 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 7, Title Film : Setan Kembar, Status Playing : true, Studio : C, Seat Number : 5, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-27 21:42:21,527 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 8, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-27 21:42:21,527 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 9, Title Film : Avatar 2, Status Playing : true, Studio : A, Seat Number : 7, Status Seat : true, Price : 20000, Date Show : 2022-06-19, Show Start : 00:00, Show End : 00:00
+2022-07-27 21:42:21,535 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 10, Title Film : Keranda Modif, Status Playing : true, Studio : C, Seat Number : 6, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,540 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 11, Title Film : pergi, Status Playing : true, Studio : B, Seat Number : 8, Status Seat : true, Price : 20000, Date Show : 2022-08-08, Show Start : 09:09, Show End : 12:12
+2022-07-27 21:42:21,540 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 12, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-27 21:42:21,540 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 13, Title Film : Final Fantasprit, Status Playing : true, Studio : D, Seat Number : 6, Status Seat : true, Price : 15000, Date Show : 2022-07-21, Show Start : 16:30, Show End : 18:00
+2022-07-27 21:42:21,540 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 14, Title Film : Alas Pati, Status Playing : true, Studio : C, Seat Number : 2, Status Seat : false, Price : 35000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-27 21:42:21,540 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 15, Title Film : KKN di Desa Penari, Status Playing : true, Studio : A, Seat Number : 6, Status Seat : true, Price : 25000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 16, Title Film : The Lost City, Status Playing : true, Studio : A, Seat Number : 9, Status Seat : false, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 17, Title Film : The Twin, Status Playing : true, Studio : A, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 18, Title Film : Avatar 2, Status Playing : true, Studio : A, Seat Number : 7, Status Seat : true, Price : 20000, Date Show : 2022-06-19, Show Start : 00:00, Show End : 00:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 19, Title Film : bumi cinta, Status Playing : false, Studio : B, Seat Number : 3, Status Seat : true, Price : 20000, Date Show : 2022-06-25, Show Start : 13:06, Show End : 09:09
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 20, Title Film : Makmum, Status Playing : true, Studio : C, Seat Number : 9, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 21, Title Film : The Roundup, Status Playing : true, Studio : A, Seat Number : 2, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 22, Title Film : Avatar 2, Status Playing : true, Studio : A, Seat Number : 7, Status Seat : true, Price : 20000, Date Show : 2022-06-19, Show Start : 00:00, Show End : 00:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 23, Title Film : Alas Pati, Status Playing : true, Studio : C, Seat Number : 2, Status Seat : false, Price : 35000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 24, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 25, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 26, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-27 21:42:21,544 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 27, Title Film : Setan Kembar, Status Playing : true, Studio : C, Seat Number : 5, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-27 21:42:21,551 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 28, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-27 21:42:21,551 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 29, Title Film : Avatar 2, Status Playing : true, Studio : A, Seat Number : 7, Status Seat : true, Price : 20000, Date Show : 2022-06-19, Show Start : 00:00, Show End : 00:00
+2022-07-27 21:42:21,551 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 30, Title Film : Keranda Modif, Status Playing : true, Studio : C, Seat Number : 6, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 31, Title Film : pergi, Status Playing : true, Studio : B, Seat Number : 8, Status Seat : true, Price : 20000, Date Show : 2022-08-08, Show Start : 09:09, Show End : 12:12
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 32, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 33, Title Film : Final Fantasprit, Status Playing : true, Studio : D, Seat Number : 6, Status Seat : true, Price : 15000, Date Show : 2022-07-21, Show Start : 16:30, Show End : 18:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 34, Title Film : Alas Pati, Status Playing : true, Studio : C, Seat Number : 2, Status Seat : false, Price : 35000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 35, Title Film : KKN di Desa Penari, Status Playing : true, Studio : A, Seat Number : 6, Status Seat : true, Price : 25000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 36, Title Film : The Lost City, Status Playing : true, Studio : A, Seat Number : 9, Status Seat : false, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 37, Title Film : The Twin, Status Playing : true, Studio : A, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 38, Title Film : pergi, Status Playing : true, Studio : B, Seat Number : 8, Status Seat : true, Price : 20000, Date Show : 2022-08-08, Show Start : 09:09, Show End : 12:12
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 39, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 40, Title Film : Cinta Segiempat, Status Playing : false, Studio : D, Seat Number : 9, Status Seat : true, Price : 15000, Date Show : 2022-07-22, Show Start : 15:30, Show End : 17:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 41, Title Film : Avatar 2, Status Playing : true, Studio : A, Seat Number : 3, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 42, Title Film : tenggelam kapak vanderwijk, Status Playing : true, Studio : B, Seat Number : 3, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 43, Title Film : Avatar 2, Status Playing : true, Studio : A, Seat Number : 3, Status Seat : true, Price : 35000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,552 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 44, Title Film : Firestarter, Status Playing : true, Studio : A, Seat Number : 7, Status Seat : true, Price : 25000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,560 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 45, Title Film : KKN di Desa Penari, Status Playing : true, Studio : A, Seat Number : 6, Status Seat : true, Price : 25000, Date Show : 2022-06-19, Show Start : 18:00, Show End : 19:00
+2022-07-27 21:42:21,560 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 46, Title Film : The Nun, Status Playing : true, Studio : C, Seat Number : 4, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 20:30
+2022-07-27 21:42:21,560 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 47, Title Film : Setan Kembar, Status Playing : true, Studio : C, Seat Number : 5, Status Seat : false, Price : 50000, Date Show : 2022-06-30, Show Start : 19:30, Show End : 21:00
+2022-07-27 21:42:21,560 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 48, Title Film : pergi, Status Playing : true, Studio : B, Seat Number : 8, Status Seat : true, Price : 20000, Date Show : 2022-08-08, Show Start : 09:09, Show End : 12:12
+2022-07-27 21:42:21,560 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 49, Title Film : di bawah lindungan kabah, Status Playing : false, Studio : B, Seat Number : 2, Status Seat : false, Price : 20000, Date Show : 2022-08-08, Show Start : 10:00, Show End : 15:00
+2022-07-27 21:42:21,560 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] Reservation id : 50, Title Film : Thank you dewi, Status Playing : true, Studio : E, Seat Number : 9, Status Seat : true, Price : 100000, Date Show : 2022-08-08, Show Start : 07:00, Show End : 10:00
+2022-07-27 21:42:21,560 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-7] ==================== Logger End Find All Reservation ====================
+2022-07-27 21:43:16,667 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-27 21:43:16,691 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] ==================== Logger Start Get By id Reservation ====================
+2022-07-27 21:43:16,761 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] Update RReservation : ReservationResponseDTO{reservation_id=4, user_id=4, schedule_id=12, user_name='Nur Aida', email_user='Aida_Nur@gmail.com', film_name='di bawah lindungan kabah', price=20000, studio='B', status_show=false, seat_number=2, status_seat=false, date_film=2022-08-08, start_film=10:00, end_film=15:00, created_at=2022-07-21T17:21:42.653838, updated_at=2022-07-21T17:21:42.653838}
+2022-07-27 21:43:16,761 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-2] ==================== Logger End Get By id Reservation ====================
+2022-07-27 21:44:58,879 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-27 21:44:59,174 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-5] ==================== Logger Start Error ====================
+2022-07-27 21:44:59,174 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-5] Reservation not exist with id 77
+2022-07-27 21:44:59,174 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-5] ==================== Logger End Error ====================
+2022-07-27 21:48:45,977 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-27 21:48:46,184 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-4] ==================== Logger Start Error ====================
+2022-07-27 21:48:46,184 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-4] Reservation must have schedule id and user id
+2022-07-27 21:48:46,184 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-4] ==================== Logger End Error ====================
+2022-07-27 21:49:09,744 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-8] Did not match request to Ant [pattern='/login']
+2022-07-27 21:49:09,984 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-8] ==================== Logger Start Create Reservation ====================
+2022-07-27 21:49:10,051 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-8] Create Reservation : BookingResponsePost{reservation_id=51, schedule_id=1, user_id=15, created_at=2022-07-27T21:49:09.925972100, updated_at=2022-07-27T21:49:09.925972100}
+2022-07-27 21:49:10,059 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-8] ==================== Logger End Create Reservation ====================
+2022-07-27 21:50:09,275 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-27 21:50:09,587 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-6] ==================== Logger Start Update Reservation ====================
+2022-07-27 21:50:09,936 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-6] Update Reservation : Reservation{reservationId=51, user=User{userId=16, username='Tajungkang', emailId='Tajungkang@apps.ui.ac.id', password='$2a$06$4wkzdO.HBB36Yr1ytxpUN.A7fBRuqLFpUsFZegYRVY4nicdc5kB7i'}, schedule=Schedule{scheduleId=1, films=Films{filmId=3, name='Avatar 2', isPlaying=true}, dateShow=2022-06-19, seats=Seats{seatId=7, seatNumber=7, studioName='A', isAvailable=true, createdAt=2022-07-21T17:21:42.618310, updatedAt=2022-07-21T17:21:42.618310}, showStart=00:00, showEnd=00:00, price=20000, createdAt=2022-07-21T17:21:42.637057, updatedAt=2022-07-27T17:49:21.593329}}
+2022-07-27 21:50:09,936 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-6] ==================== Logger End Update Reservation ====================
+2022-07-27 22:07:21,496 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-27 22:07:21,733 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-3] ==================== Logger Start Error ====================
+2022-07-27 22:07:21,742 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-3] Reservation not exist with id 99
+2022-07-27 22:07:21,743 ERROR com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-3] ==================== Logger End Error ====================
