@@ -79,6 +79,9 @@ public class ReservationController {
         try {
             Optional<Reservation> reservation = reservationServices.getReservationById(id);
             Reservation reservationGet = reservation.get();
+            if(reservation.isEmpty()){
+                throw new ResourceNotFoundException("Reservation not exist with id " + reservationGet.getReservationId());
+            }
             ReservationResponseDTO result = reservationGet.convertToResponse();
             logger.info(Line + " Logger Start Get By id Reservation " + Line);
             logger.info("Update RReservation : " + result);

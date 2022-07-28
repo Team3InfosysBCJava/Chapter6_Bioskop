@@ -452,3 +452,75 @@ java.lang.RuntimeException: Refresh token is missing
 2022-07-28 01:35:32,776 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-6] ==================== Logger Start Get By id Reservation ====================
 2022-07-28 01:35:32,796 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-6] Update RReservation : ReservationResponseDTO{reservation_id=33, user_id=13, schedule_id=31, user_name='Tasilia', email_user='Tasilia@hotmail.com', film_name='Final Fantasprit', price=15000, studio='D', status_show=true, seat_number=6, status_seat=true, date_film=2022-07-21, start_film=16:30, end_film=18:00, created_at=2022-07-26T18:01:21.258499, updated_at=2022-07-26T18:01:21.258499}
 2022-07-28 01:35:32,797 INFO com.TeamC.Chapter6.RestController.ReservationController [http-nio-8090-exec-6] ==================== Logger End Get By id Reservation ====================
+2022-07-28 09:35:29,341 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting Chapter6Application using Java 17.0.3 on LAPTOP-40MBARLA with PID 19116 (C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Github - Chapter6_Bioskop\target\classes started by ASUS in C:\Users\ASUS\Documents\BootcampJava\Chapter6\coding\Github - Chapter6_Bioskop)
+2022-07-28 09:35:29,342 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.1, Spring v5.3.21
+2022-07-28 09:35:29,344 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-07-28 09:35:35,218 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-28 09:35:35,385 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/v2/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 09:35:35,388 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/ui']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 09:35:35,389 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-resources/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 09:35:35,390 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/configuration/security']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 09:35:35,392 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/swagger-ui.html']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 09:35:35,392 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-07-28 09:35:37,083 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started Chapter6Application in 8.421 seconds (JVM running for 9.289)
+2022-07-28 09:35:52,609 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-1] Did not match request to Ant [pattern='/login']
+2022-07-28 09:35:52,727 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-4] Did not match request to Ant [pattern='/login']
+2022-07-28 09:35:52,745 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-2] Did not match request to Ant [pattern='/login']
+2022-07-28 09:35:52,746 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-3] Did not match request to Ant [pattern='/login']
+2022-07-28 09:35:52,921 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-5] Did not match request to Ant [pattern='/login']
+2022-07-28 09:35:52,967 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-6] Did not match request to Ant [pattern='/login']
+2022-07-28 09:36:02,203 TRACE org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter [http-nio-8090-exec-10] Did not match request to Ant [pattern='/login']
+2022-07-28 09:36:02,358 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] ==================== Logger Start Get All ====================
+2022-07-28 09:36:02,365 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 1 seatNumber : 2 studioName : A isAvailable : true
+2022-07-28 09:36:02,365 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 2 seatNumber : 2 studioName : A isAvailable : true
+2022-07-28 09:36:02,366 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 3 seatNumber : 3 studioName : A isAvailable : true
+2022-07-28 09:36:02,366 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 4 seatNumber : 4 studioName : A isAvailable : true
+2022-07-28 09:36:02,366 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 5 seatNumber : 5 studioName : A isAvailable : true
+2022-07-28 09:36:02,367 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 6 seatNumber : 6 studioName : A isAvailable : true
+2022-07-28 09:36:02,370 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 7 seatNumber : 7 studioName : A isAvailable : true
+2022-07-28 09:36:02,372 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 8 seatNumber : 8 studioName : A isAvailable : false
+2022-07-28 09:36:02,373 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 9 seatNumber : 9 studioName : A isAvailable : false
+2022-07-28 09:36:02,373 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 10 seatNumber : 3 studioName : A isAvailable : false
+2022-07-28 09:36:02,373 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 11 seatNumber : 3 studioName : B isAvailable : false
+2022-07-28 09:36:02,374 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 12 seatNumber : 2 studioName : B isAvailable : false
+2022-07-28 09:36:02,375 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 13 seatNumber : 3 studioName : B isAvailable : false
+2022-07-28 09:36:02,377 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 14 seatNumber : 4 studioName : B isAvailable : false
+2022-07-28 09:36:02,378 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 15 seatNumber : 5 studioName : B isAvailable : false
+2022-07-28 09:36:02,384 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 16 seatNumber : 6 studioName : B isAvailable : false
+2022-07-28 09:36:02,386 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 17 seatNumber : 7 studioName : B isAvailable : false
+2022-07-28 09:36:02,387 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 18 seatNumber : 8 studioName : B isAvailable : true
+2022-07-28 09:36:02,387 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 19 seatNumber : 9 studioName : B isAvailable : true
+2022-07-28 09:36:02,387 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 20 seatNumber : 3 studioName : B isAvailable : true
+2022-07-28 09:36:02,388 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 21 seatNumber : 3 studioName : C isAvailable : true
+2022-07-28 09:36:02,388 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 22 seatNumber : 2 studioName : C isAvailable : false
+2022-07-28 09:36:02,392 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 23 seatNumber : 3 studioName : C isAvailable : false
+2022-07-28 09:36:02,394 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 24 seatNumber : 4 studioName : C isAvailable : false
+2022-07-28 09:36:02,395 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 25 seatNumber : 5 studioName : C isAvailable : false
+2022-07-28 09:36:02,396 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 26 seatNumber : 6 studioName : C isAvailable : false
+2022-07-28 09:36:02,396 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 27 seatNumber : 7 studioName : C isAvailable : false
+2022-07-28 09:36:02,397 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 28 seatNumber : 8 studioName : C isAvailable : false
+2022-07-28 09:36:02,397 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 29 seatNumber : 9 studioName : C isAvailable : false
+2022-07-28 09:36:02,400 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 30 seatNumber : 2 studioName : C isAvailable : false
+2022-07-28 09:36:02,402 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 31 seatNumber : 3 studioName : D isAvailable : false
+2022-07-28 09:36:02,403 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 32 seatNumber : 2 studioName : D isAvailable : false
+2022-07-28 09:36:02,403 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 33 seatNumber : 3 studioName : D isAvailable : true
+2022-07-28 09:36:02,404 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 34 seatNumber : 4 studioName : D isAvailable : true
+2022-07-28 09:36:02,408 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 35 seatNumber : 5 studioName : D isAvailable : true
+2022-07-28 09:36:02,412 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 36 seatNumber : 6 studioName : D isAvailable : true
+2022-07-28 09:36:02,413 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 37 seatNumber : 7 studioName : D isAvailable : true
+2022-07-28 09:36:02,415 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 38 seatNumber : 8 studioName : D isAvailable : true
+2022-07-28 09:36:02,419 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 39 seatNumber : 9 studioName : D isAvailable : true
+2022-07-28 09:36:02,420 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 40 seatNumber : 2 studioName : D isAvailable : true
+2022-07-28 09:36:02,421 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 41 seatNumber : 2 studioName : E isAvailable : true
+2022-07-28 09:36:02,422 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 42 seatNumber : 2 studioName : E isAvailable : true
+2022-07-28 09:36:02,422 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 43 seatNumber : 3 studioName : E isAvailable : true
+2022-07-28 09:36:02,422 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 44 seatNumber : 4 studioName : E isAvailable : true
+2022-07-28 09:36:02,422 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 45 seatNumber : 5 studioName : E isAvailable : false
+2022-07-28 09:36:02,426 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 46 seatNumber : 6 studioName : E isAvailable : false
+2022-07-28 09:36:02,428 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 47 seatNumber : 7 studioName : E isAvailable : false
+2022-07-28 09:36:02,430 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 48 seatNumber : 8 studioName : E isAvailable : true
+2022-07-28 09:36:02,432 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 49 seatNumber : 9 studioName : E isAvailable : true
+2022-07-28 09:36:02,433 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 50 seatNumber : 2 studioName : E isAvailable : true
+2022-07-28 09:36:02,435 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 51 seatNumber : 3 studioName : C isAvailable : true
+2022-07-28 09:36:02,436 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] seatId : 52 seatNumber : 20 studioName : D isAvailable : true
+2022-07-28 09:36:02,437 INFO com.TeamC.Chapter6.RestController.SeatsController [http-nio-8090-exec-10] ==================== Logger End Get All ====================

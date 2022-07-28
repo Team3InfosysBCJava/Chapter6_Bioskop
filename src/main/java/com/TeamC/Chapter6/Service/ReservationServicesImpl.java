@@ -38,10 +38,6 @@ public class ReservationServicesImpl implements ReservationServices{
 
     @Override
     public Reservation updateReservation(Reservation Reservation) throws ResourceNotFoundException {
-        Optional<Reservation> optionalReservation = ReservationRepository.findById(Reservation.getReservationId());
-        if(optionalReservation.isEmpty()){
-            throw new ResourceNotFoundException("Reservation not exist with id " + Reservation.getReservationId());
-        }
         return this.ReservationRepository.save(Reservation);
     }
 
